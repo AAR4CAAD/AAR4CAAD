@@ -1,4 +1,6 @@
-# Captions — re-count, dictionary audit, lexical vs visual (audit rev12)
+# Captions — re-count, dictionary audit, lexical vs visual (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 Captions used in the evaluated trainings: the frozen `caption_snapshot` of AESTHETIC-v2 and CONTROL-v2 (89 + 89); the platform writes them to `captions/<code>.txt` of the training zip and `aar_worker.py` encodes them with the frozen SDXL text encoders (only the UNet attention LoRA is trained). Captions changed between v1 and v2: AESTHETIC 89/89, CONTROL 62/89 (554 `caption.changed` events, 2026-09-27T13:48 → 2026-09-28T01:28 UTC). Caption `source` values: {'Imported': 329, 'Manual': 225}; `model` field never filled: the export does not record who/what wrote the text (author's statement needed).
 

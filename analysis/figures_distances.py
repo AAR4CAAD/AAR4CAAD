@@ -1,7 +1,7 @@
 """
 Figure (manuscript Fig. 3): DINOv2, original geometry — change of the mean image-to-centroid distance with respect to BASE,
 per adapter and training seed, towards the own and the other photograph corpus, with 95% prompt-bootstrap intervals.
-Data: audit_rev12/outputs/dino_distance_changes.csv (produced by audit_rev12/scripts/a03_dino.py).
+Data: audit/outputs/dino_distance_changes.csv (produced by audit/scripts/a03_dino.py).
 
     python figures_distances.py [--out figures]
 """

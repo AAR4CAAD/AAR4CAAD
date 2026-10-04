@@ -1,5 +1,7 @@
 # Controlled-caption experiment — analysis (DRY RUN on existing adapters: numbers meaningless, code-path test only)
 
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
+
 Direction frozen (d = 0.2352); P = (e_A − e_C)·u per cell; intervals: bootstrap over the 48 prompts. Three quantities kept separate: estimate in the neutral regime, its uncertainty, paired per-cell difference between the original and the neutral regime.
 
 | seed | quantity | estimate | 95% CI | p | R |

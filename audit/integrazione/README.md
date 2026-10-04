@@ -1,11 +1,11 @@
-# Integrazione mirata (4 ottobre 2026)
+# Integrazione mirata (4 ottobre 2026) — risultati confluiti nella revisione 16 del manoscritto
 
 Risposta all'incarico `inputs/integrazione_mirata/00_INCARICO_AGENTE.md`. Nessun training, nessuna modifica a dati/campioni/manoscritto.
 
 | file | contenuto |
 |---|---|
-| `RISCONTRO_INTEGRAZIONE.md` | risposta breve nell'ordine dell'incarico, con i risultati reali |
-| `SOSTITUZIONI_MIRATE.md` | sostituzioni per abstract, risultati, conclusioni (non applicate) |
+| `../history/RISCONTRO_INTEGRAZIONE.md` | risposta breve nell'ordine dell'incarico, con i risultati reali |
+| `../history/SOSTITUZIONI_MIRATE.md` | sostituzioni per abstract, risultati, conclusioni (non applicate) |
 | `SPEC_dino_aggiustamento_completo.json`, `dino_aggiustamento_completo.csv`, `report_dino_aggiustamento_completo.md` | DINOv2: direzione originale, periodo+area, periodo+area+tipologia+stile; due geometrie (G1 proiezione, G2 trasformazione comune); P, R, ΔD per seed |
 | `verifica_tabelle_locali.csv`, `report_verifiche_locali.md`, `stabilita_bootstrap_riprodotta.csv`, `stabilita_inclusione_per_foto.csv` | riproduzione delle tabelle locali dell'autore; regola vs codice storico; bootstrap valutatori; ICC; lotti; binomiale; verifica fuori training; dispersione intra-corpus |
 | `report_caption_v1_v2.md`, `caption_v1_v2_transizioni.csv`, `caption_v1_v2_copertura.csv` | caption v1→v2: copertura, testi modificati, revisione, aggiunte 0→1 / 1→0 |

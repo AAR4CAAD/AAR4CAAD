@@ -1,4 +1,6 @@
-# DINOv2 measures — reproduction, distances to the corpora, adjusted directions (audit rev12)
+# DINOv2 measures — reproduction, distances to the corpora, adjusted directions (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 Space: DINOv2 CLS, L2-normalised. g = centroid(AESTHETIC photos) − centroid(CONTROL photos); d = ‖g‖; u = g/d. For a cell: P = (e_A − e_C)·u; S = (e_A − e_C)·g = d·P; R = P/d = S/d². Intervals: bootstrap over the 48 prompts unless stated (conditional on the direction). The 'direction uncertainty' rows resample the photographs.
 

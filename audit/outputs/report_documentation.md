@@ -1,4 +1,6 @@
-# Documentation items (audit rev12)
+# Documentation items (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 ## 1. The 'five summary measures' of the VLM sentence (manuscript 5.2)
 

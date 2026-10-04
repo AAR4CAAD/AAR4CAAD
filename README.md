@@ -30,16 +30,16 @@ The study concerns **images**: two-dimensional representations of architecture, 
 
 Besides the data and code behind every number of the manuscript, the repository holds materials that the paper only summarises: the covariance decomposition of the 31 descriptor contrasts (`audit/outputs/report_descriptors.md`, `descriptors_profile.csv`), the lexical transition tables of the captions v1 → v2 (`audit/integrazione/caption_v1_v2_transizioni.csv`), the detailed per-photograph counts of phase 1 (`audit/inputs/integrazione_mirata/02_fase1_per_600_foto.csv`, `audit/integrazione/stabilita_inclusione_per_foto.csv`), the sensitivity analyses with their scripts (`audit/scripts/`, `analysis/*.py`: adjusted DINOv2 directions, crossed-effects and two-way bootstrap models, Davidson model, rater-resampling stability of the selection), the complete Table 3 (`audit/integrazione/tabella3_completa.csv`) and the figure of the two repertoires with photo credits (`analysis/figures/fig_repertoires*.{png,pdf,csv}`).
 
-## Independent audit after the first review
+## Verification and sensitivity analyses
 
-The folder [`audit/`](audit/README.md) contains the independent re-analysis carried out after the first review: every number of the manuscript recomputed from the export (`audit/RIPRODUZIONE_PRECEDENTI.csv`), the exact re-execution of the CONTROL sampling, the chronology of all training runs, the decomposition of the descriptor covariances, the distances to the two corpora in both probe spaces, the direction adjusted for period and area, the crossed-effects and two-way bootstrap sensitivities of the human contrast, the caption audit, and the protocol of the controlled-caption experiment (not yet run). [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md) maps each point of the review to the evidence. The audit's conclusions are in `audit/RISPOSTA_REVIEWER.md`; what remains open is in `audit/MATERIALI_O_DECISIONI_MANCANTI.md`.
+The folder [`audit/`](audit/README.md) contains the independent re-analysis and the sensitivity analyses on which revision 16 is based: every number of the manuscript recomputed from the export (`audit/history/RIPRODUZIONE_PRECEDENTI.csv`), the exact re-execution of the CONTROL sampling, the chronology of all training runs, the decomposition of the descriptor covariances, the distances to the two corpora in both probe spaces, the direction adjusted for period and area, the crossed-effects and two-way bootstrap sensitivities of the human contrast, the caption audit, and the protocol of the controlled-caption experiment (not yet run). [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md) maps each point of the review to the evidence. The process documents of the verification passes (replies to the first-round review, closure table) are in `audit/history/`.
 
 ## Where to look
 
 | You want to check… | Go to |
 |---|---|
 | which file supports a statement of the manuscript | [`PAPER_MAP.md`](PAPER_MAP.md) |
-| the evidence for each point of the review | [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md), [`audit/`](audit/README.md) |
+| the evidence for each point of the first-round review | [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md), [`audit/`](audit/README.md) |
 | what was planned, when, and what changed | [`protocol/`](protocol/README.md) |
 | what is not preregistered and the other limits, stated by the authors | [`protocol/TRANSPARENCY_NOTES.md`](protocol/TRANSPARENCY_NOTES.md) |
 | the human data | [`data/`](data/README.md) |

@@ -1,4 +1,6 @@
-# Human statistics — reproduction and sensitivities (audit rev12)
+# Human statistics — reproduction and sensitivities (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 Independent recomputation from the export (SHA256 ea0bdbf6…). Reported values come from the manuscript revision 12 unless stated. Inference unit: participants, unless the row says prompt or two-way. The human data concern ONLY the two original adapters (training seeds 1254/9865); no model of repeated judgements creates training replications.
 

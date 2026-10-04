@@ -1,4 +1,6 @@
-# Training runs and chronology (audit rev12)
+# Training runs and chronology (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 Sources: `training_runs.csv`, `generated_images.csv`, `generation_plan.csv`, `prompt_sets.csv`, `audit_log.csv` (2189 events, users {'admin@research.local': 1346, 'researcher@research.local': 426, 'system': 3}). Times UTC. Each timestamp is the moment a record was saved by the platform; durations of human activities are not measured by these records.
 

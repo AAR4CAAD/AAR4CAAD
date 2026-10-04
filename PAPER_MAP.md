@@ -57,11 +57,11 @@ Paths are relative to the root of the repository. "Export" is `data/export/` (an
 | data availability | this repository; `ANONYMISATION.md` |
 | VLM evaluation (not in the body of revision 16; audit material) | `analysis/vlm_report/`, `analysis/vlm/` |
 | exploratory analyses of the earlier revisions (decomposition of the source direction, residual direction, VLM) | `analysis/decomposition_report/`, `analysis/embedding_report/`, `analysis/replication_report/` |
-| independent audit of revision 12 and its second pass | `audit/RISPOSTA_REVIEWER.md`, `audit/CORREZIONI_SECONDO_PASSAGGIO.md`, `audit/RIPRODUZIONE_PRECEDENTI.csv`, `audit/TABELLA_CHIUSURA.csv` |
-| integration after the audit (basis of revision 16) | `audit/integrazione/RISCONTRO_INTEGRAZIONE.md` |
+| verification history (first pass on revision 12, second pass, targeted integration) | `audit/history/RISPOSTA_REVIEWER.md`, `audit/history/CORREZIONI_SECONDO_PASSAGGIO.md`, `audit/history/RIPRODUZIONE_PRECEDENTI.csv`, `audit/history/TABELLA_CHIUSURA.csv` |
+| targeted integration (basis of revision 16) | `audit/history/RISCONTRO_INTEGRAZIONE.md` |
 
 ## Notes
 
 - **Roles in the anonymised export.** Professional roles declared by fewer than ten participants overall are merged into `Other` in `participants.csv` (see `ANONYMISATION.md`); the manuscript reports 29 participants "in altre categorie".
-- `audit/PATCH_MANOSCRITTO.md` and `audit/integrazione/SOSTITUZIONI_MIRATE.md` are the wording proposals that preceded revision 16; they are kept as history and are superseded by the manuscript.
+- `audit/history/PATCH_MANOSCRITTO.md` and `audit/history/SOSTITUZIONI_MIRATE.md` are the wording proposals that preceded revision 16; they are kept as history and are superseded by the manuscript.
 - Intervals in the manuscript come from bootstrap draws; a re-run on the anonymised export (random participant identifiers) reproduces every estimate and shifts bootstrap limits by Monte Carlo error only (`audit/README.md`).

@@ -1,4 +1,6 @@
-# CONTROL: how it was built, re-executed from the platform algorithm (audit rev12)
+# CONTROL: how it was built, re-executed from the platform algorithm (verification run, October 2026)
+
+> Reference values in the *reported* columns are those of the manuscript version under verification (revision 12, 3 October 2026); the final manuscript (revision 16) adopted the recomputed values and wording. See `../README.md`.
 
 Stored parameters (control_dataset.csv): method `MatchedControl`, matching variables `BuildingType,Style`, seed `345145722`, reference `AESTHETIC-v1`, reference images excluded from the pool `True`. Pool = active photographs not in AESTHETIC-v1 (511), ordered by image_asset_id, shuffled once with xoshiro256**(SplitMix64(345145722)).
 
