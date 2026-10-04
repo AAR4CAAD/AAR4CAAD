@@ -1,0 +1,50 @@
+=== b02_verifiche_locali started 2026-10-04T02:08:24+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[fase1] duplicate participant-photo pairs: package 0 | recomputed 0 | agree True 
+[fase1] per-photo n_giudizi: max abs difference over 600: package 0 | recomputed 0.0 | agree True 
+[fase1] per-photo n_valutatori_distinti: max abs difference over 600: package 0 | recomputed 0.0 | agree True 
+[fase1] per-photo media: max abs difference over 600: package 0 | recomputed 0.0 | agree True 
+[fase1] per-photo sd_campionaria: max abs difference over 600: package 0 | recomputed 0.0 | agree True 
+[fase1] per-photo errore_standard_media: max abs difference over 600: package 0 | recomputed 0.0 | agree True 
+[fase1] 89 AESTHETIC: n range: package 14-64 | recomputed 14-64 | agree True 
+[fase1] 89 AESTHETIC: SE range: package 0.1533-0.4871 | recomputed 0.1533-0.4871 | agree True 
+[regola] historical rule on the complete sample reproduces the 89 AESTHETIC (eligible-population percentile): package True | recomputed True | agree True cutoff P65 = 4.562 (platform recorded 4.563)
+[regola] author's convention (percentile over all active images) gives the same 89: package True | recomputed True | agree True cutoff 4.562; both non-binding because < 5
+[stabilita] historical convention (eligible): mean cardinality: package 100.939 | recomputed 101.375 | agree False different seed and convention: compare distributions, not digits
+[stabilita] historical convention (eligible): cardinality quantiles 2.5/50/97.5: package [71.0, 100.0, 134.0] | recomputed [72.0, 101.0, 135.0] | agree False 
+[stabilita] historical convention (eligible): mean recovery of the 89: package 0.788 | recomputed 0.7939 | agree False 
+[stabilita] historical convention (eligible): mean Jaccard: package 0.5877 | recomputed 0.5924 | agree False 
+[stabilita] author's convention (all active): mean cardinality: package 100.939 | recomputed 101.578 | agree False different seed and convention: compare distributions, not digits
+[stabilita] author's convention (all active): cardinality quantiles 2.5/50/97.5: package [71.0, 100.0, 134.0] | recomputed [73.0, 101.0, 136.0] | agree False 
+[stabilita] author's convention (all active): mean recovery of the 89: package 0.788 | recomputed 0.7921 | agree False 
+[stabilita] author's convention (all active): mean Jaccard: package 0.5877 | recomputed 0.5895 | agree False 
+[stabilita] inclusion probability of the 89: min / median / max (historical convention): package [0.507, 0.795, 1.0] | recomputed [0.506, 0.801, 1.0] | agree False 
+[stabilita] correlation of per-image inclusion probabilities with the package's (600 images): package 1 | recomputed 0.9998 | agree False 
+[icc] complete: ICC1: package 0.138184 | recomputed 0.138184 | agree True one-way ANOVA on rater-centred scores, df_within reduced by (raters − 1); NOT a crossed model
+[icc] complete: ICCk: package 0.860065 | recomputed 0.860065 | agree True 
+[icc] complete: k0: package 38.331948 | recomputed 38.331948 | agree True 
+[icc] complete: MS_between: package 12.802915 | recomputed 12.802915 | agree True 
+[icc] complete: MS_within: package 1.791578 | recomputed 1.791578 | agree True 
+[icc] complete: df_within: package 22247.0 | recomputed 22247.0 | agree True 
+[icc] filtered: ICC1: package 0.138146 | recomputed 0.138146 | agree True one-way ANOVA on rater-centred scores, df_within reduced by (raters − 1); NOT a crossed model
+[icc] filtered: ICCk: package 0.858439 | recomputed 0.858439 | agree True 
+[icc] filtered: k0: package 37.83199 | recomputed 37.83199 | agree True 
+[icc] filtered: MS_between: package 12.693051 | recomputed 12.693051 | agree True 
+[icc] filtered: MS_within: package 1.796844 | recomputed 1.796844 | agree True 
+[icc] filtered: df_within: package 21949.0 | recomputed 21949.0 | agree True 
+[lotti] batch 1: photographs / ratings / raters: package 300/18143/166 | recomputed 300/18143/166 | agree True import dates from source_images.imported_at
+[lotti] batch 2: photographs / ratings / raters: package 300/4869/54 | recomputed 300/4869/54 | agree True import dates from source_images.imported_at
+[lotti] batch 1 AESTHETIC: photographs: package 43 | recomputed 43 | agree True 
+[lotti] batch 2 AESTHETIC: photographs: package 46 | recomputed 46 | agree True 
+[lotti] batch 1 CONTROL: photographs: package 46 | recomputed 46 | agree True 
+[lotti] batch 2 CONTROL: photographs: package 43 | recomputed 43 | agree True 
+[binomiale] wins / n: package 677/1320 | recomputed 677/1320 | agree True 
+[binomiale] two-sided exact p: package 0.3637276593 | recomputed 0.3637276593 | agree True 
+[binomiale] Clopper–Pearson 95% low / high: package 0.485533/0.540167 | recomputed 0.485533/0.540167 | agree True marginal summary assuming independent comparisons; does not replace the clustered inference
+[fuori_training] n external photographs: package 422 | recomputed 422 | agree True 
+[fuori_training] Spearman projection-on-u vs mean rating, complete sample: package 0.396569 | recomputed 0.396569 | agree True projection on u from the matrices (affinity = d·projection: same ranks)
+[fuori_training] Spearman, filtered sample: package 0.393121 | recomputed 0.393121 | agree True 
+[fuori_training] Spearman(saved affinity, projection on u) over the 422: package 1 | recomputed 1.0 | agree True the saved affinity is a positive affine transform of the projection for non-members
+[dispersione] RMS distance to own centroid: A 0.9095 C 0.9225 diff -0.0130
+[dispersione] mean distance to own centroid: A 0.9055 C 0.9207 diff -0.0151
+[dispersione] mean pairwise distance: A 1.2874 C 1.3085 diff -0.0211
+done

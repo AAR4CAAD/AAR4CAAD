@@ -1,0 +1,2 @@
+vittorie_A,n_decisivi,proporzione,p_bilaterale_esatto,ci95_cp_low,ci95_cp_high,nota
+677,1320,0.5128787878787879,0.3637276592698947,0.4855326336726942,0.5401674826601717,Test marginale sotto indipendenza dei confronti; non tiene conto di partecipanti e prompt ripetuti. Non sostituisce Davidson o bootstrap cluster.

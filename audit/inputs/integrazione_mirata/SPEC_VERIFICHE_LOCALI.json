@@ -1,0 +1,12 @@
+{
+  "status": "Analisi esplorative post-review, specifica salvata prima del nuovo calcolo; risultati precedenti conosciuti",
+  "input": "FULL_EXPERIMENT_EXPORT_ARCH300_20261001-134634.zip",
+  "fase1": "Tutti i giudizi Fase 1 dei 166 identificativi; nessun filtro retroattivo dalla Fase 2",
+  "per_foto": "n, partecipanti distinti, media grezza, sd campionaria, SE=sd/sqrt(n); verificare assenza di duplicati partecipante-foto",
+  "stabilita": "3000 bootstrap non parametrici dei 166 valutatori con rimpiazzo; tutte le risposte di un valutatore mantenute insieme; duplicati come copie bootstrap; riselezione su tutte le 600 foto con regola congelata",
+  "regola": "Immagini attive, almeno 10 risposte bootstrap, media >=5, media >= quantile 0.65 delle medie disponibili di tutte le immagini attive, interpolazione lineare; nessun vincolo artificiale di 89 casi",
+  "output_stabilita": "Cardinalita selezionata, recupero delle 89 originarie, Jaccard con insieme originale, frequenza inclusione per immagine; non e validazione esterna",
+  "seed": 20261004,
+  "binomiale": "Esatto bilaterale H0 p=0.5 sui confronti AESTHETIC-CONTROL decisivi e inclusi, verificare 677/1320. IC Clopper-Pearson 95%; analisi marginale i.i.d., non sostituisce inferenza cluster",
+  "heldout": "Foto presenti in nessuno dei due dataset LoRA; correlazione di Spearman fra affinità sorgente salvata (proporzionale alla proiezione su u) e medie Fase1 complete. Verificare 422 e confrontare con medie filtrate storiche. Nessun test di assenza di memorizzazione"
+}

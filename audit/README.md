@@ -4,6 +4,10 @@
 
 Mandato: `inputs/package/00_prompt/AAR_prompt_agente_verifica_integrale.md`. Tutti i nuovi output sono in questa cartella; nessun file storico (`analysis/*_report`, `analysis/metrics`, `analysis/figures`, dati, manoscritto) è stato modificato. Le analisi nuove sono **post-review**, non preregistrate; le specifiche fissate prima dei risultati sono in `outputs/SPEC_direzione_aggiustata.json` e in `PROTOCOLLO_CAPTION_CONTROLLATE.md` §4.
 
+## Integrazione mirata (4 ottobre 2026)
+
+`integrazione/` risponde all'incarico `inputs/integrazione_mirata/00_INCARICO_AGENTE.md`: direzione DINOv2 aggiustata anche per tipologia e stile (due geometrie, P/R/ΔD per seed), riproduzione delle tabelle locali dell'autore (stabilità della selezione, ICC, lotti, binomiale, verifica fuori training, dispersione), caption v1→v2 (aggiunte per descrittore), Tab. 3 completa, hardware/scala LoRA/calendario, sostituzioni mirate. Vedi `integrazione/README.md` e `integrazione/RISCONTRO_INTEGRAZIONE.md`.
+
 ## Consegne
 
 | file | contenuto |
@@ -35,6 +39,10 @@ Mandato: `inputs/package/00_prompt/AAR_prompt_agente_verifica_integrale.md`. Tut
 | riesecuzione del riscontro precedente | `outputs/riscontro_rerun/` (`analisi_riscontro.py --bootstrap 3000`): 14 file identici, 5 con differenze float |
 
 ## Riproduzione in questo repository
+
+Gli script leggono per default `../data/export/` (copia anonimizzata dell'export: identificativi dei partecipanti casuali, orari relativi, ruoli rari aggregati). Rieseguiti qui il 4 ottobre 2026: `a00`–`a05`, `a09`, `a10 --dry-run` riproducono gli stessi valori dell'esecuzione sull'export completo; i soli scostamenti sono negli intervalli bootstrap che dipendono dall'ordine degli identificativi (es. bootstrap a due vie dei rating −0,024/+0,235 contro −0,025/+0,233: errore Monte Carlo). `a06_runs_timeline.py` e `a07_documentation.py` richiedono il registro audit completo della piattaforma (non ridistribuito perché contiene eventi sui singoli partecipanti): i loro output, prodotti sull'export completo il 3 ottobre 2026, sono in `outputs/`. `inputs/previous_reply/` contiene gli allegati (dati derivati) del riscontro tecnico precedente; i testi delle review e le bozze del manoscritto non sono ridistribuiti.
+
+## Riproduzione (comandi) in questo repository
 
 Gli script leggono per default `../data/export/` (copia anonimizzata dell'export: identificativi dei partecipanti casuali, orari relativi, ruoli rari aggregati). Rieseguiti qui il 4 ottobre 2026: `a00`–`a05`, `a09`, `a10 --dry-run` riproducono gli stessi valori dell'esecuzione sull'export completo; i soli scostamenti sono negli intervalli bootstrap che dipendono dall'ordine degli identificativi (es. bootstrap a due vie dei rating −0,024/+0,235 contro −0,025/+0,233: errore Monte Carlo). `a06_runs_timeline.py` e `a07_documentation.py` richiedono il registro audit completo della piattaforma (non ridistribuito perché contiene eventi sui singoli partecipanti): i loro output, prodotti sull'export completo il 3 ottobre 2026, sono in `outputs/`. `inputs/previous_reply/` contiene gli allegati (dati derivati) del riscontro tecnico precedente; i testi delle review e le bozze del manoscritto non sono ridistribuiti.
 

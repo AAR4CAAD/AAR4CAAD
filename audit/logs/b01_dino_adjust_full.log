@@ -1,0 +1,13 @@
+=== b01_dino_adjust_full started 2026-10-04T01:57:54+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+type: 236 distinct, 182 singletons, 35 categories with >= 3 (380 photographs), pooled 220
+style: 205 distinct, 131 singletons, 41 categories with >= 3 (403 photographs), pooled 197
+[(i) original] G1: d 0.2352 cos +1.000 | G2: d_T 0.2352 removed 0 dims (0.0% var) | pooled R G1 0.192, G2 0.192
+[(ii) period + area] G1: d 0.2092 cos +0.982 | G2: d_T 0.1623 removed 11 dims (18.6% var) | pooled R G1 0.202, G2 0.135
+[(iii) period + area + type + style] G1: d 0.1603 cos +0.925 | G2: d_T 0.1005 removed 87 dims (57.4% var) | pooled R G1 0.254, G2 0.114
+=== b01_dino_adjust_full started 2026-10-04T02:02:21+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+type: 236 distinct, 182 singletons, 35 categories with >= 3 (380 photographs), pooled 220
+style: 205 distinct, 131 singletons, 41 categories with >= 3 (403 photographs), pooled 197
+[(i) original] G1: d 0.2352 cos +1.000 | G2: d_T 0.2352 removed 0 dims (0.0% var) | pooled R G1 0.192, G2 0.192
+[(ii) period + area] G1: d 0.2092 cos +0.982 | G2: d_T 0.1623 removed 11 dims (18.6% var) | pooled R G1 0.202, G2 0.135
+[(iii) period + area + type + style] G1: d 0.1603 cos +0.925 | G2: d_T 0.1005 removed 87 dims (57.4% var) | pooled R G1 0.254, G2 0.114
+done

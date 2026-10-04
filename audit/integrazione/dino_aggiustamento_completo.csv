@@ -1,0 +1,193 @@
+direction,geometry,training_seed,quantity,estimate,ci_low,ci_high,n_cells,denominator,note
+(i) original,G1 projection on adjusted direction,-,d_adj (norm of the adjusted photograph contrast),0.2352287934639978,,,192,,rank(X)=0 of 0 columns; mean R2 of covariate model 0.000
+(i) original,G1 projection on adjusted direction,-,"cosine(u_adj, u_original)",1.0,,,192,,
+(i) original,G2 common transformation,-,d_T (norm of the photograph contrast after T),0.2352287934639978,,,192,,directions removed 0 of 768; share of photograph variance removed 0.000
+(i) original,G2 common transformation,-,"cosine(u_T, u_original)",1.0,,,192,,
+(i) original,G1 projection on adjusted direction,1254,P A−C,0.04350469479490654,0.02783534769447131,0.061717601905110046,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,1254,R = mean P(A−C) / d,0.1849462991084253,0.11833308025163833,0.26237265003255666,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G1 projection on adjusted direction,1254,P A−BASE,0.04159868184911628,0.02612002775801813,0.05856331088156759,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,1254,P C−BASE,-0.0019060129457902644,-0.011966105291634136,0.008719438337201214,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,1254,P A−C,0.04350469479490654,0.027760922457355335,0.06171501638740523,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,1254,R = mean P(A−C) / d,0.1849462991084253,0.11801668515382746,0.262361658530765,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G2 common transformation,1254,P A−BASE,0.04159868184911628,0.026408295512560537,0.059019030958597916,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,1254,P C−BASE,-0.0019060129457902644,-0.012043572626117995,0.008488297528730837,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.01480808140047949,-0.02054225390192779,-0.009178134133560693,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.0036866642241164273,-0.008304437330689127,0.0007975981036981002,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,AESTHETIC: ΔD own − other (per-image),-0.011121417176363063,-0.016019277704695415,-0.006771223182719568,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.05245543908990541,-0.06450096756455916,-0.034850502386324235,192,,
+(i) original,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.027714331331714748,-0.040383623939312364,-0.01046462884931172,192,,
+(i) original,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.007057726603983308,-0.012359750245974802,-0.002314404823206256,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.006451011088588143,-0.011867665958382963,-0.0014695949465394357,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,CONTROL: ΔD own − other (per-image),-0.000606715515395163,-0.0033339513454281934,0.002111018233649293,192,,negative = closer than BASE
+(i) original,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.04153434398695671,-0.05220902287410226,-0.025534031461523193,192,,
+(i) original,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.03543131618340983,-0.04792778482938965,-0.019681179159111235,192,,
+(i) original,G1 projection on adjusted direction,9865,P A−C,0.041249670103704034,0.025909608357801123,0.05802870183888498,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,9865,R = mean P(A−C) / d,0.1753597826875619,0.11014641522516942,0.24669047094256502,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G1 projection on adjusted direction,9865,P A−BASE,0.041328484183461946,0.025509138988217342,0.058934171284476505,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,9865,P C−BASE,7.881407975791437e-05,-0.012144401865269498,0.012319216649567467,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,9865,P A−C,0.041249670103704034,0.0260058616141701,0.058578710451370336,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,9865,R = mean P(A−C) / d,0.1753597826875619,0.11055560516723198,0.24902865669094168,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G2 common transformation,9865,P A−BASE,0.041328484183461946,0.02502535937190152,0.05884263712429219,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,9865,P C−BASE,7.881407975791437e-05,-0.011844670828635967,0.012565808928923837,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.008080826858508701,-0.014431334916286415,-0.0016885907780544356,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.0030710337663971492,-0.0025657072957851112,0.008491205133535474,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,AESTHETIC: ΔD own − other (per-image),-0.01115186062490585,-0.015948959387854688,-0.006660197886408235,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.03945957803406808,-0.05429578956768893,-0.01999352213959862,192,,
+(i) original,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.014283238653292452,-0.02906895437091641,0.0038696211908975232,192,,
+(i) original,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),0.001290858285243765,-0.0031088956943182214,0.0057677379301237855,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.0009250381613215083,-0.004267751311491976,0.0060077744694473885,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,CONTROL: ΔD own − other (per-image),0.0003658201239222566,-0.002854932673643678,0.0037211312601296478,192,,negative = closer than BASE
+(i) original,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.053368315691301405,-0.06630342918408108,-0.03179904055092053,192,,
+(i) original,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.04700684952113254,-0.06121571925806893,-0.026152243320914998,192,,
+(i) original,G1 projection on adjusted direction,42160,P A−C,0.05044890041669466,0.03522035410930596,0.06758265759242696,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,42160,R = mean P(A−C) / d,0.2144673688700272,0.14972807363693977,0.28730605891055855,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G1 projection on adjusted direction,42160,P A−BASE,0.0319965118839379,0.01844451801887688,0.04611770606511952,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G1 projection on adjusted direction,42160,P C−BASE,-0.018452388532756766,-0.0317327786910018,-0.004946744305582996,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,42160,P A−C,0.05044890041669466,0.035371795810916845,0.06772407158905805,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,42160,R = mean P(A−C) / d,0.2144673688700272,0.15037187960720702,0.28790723529950574,192,0.2352287934639978,denominator fixed within the bootstrap
+(i) original,G2 common transformation,42160,P A−BASE,0.0319965118839379,0.018582833885496825,0.046269512945508115,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,42160,P C−BASE,-0.018452388532756766,-0.03194818506458002,-0.005311762650179986,192,0.2352287934639978,IC conditional on the estimated direction (prompt bootstrap)
+(i) original,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.009506743767254211,-0.01535459705883918,-0.004049261387788475,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.000999525951937013,-0.006264939341205821,0.004093845821785991,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,AESTHETIC: ΔD own − other (per-image),-0.008507217815317198,-0.012525543618567945,-0.004778315400473615,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.04925997459561021,-0.059573609921770215,-0.0342657760753795,192,,
+(i) original,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.03139392827318177,-0.04182519981231704,-0.014346833349233794,192,,
+(i) original,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.002527156763868476,-0.0065357578425394545,0.0012629231048377353,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.001939899250315223,-0.0030568791604742088,0.007224006164074321,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,CONTROL: ΔD own − other (per-image),-0.004467056014183699,-0.007936801574280528,-0.0009635527913716255,192,,negative = closer than BASE
+(i) original,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.008597865298159313,-0.020095183803400272,0.004930596902466472,192,,
+(i) original,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),0.0035156141937823238,-0.010356364447035152,0.018952669757470775,192,,
+(i) original,G1 projection on adjusted direction,mean of the three seeds (descriptive),P A−C,0.04506775510510174,0.032120243520063485,0.059437855485703406,192,0.2352287934639978,
+(i) original,G1 projection on adjusted direction,mean of the three seeds (descriptive),R,0.1915911502220048,0.13654894474038762,0.2526810370891116,192,0.2352287934639978,
+(i) original,G2 common transformation,mean of the three seeds (descriptive),P A−C,0.04506775510510174,0.03201887297167735,0.05908381330341939,192,0.2352287934639978,
+(i) original,G2 common transformation,mean of the three seeds (descriptive),R,0.1915911502220048,0.1361180002675901,0.25117593995763227,192,0.2352287934639978,
+(i) original,G1 projection on adjusted direction,-,d_adj under resampling of the two photograph sets: 2.5% / 97.5%,0.23197524445879292,0.23197524445879292,0.31638202840415935,192,,stability check of the denominator only (norm biased upwards); not a CI of R
+(i) original,G2 common transformation,-,d_T under resampling of the two photograph sets: 2.5% / 97.5%,0.23197524445879292,0.23197524445879292,0.31638202840415935,192,,same
+(ii) period + area,G1 projection on adjusted direction,-,d_adj (norm of the adjusted photograph contrast),0.20920390209601017,,,192,,rank(X)=12 of 12 columns; mean R2 of covariate model 0.067
+(ii) period + area,G1 projection on adjusted direction,-,"cosine(u_adj, u_original)",0.981935701849858,,,192,,
+(ii) period + area,G2 common transformation,-,d_T (norm of the photograph contrast after T),0.16231215886486997,,,192,,directions removed 11 of 768; share of photograph variance removed 0.186
+(ii) period + area,G2 common transformation,-,"cosine(u_T, u_original)",0.6900182434074003,,,192,,
+(ii) period + area,G1 projection on adjusted direction,1254,P A−C,0.0436849733818734,0.028934160113578335,0.060341384346810675,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,1254,R = mean P(A−C) / d,0.20881528950557054,0.13830602500090822,0.28843335971390316,192,0.20920390209601017,denominator fixed within the bootstrap
+(ii) period + area,G1 projection on adjusted direction,1254,P A−BASE,0.03833333490923928,0.023105769830216713,0.05498465505440804,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,1254,P C−BASE,-0.005351638472634109,-0.01451883102092179,0.004005843564041353,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,1254,P A−C,0.027390747214579087,0.018814954121586954,0.03651109801399613,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,1254,R = mean P(A−C) / d,0.16875351425386903,0.11591832831975947,0.22494370273512768,192,0.16231215886486997,denominator fixed within the bootstrap
+(ii) period + area,G2 common transformation,1254,P A−BASE,0.007892533476804561,-0.001483962621739576,0.018636603426299,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,1254,P C−BASE,-0.019498213737774526,-0.026870188222169685,-0.012005133439963562,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.011154625193424474,-0.017716202324266975,-0.004364435257310417,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.00930666222274582,-0.015697505122362974,-0.0027455594091419784,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,AESTHETIC: ΔD own − other (per-image),-0.001847962970678653,-0.00416278929874409,0.00024875566613150594,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.032651265899091675,-0.042315132297692785,-0.018391151334569998,192,,
+(ii) period + area,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.028005567607524817,-0.03802355263964795,-0.013489872498322418,192,,
+(ii) period + area,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.0061325007118910565,-0.012989613731616763,0.0003143886034728621,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.0021941729837229623,-0.00952139226348043,0.00450749689281289,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,CONTROL: ΔD own − other (per-image),-0.0039383277281680945,-0.005481082139997257,-0.002459658527867495,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.03613742828254721,-0.047569564971467006,-0.01974670766901877,192,,
+(ii) period + area,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.02327671275442761,-0.03520487865630039,-0.00850707881979565,192,,
+(ii) period + area,G1 projection on adjusted direction,9865,P A−C,0.037975171115167815,0.02229924345543862,0.05357400249118912,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,9865,R = mean P(A−C) / d,0.1815222887082662,0.10659095376339972,0.2560851014461592,192,0.20920390209601017,denominator fixed within the bootstrap
+(ii) period + area,G1 projection on adjusted direction,9865,P A−BASE,0.03912766661191281,0.023519986861749248,0.05594831899205507,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,9865,P C−BASE,0.0011524954967449912,-0.010507911795913899,0.012531819432835135,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,9865,P A−C,0.018131011607810162,0.008191071938739858,0.028401500778460813,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,9865,R = mean P(A−C) / d,0.11170458044923674,0.050464931253604885,0.17498073451235385,192,0.16231215886486997,denominator fixed within the bootstrap
+(ii) period + area,G2 common transformation,9865,P A−BASE,0.007345266118357602,-0.003256532073167172,0.018769624549186403,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,9865,P C−BASE,-0.010785745489452561,-0.019980502243264496,-0.001660733981091154,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),0.0010193078528205428,-0.006204933409665542,0.00828033547207997,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.0029962009958089276,-0.004412331133635987,0.010230160431718491,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,AESTHETIC: ΔD own − other (per-image),-0.001976893142988384,-0.004375009938423823,0.0003036275446268643,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.013192342886398145,-0.02506094017209452,0.0011460636775687187,192,,
+(ii) period + area,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.008958519313734203,-0.02091371773475837,0.005958683733919503,192,,
+(ii) period + area,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),0.009027231772511109,0.001928995805614227,0.016539104178337812,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.01079192924975341,0.0032735795639589815,0.01846949616784148,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,CONTROL: ΔD own − other (per-image),-0.0017646974772422986,-0.003565516420255723,5.407087272285237e-05,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.029362770947052363,-0.04082973749678912,-0.011439433760875573,192,,
+(ii) period + area,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.022232069730183546,-0.034412851456928704,-0.004864373424772079,192,,
+(ii) period + area,G1 projection on adjusted direction,42160,P A−C,0.045368693215532385,0.031189570389931018,0.06127995218020793,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,42160,R = mean P(A−C) / d,0.2168635133522093,0.1490869437780236,0.2929197379506079,192,0.20920390209601017,denominator fixed within the bootstrap
+(ii) period + area,G1 projection on adjusted direction,42160,P A−BASE,0.030600376761460005,0.01775593955729478,0.04448398891693974,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G1 projection on adjusted direction,42160,P C−BASE,-0.014768316454072387,-0.02699834812071119,-0.0025508698590299738,192,0.20920390209601017,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,42160,P A−C,0.020051473213132345,0.010619539765894182,0.031190093703165233,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,42160,R = mean P(A−C) / d,0.12353648274634703,0.06542664357471388,0.19216116599824157,192,0.16231215886486997,denominator fixed within the bootstrap
+(ii) period + area,G2 common transformation,42160,P A−BASE,0.006214838867474884,-0.003860937674297375,0.01649801158114561,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,42160,P C−BASE,-0.013836634345657461,-0.02139833854436321,-0.006089356049743292,192,0.16231215886486997,IC conditional on the estimated direction (prompt bootstrap)
+(ii) period + area,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.003249352153573826,-0.009844007282786737,0.0034573722857486984,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.001708101660461675,-0.008107516097422218,0.004904353074283556,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,AESTHETIC: ΔD own − other (per-image),-0.001541250493112151,-0.003801369549724998,0.0006282871975597452,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.029231039384356672,-0.038021237426915544,-0.01539200721616588,192,,
+(ii) period + area,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.025661680654551766,-0.03473112654267876,-0.011387373717516087,192,,
+(ii) period + area,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),0.00023891699310900813,-0.006450548603787582,0.006829177899901567,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.0027879122213620012,-0.004308795763142866,0.009617050057584668,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,CONTROL: ΔD own − other (per-image),-0.002548995228252993,-0.004064645977373108,-0.0009186816388745703,192,,negative = closer than BASE
+(ii) period + area,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),0.003156804500697552,-0.009207978305390297,0.016362310389000247,192,,
+(ii) period + area,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),0.010800612198248738,-0.001943833377898752,0.023530355650555477,192,,
+(ii) period + area,G1 projection on adjusted direction,mean of the three seeds (descriptive),P A−C,0.042342945904191194,0.02988149161941021,0.05548532581410811,192,0.20920390209601017,
+(ii) period + area,G1 projection on adjusted direction,mean of the three seeds (descriptive),R,0.20240036385534865,0.14283429381588048,0.2652212757897994,192,0.20920390209601017,
+(ii) period + area,G2 common transformation,mean of the three seeds (descriptive),P A−C,0.02185774401184053,0.014794978336839352,0.029570594056184757,192,0.16231215886486997,
+(ii) period + area,G2 common transformation,mean of the three seeds (descriptive),R,0.1346648591498176,0.091151386564679,0.18218348066458298,192,0.16231215886486997,
+(ii) period + area,G1 projection on adjusted direction,-,d_adj under resampling of the two photograph sets: 2.5% / 97.5%,0.20896491551515803,0.20896491551515803,0.28063393196342956,192,,stability check of the denominator only (norm biased upwards); not a CI of R
+(ii) period + area,G2 common transformation,-,d_T under resampling of the two photograph sets: 2.5% / 97.5%,0.172898150785554,0.172898150785554,0.2266602448379047,192,,same
+(iii) period + area + type + style,G1 projection on adjusted direction,-,d_adj (norm of the adjusted photograph contrast),0.16031058523808836,,,192,,rank(X)=88 of 88 columns; mean R2 of covariate model 0.257
+(iii) period + area + type + style,G1 projection on adjusted direction,-,"cosine(u_adj, u_original)",0.9250023900486278,,,192,,
+(iii) period + area + type + style,G2 common transformation,-,d_T (norm of the photograph contrast after T),0.10051217856254248,,,192,,directions removed 87 of 768; share of photograph variance removed 0.574
+(iii) period + area + type + style,G2 common transformation,-,"cosine(u_T, u_original)",0.4272953879599184,,,192,,
+(iii) period + area + type + style,G1 projection on adjusted direction,1254,P A−C,0.04270550024617107,0.02867332593280411,0.05878332175307983,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,1254,R = mean P(A−C) / d,0.2663922671278766,0.1788610894921216,0.36668396953187243,192,0.16031058523808836,denominator fixed within the bootstrap
+(iii) period + area + type + style,G1 projection on adjusted direction,1254,P A−BASE,0.03585933845178845,0.022395376435194726,0.05107770736458345,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,1254,P C−BASE,-0.006846161794382619,-0.01581735031960916,0.00217146674425066,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,1254,P A−C,0.014786609442774018,0.008475269181294496,0.020988557076088044,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,1254,R = mean P(A−C) / d,0.1471126151501455,0.08432081865602846,0.20881605966811445,192,0.10051217856254248,denominator fixed within the bootstrap
+(iii) period + area + type + style,G2 common transformation,1254,P A−BASE,0.007393801727592333,0.0012336545091123387,0.013630792648757528,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,1254,P C−BASE,-0.007392807715181683,-0.011929014041815717,-0.0024448444264715246,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.011888366504366909,-0.019199536389029007,-0.00444333050035639,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.010484028024677211,-0.017777277862638823,-0.0025984416392928656,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,AESTHETIC: ΔD own − other (per-image),-0.0014043384796897016,-0.0024048518631009986,-0.0003454495660486039,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.02333547431642427,-0.031280545934057005,-0.011548414861513636,192,,
+(iii) period + area + type + style,G2 common transformation,1254,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.018822646931762416,-0.02682423556259104,-0.00785570175051526,192,,
+(iii) period + area + type + style,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.009339940941429462,-0.017053843877958882,-0.0012355702318594024,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.008234959964541929,-0.01646652592681558,-0.00013804129337186894,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,CONTROL: ΔD own − other (per-image),-0.0011049809768875305,-0.0018501054084900668,-0.00032501478962046427,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.018729365889658345,-0.0292643695097558,-0.007272663943294574,192,,
+(iii) period + area + type + style,G2 common transformation,1254,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.015022647694546032,-0.025250615926882432,-0.0034965425600141323,192,,
+(iii) period + area + type + style,G1 projection on adjusted direction,9865,P A−C,0.03552683657299955,0.021528143930061243,0.0499963909925061,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,9865,R = mean P(A−C) / d,0.22161254367723868,0.13429022106112523,0.3118720508583572,192,0.16031058523808836,denominator fixed within the bootstrap
+(iii) period + area + type + style,G1 projection on adjusted direction,9865,P A−BASE,0.032790338145074295,0.01920314044261025,0.04771949392509097,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,9865,P C−BASE,-0.002736498427925251,-0.013077981120190419,0.00809969848260013,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,9865,P A−C,0.008894028462695228,0.0022026780754039387,0.01546530595650124,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,9865,R = mean P(A−C) / d,0.08848707280940117,0.02191453918226784,0.15386499604003848,192,0.10051217856254248,denominator fixed within the bootstrap
+(iii) period + area + type + style,G2 common transformation,9865,P A−BASE,0.001616307108557798,-0.004010639022695483,0.006835713886299889,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,9865,P C−BASE,-0.007277721354137431,-0.013171877987092165,-0.0014851323104773991,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),6.2882088290907206e-06,-0.009915355395703452,0.010409407338615312,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.00048650738176342297,-0.00985528119851149,0.010622984862680703,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,AESTHETIC: ΔD own − other (per-image),-0.00048021917293433373,-0.001380666686818893,0.000429759509310848,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.012095231745227919,-0.02126569585926285,-0.000814571900095302,192,,
+(iii) period + area + type + style,G2 common transformation,9865,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.011032832964697925,-0.01988654001139352,0.00012047825340648637,192,,
+(iii) period + area + type + style,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),0.0004963551666302309,-0.007915324823021418,0.008943793483430992,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),0.0015289747954279915,-0.00681816280844336,0.01028464259856951,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,CONTROL: ΔD own − other (per-image),-0.0010326196287977606,-0.0019129378629363168,-0.00016325185818476219,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.02015951641902136,-0.029153713624427074,-0.007428949722140835,192,,
+(iii) period + area + type + style,G2 common transformation,9865,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.016513615563807094,-0.026530656681784663,-0.003363739798348782,192,,
+(iii) period + area + type + style,G1 projection on adjusted direction,42160,P A−C,0.04391882391551299,0.031084923063659623,0.05808104874805817,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,42160,R = mean P(A−C) / d,0.2739608482514495,0.19390437017925702,0.3623032668853275,192,0.16031058523808836,denominator fixed within the bootstrap
+(iii) period + area + type + style,G1 projection on adjusted direction,42160,P A−BASE,0.026836095896687062,0.015226113933659944,0.039516677530133396,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G1 projection on adjusted direction,42160,P C−BASE,-0.01708272801882592,-0.028290226660001402,-0.005947487719763022,192,0.16031058523808836,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,42160,P A−C,0.010623200648950748,0.005806249191936037,0.015453540794633826,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,42160,R = mean P(A−C) / d,0.1056906814763804,0.05776662365668623,0.1537479439371424,192,0.10051217856254248,denominator fixed within the bootstrap
+(iii) period + area + type + style,G2 common transformation,42160,P A−BASE,0.004479257468965374,-0.0012897304654218402,0.010337968840281512,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,42160,P C−BASE,-0.006143943179985375,-0.010597307674595558,-0.001217377069010259,192,0.10051217856254248,IC conditional on the estimated direction (prompt bootstrap)
+(iii) period + area + type + style,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.004853378058630931,-0.013613214864404791,0.004161520370184881,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,AESTHETIC: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.003957100278733194,-0.012790804007551847,0.005352344705343242,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,AESTHETIC: ΔD own − other (per-image),-0.0008962777798977372,-0.0018462405865507223,2.3849814056806456e-05,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OWN corpus (vs BASE),-0.019485547086671634,-0.027769575682075588,-0.008406604486721887,192,,
+(iii) period + area + type + style,G2 common transformation,42160,AESTHETIC: ΔD centroid-to-centroid to OTHER corpus (vs BASE),-0.01669688821096632,-0.02499472933101687,-0.005341453224358832,192,,
+(iii) period + area + type + style,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OWN corpus centroid (vs BASE),-0.0022697658902645795,-0.011386625349965913,0.006637179735625617,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,CONTROL: ΔD mean per-image distance to OTHER corpus centroid (vs BASE),-0.001341759941728208,-0.010491815843658497,0.007605766724358982,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,CONTROL: ΔD own − other (per-image),-0.0009280059485363724,-0.001645463177653501,-0.00017513952855582472,192,,negative = closer than BASE
+(iii) period + area + type + style,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OWN corpus (vs BASE),0.004059939706149929,-0.006118712817599287,0.01435491237589042,192,,
+(iii) period + area + type + style,G2 common transformation,42160,CONTROL: ΔD centroid-to-centroid to OTHER corpus (vs BASE),0.007130638675847234,-0.0027992704416881196,0.016614494179911864,192,,
+(iii) period + area + type + style,G1 projection on adjusted direction,mean of the three seeds (descriptive),P A−C,0.040717053578227864,0.02965623676361132,0.05253592258141436,192,0.16031058523808836,
+(iii) period + area + type + style,G1 projection on adjusted direction,mean of the three seeds (descriptive),R,0.2539885530188549,0.18499238038191168,0.3277133727843961,192,0.16031058523808836,
+(iii) period + area + type + style,G2 common transformation,mean of the three seeds (descriptive),P A−C,0.011434612851473333,0.0074730754708158455,0.015521845386506394,192,0.10051217856254248,
+(iii) period + area + type + style,G2 common transformation,mean of the three seeds (descriptive),R,0.11376345647864239,0.07434995020196299,0.15442750926792534,192,0.10051217856254248,
+(iii) period + area + type + style,G1 projection on adjusted direction,-,d_adj under resampling of the two photograph sets: 2.5% / 97.5%,0.14655186567827008,0.14655186567827008,0.19883967037146036,192,,stability check of the denominator only (norm biased upwards); not a CI of R
+(iii) period + area + type + style,G2 common transformation,-,d_T under resampling of the two photograph sets: 2.5% / 97.5%,0.1001163357326047,0.1001163357326047,0.12660108928110414,192,,same

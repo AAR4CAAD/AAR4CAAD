@@ -1,0 +1,35 @@
+{
+  "written_before_results": "2026-10-04T10:30:00+02:00",
+  "status": "post-review sensitivity, not preregistered; specification fixed before computing any adjusted result with building type and style; earlier results (original direction, period+area) were known",
+  "inputs": {
+    "embeddings_photographs_and_original_outputs": "analysis/metrics/embeddings_dinov2_vitb14.npz (CLS, 1176 x 768)",
+    "embeddings_replication_outputs": "analysis/metrics/embeddings_replication_dinov2_vitb14.npz (960 x 768)",
+    "frozen_direction": "analysis/baseline/direction_dinov2.npz (d = 0.235229)",
+    "metadata": "export image_metadata.csv (period, continent[=area], building_type, architectural_style) as recorded",
+    "preprocessing": "identical to the frozen file: L2-normalised CLS; no re-extraction; same 600 photographs, same 192 cells, same 7 adapters (REP-AES-S1254-R excluded as determinism re-run)"
+  },
+  "metadata_coding": {
+    "period": "as recorded; 'pre-1919' (1 photograph) merged into '1919-1945'",
+    "area": "continent field as recorded, 8 labels, no merging",
+    "building_type": "catalogue strings normalised only by trimming and lower-casing (236 -> 236 distinct; 182 singletons); categories with at least 3 photographs among the 600 get their own dummy (35 categories, 380 photographs); all others pooled into one 'rare type' level (220 photographs). No manual merging of aliases (museum/art museum etc. remain distinct): declared limit",
+    "architectural_style": "same normalisation (206 -> 205 distinct; 131 singletons); categories with at least 3 photographs get a dummy (41 categories, 403 photographs); others pooled into 'rare style' (197 photographs)",
+    "overlap_A_vs_C": "building type: 49 vs 47 categories, 27 shared; style: 46 vs 52 categories, 15 shared (reported; the model is additive, not saturated: it cannot identify an 'autonomous' preference effect)"
+  },
+  "models_compared": [
+    "(i) original direction: no adjustment",
+    "(ii) period + area (additive dummies) - repeated from the audit for comparability",
+    "(iii) period + area + building type + style (additive dummies; rare levels pooled as above)"
+  ],
+  "estimation": "per embedding dimension, OLS of the L2-normalised CLS of the 600 photographs on intercept + dummies; coefficient matrix B (k x 768); residuals E_res = E - X B. Rank of X reported; if rank-deficient, least-squares minimum-norm solution (numpy lstsq) and the deficiency reported",
+  "two_geometries_declared": {
+    "G1_projection_on_adjusted_direction": "u_adj = normalised (mean E_res[A] - mean E_res[C]); outputs are ORIGINAL embeddings projected on u_adj; d_adj = ||mean E_res[A] - mean E_res[C]||; R = mean P / d_adj. This is the geometry of the audit's previous adjustment (outputs cannot be residualised: they have no period/area/type/style). Distances are NOT computed in this geometry because a raw output vs a residualised centroid is not a meaningful distance.",
+    "G2_common_linear_transformation": "T(e) = (I - Pi) e, where Pi is the orthogonal projector onto the row space of B (the embedding directions along which the covariates shift the photographs, dimension = rank(B) <= k). T is estimated on the photographs only and applied identically to photographs and outputs. In T-space: direction u_T from the transformed photograph centroids, d_T, projections P_T of transformed outputs, R_T = mean P_T / d_T, and distances DeltaD (mean per-image distance to the transformed photograph centroid and centroid-to-centroid), own vs other corpus, own-minus-other. The dimension removed and the share of photograph variance removed are reported. G2 differs from G1: in G2 the outputs are transformed too, so distances are comparable; P and R are reported for both geometries and never mixed."
+  },
+  "cells_and_units": "192 prompt x generation-seed cells shared by BASE and the six adapters; contrasts per cell (same prompt, same generation seed); per training seed 1254, 9865, 42160 separately; the mean of the three seeds is a descriptive summary of these six adapters, not an inference about future trainings",
+  "uncertainty": {
+    "conditional_on_direction": "bootstrap over the 48 prompts (5000 resamples, seed 20261004, percentile 95%) for every P, R-numerator and DeltaD; R intervals are conditional on d (the denominator is fixed within this bootstrap)",
+    "denominator_stability": "d (or d_T) re-estimated by resampling the 89 AESTHETIC and 89 CONTROL photographs with replacement (the other 422 fixed), refitting the covariate model and the transformation on the resampled 600 (1000 resamples): quantiles of d_adj reported as a stability check of the denominator ONLY; the bootstrap norm is biased upwards, so these quantiles are not used as a confidence interval of R"
+  },
+  "reporting": "dino_aggiustamento_completo.csv: one row per (direction, geometry, training seed or 'mean of seeds', quantity); columns estimate, ci_low, ci_high, n_cells, denominator, notes. No threshold for 'positive'; estimates and intervals are reported whatever their sign.",
+  "what_this_is_not": "a linear additive adjustment on recorded catalogue strings; it does not isolate a preference effect from composition, and removing many covariate directions (G2) also removes genuine corpus differences aligned with them: attenuation under G2 is expected by construction and is not evidence against transfer"
+}

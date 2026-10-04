@@ -1,0 +1,39 @@
+=== b03_caption_v1_v2 started 2026-10-04T02:09:34+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+                                                                      0                                                              1
+corpus                                                        AESTHETIC                                                        CONTROL
+photographs                                                          89                                                             89
+captions_v2                                                          89                                                             89
+texts_changed_v1_to_v2                                               89                                                             62
+texts_unchanged                                                       0                                                             27
+current_caption_equals_v2                                            89                                                             89
+current_reviewed_flag                                                89                                                             89
+reviewed_by                                {"admin@research.local": 89}  {"admin@research.local": 62, "researcher@research.local": 27}
+reviewed_at_min                                2026-09-28T01:28:46.447Z                                       2026-09-27T20:48:19.387Z
+reviewed_at_max                                2026-09-28T01:28:47.162Z                                       2026-09-28T01:29:17.725Z
+source_of_current                                      {"Imported": 89}                                               {"Imported": 89}
+model_field_filled                                                    0                                                              0
+caption_versions_per_photo_min_median_max                         3/4/9                                                          1/2/4
+mean_words_v1                                                      27.2                                                           33.7
+mean_words_v2                                                      35.3                                                           35.1
+CONTROL unchanged texts: 27 | reviewed after the v1 freeze: 0 | reviewed before: 27
+{"caption_changed": 554, "caption_changed_span": "2026-09-27T13:48:08.408Z \u2192 2026-09-28T01:28:28.165Z", "caption_changed_by": {"admin@research.local": 329, "researcher@research.local": 225}, "caption_reviewed": 444, "caption_reviewed_span": "2026-09-27T14:16:12.951Z \u2192 2026-09-28T01:29:17.726Z", "caption_reviewed_by": {"admin@research.local": 252, "researcher@research.local": 192}}
+=== b03_caption_v1_v2 started 2026-10-04T02:09:50+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+                                                                      0                                                              1
+corpus                                                        AESTHETIC                                                        CONTROL
+photographs                                                          89                                                             89
+captions_v2                                                          89                                                             89
+texts_changed_v1_to_v2                                               89                                                             62
+texts_unchanged                                                       0                                                             27
+current_caption_equals_v2                                            89                                                             89
+current_reviewed_flag                                                89                                                             89
+reviewed_by                                {"admin@research.local": 89}  {"admin@research.local": 62, "researcher@research.local": 27}
+reviewed_at_min                                2026-09-28T01:28:46.447Z                                       2026-09-27T20:48:19.387Z
+reviewed_at_max                                2026-09-28T01:28:47.162Z                                       2026-09-28T01:29:17.725Z
+source_of_current                                      {"Imported": 89}                                               {"Imported": 89}
+model_field_filled                                                    0                                                              0
+caption_versions_per_photo_min_median_max                         3/4/9                                                          1/2/4
+mean_words_v1                                                      27.2                                                           33.7
+mean_words_v2                                                      35.3                                                           35.1
+CONTROL unchanged texts: 27 | reviewed after the v1 freeze: 0 | reviewed before: 27
+{"caption_changed": 554, "caption_changed_span": "2026-09-27T13:48:08.408Z \u2192 2026-09-28T01:28:28.165Z", "caption_changed_by": {"admin@research.local": 329, "researcher@research.local": 225}, "caption_reviewed": 444, "caption_reviewed_span": "2026-09-27T14:16:12.951Z \u2192 2026-09-28T01:29:17.726Z", "caption_reviewed_by": {"admin@research.local": 252, "researcher@research.local": 192}}
+done

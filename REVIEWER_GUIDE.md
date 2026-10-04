@@ -20,6 +20,8 @@ Everything referenced below is in this repository. "Export" = `data/export/` (an
 | minor — ICC, ties, linked/unlinked, abstract 158 vs 159 | `audit/outputs/report_human.md` (Definitions), `human_reproduction.csv` | estimator documented; Davidson OR 1.089 (0.985/1.205); −0.116 (−0.289/+0.056) not powered; 0.104 is the participant-level estimate (n = 158) |
 | VLM "five summary measures" | `analysis/ANALYSIS_PLAN.md` §8.6 (dated note), `analysis/vlm_report/report_replication_vlm.md` §1 | the five measures named before the replication VLM run |
 
+Integration after the audit (`audit/integrazione/`): DINOv2 direction adjusted also for building type and style in two declared geometries (`dino_aggiustamento_completo.csv`), stability of the selection under rater resampling, reproduction of the authors' local tables, captions v1→v2 additions per descriptor, complete Table 3 (`tabella3_completa.csv`), hardware and LoRA inference scale (`report_hardware_calendario.md`); summary in `audit/integrazione/RISCONTRO_INTEGRAZIONE.md`.
+
 Deliverables of the audit: `audit/RISPOSTA_REVIEWER.md` (point by point, with the five-question synthesis), `audit/TABELLA_CHIUSURA.csv` (status of each request: closed / declared limit / open / requires new training or data), `audit/PATCH_MANOSCRITTO.md` (proposed wording, not yet applied), `audit/MATERIALI_O_DECISIONI_MANCANTI.md`, `audit/CORREZIONI_SECONDO_PASSAGGIO.md` (corrections after an external check of the audit).
 
 Re-running: `analysis/README.md` for the historical analyses; `audit/README.md` for the audit scripts (they read `data/export/` by default in this repository).

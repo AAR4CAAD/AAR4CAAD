@@ -1,0 +1,3 @@
+perimetro,n,spearman_rho,p_asintotico_non_cluster,nota
+completo166,422,0.39656900050983473,2.405972626806324e-17,Affinita proporzionale a proiezione su u; fotografie non usate nella LoRA. Non esclude memorizzazione degli output o presenza nel pretraining del modello base.
+storico164_mean_rating_salvato,422,0.39312089535713246,4.777269270235928e-17,Affinita proporzionale a proiezione su u; fotografie non usate nella LoRA. Non esclude memorizzazione degli output o presenza nel pretraining del modello base.

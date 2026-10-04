@@ -1,0 +1,83 @@
+{
+  "export_sha256": "ea0bdbf6faa91396019e31db97f81784957bd80bd84342179670b5cdbc055d1c",
+  "spec_sha256": "8ddca757cea1dd83ad156d5f620eef7716d124a942e2e88954c68f6c2045c48b",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "bootstrap_n": 3000,
+  "bootstrap_seed": 20261004,
+  "n_set_originale": 89,
+  "cardinality_mean": 100.93933333333334,
+  "cardinality_quantiles_025_50_975": [
+    70.97500000000001,
+    100.0,
+    134.0
+  ],
+  "recovery_mean": 0.788003745318352,
+  "recovery_quantiles_025_50_975": [
+    0.6292134831460674,
+    0.797752808988764,
+    0.9101123595505618
+  ],
+  "jaccard_mean": 0.5877371356548404,
+  "jaccard_quantiles_025_50_975": [
+    0.4859154929577465,
+    0.5882352941176471,
+    0.6880733944954128
+  ],
+  "original_inclusion_probability_min_median_max": [
+    0.5066666666666667,
+    0.7953333333333333,
+    1.0
+  ],
+  "binomiale": {
+    "vittorie_A": 677,
+    "n_decisivi": 1320,
+    "proporzione": 0.5128787878787879,
+    "p_bilaterale_esatto": 0.3637276592698947,
+    "ci95_cp_low": 0.4855326336726942,
+    "ci95_cp_high": 0.5401674826601717,
+    "nota": "Test marginale sotto indipendenza dei confronti; non tiene conto di partecipanti e prompt ripetuti. Non sostituisce Davidson o bootstrap cluster."
+  },
+  "heldout": [
+    {
+      "perimetro": "completo166",
+      "n": 422,
+      "spearman_rho": 0.39656900050983473,
+      "p_asintotico_non_cluster": 2.405972626806324e-17,
+      "nota": "Affinita proporzionale a proiezione su u; fotografie non usate nella LoRA. Non esclude memorizzazione degli output o presenza nel pretraining del modello base."
+    },
+    {
+      "perimetro": "storico164_mean_rating_salvato",
+      "n": 422,
+      "spearman_rho": 0.39312089535713246,
+      "p_asintotico_non_cluster": 4.777269270235928e-17,
+      "nota": "Affinita proporzionale a proiezione su u; fotografie non usate nella LoRA. Non esclude memorizzazione degli output o presenza nel pretraining del modello base."
+    }
+  ],
+  "icc": [
+    {
+      "perimetro": "completo",
+      "n_partecipanti": 166,
+      "n_risposte": 23012,
+      "n_immagini": 600,
+      "MS_between": 12.802914776146249,
+      "MS_within": 1.7915776336622407,
+      "df_within": 22247.0,
+      "k0": 38.33194802624572,
+      "ICC1_storico": 0.13818409049638342,
+      "ICCk_storico": 0.8600648629638449
+    },
+    {
+      "perimetro": "filtro_export",
+      "n_partecipanti": 164,
+      "n_risposte": 22712,
+      "n_immagini": 600,
+      "MS_between": 12.693050719923345,
+      "MS_within": 1.796844025654687,
+      "df_within": 21949.0,
+      "k0": 37.83199000212283,
+      "ICC1_storico": 0.13814631632214652,
+      "ICCk_storico": 0.8584387579233167
+    }
+  ]
+}

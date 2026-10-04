@@ -1,0 +1,24 @@
+=== b05_tabella3 started 2026-10-04T02:11:26+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+A−C     | ratings: participant-level mean difference, one-sample t: +0.1037 [+0.0291, +0.1782] p=0.0067282224415553225 n=158
+BASE−C  | ratings: participant-level mean difference, one-sample t: +0.1401 [+0.0684, +0.2118] p=0.0001667751344072064 n=158
+A−BASE  | ratings: participant-level mean difference, one-sample t: -0.0364 [-0.1075, +0.0347] p=0.3132502089057603 n=158
+A−C     | ratings: linear mixed model, crossed random intercepts (participant + prompt×seed cell + image), linear contrast: +0.1011 [+0.0160, +0.1862] p=0.01986328720933761 n=9413
+BASE−C  | ratings: linear mixed model, crossed random intercepts (participant + prompt×seed cell + image), linear contrast: +0.1344 [+0.0493, +0.2194] p=0.0019549308100808137 n=9413
+A−BASE  | ratings: linear mixed model, crossed random intercepts (participant + prompt×seed cell + image), linear contrast: -0.0333 [-0.1184, +0.0518] p=0.4434141343442435 n=9413
+mixed model 78s
+A−C     | ratings: two-way (participant × prompt) pigeonhole bootstrap of the participant-level mean difference: +0.1037 [-0.0192, +0.2366] p=None n=158 × 48
+BASE−C  | ratings: two-way (participant × prompt) pigeonhole bootstrap of the participant-level mean difference: +0.1401 [+0.0002, +0.2780] p=None n=158 × 48
+A−BASE  | ratings: two-way (participant × prompt) pigeonhole bootstrap of the participant-level mean difference: -0.0364 [-0.1624, +0.1001] p=None n=158 × 48
+A−C     | pairs: Bradley–Terry odds ratio (decisive choices), cluster-robust by participant: +1.0899 [+0.9848, +1.2062] p=0.09569509725135157 n=4010
+BASE−C  | pairs: Bradley–Terry odds ratio (decisive choices), cluster-robust by participant: +1.1334 [+1.0385, +1.2370] p=0.005298189218700658 n=4010
+A−BASE  | pairs: Bradley–Terry odds ratio (decisive choices), cluster-robust by participant: +0.9616 [+0.8742, +1.0576] p=0.4175560857563208 n=4010
+A−C     | pairs: Davidson model with ties, cluster-robust by participant: +1.0894 [+0.9849, +1.2049] p=0.09545870385980754 n=4736
+BASE−C  | pairs: Davidson model with ties, cluster-robust by participant: +1.1331 [+1.0382, +1.2368] p=0.0054052029531710295 n=4736
+A−BASE  | pairs: Davidson model with ties, cluster-robust by participant: +0.9614 [+0.8736, +1.0580] p=0.4175331946603855 n=4736
+A−C     | pairs: Davidson odds ratio, two-way (participant × prompt) pigeonhole bootstrap: +1.0894 [+0.9089, +1.3058] p=None n=158 × 48
+BASE−C  | pairs: Davidson odds ratio, two-way (participant × prompt) pigeonhole bootstrap: +1.1331 [+0.9435, +1.3568] p=None n=158 × 48
+A−BASE  | pairs: Davidson odds ratio, two-way (participant × prompt) pigeonhole bootstrap: +0.9614 [+0.7953, +1.1487] p=None n=158 × 48
+A−C     | pairs: exact binomial on decisive choices (marginal): +0.5129 [+0.4855, +0.5402] p=0.3637276592698941 n=1320
+BASE−C  | pairs: exact binomial on decisive choices (marginal): +0.5397 [+0.5126, +0.5665] p=0.0038852257072073664 n=1349
+A−BASE  | pairs: exact binomial on decisive choices (marginal): +0.4989 [+0.4718, +0.5260] p=0.9564475195073397 n=1341
+done
