@@ -58,6 +58,10 @@ Gli script leggono per default `../data/export/` (copia anonimizzata dell'export
 
 Gli script leggono per default `../data/export/` (copia anonimizzata dell'export: identificativi dei partecipanti casuali, orari relativi, ruoli rari aggregati). Rieseguiti qui il 4 ottobre 2026: `a00`–`a05`, `a09`, `a10 --dry-run` riproducono gli stessi valori dell'esecuzione sull'export completo; i soli scostamenti sono negli intervalli bootstrap che dipendono dall'ordine degli identificativi (es. bootstrap a due vie dei rating −0,024/+0,235 contro −0,025/+0,233: errore Monte Carlo). `a06_runs_timeline.py` e `a07_documentation.py` richiedono il registro audit completo della piattaforma (non ridistribuito perché contiene eventi sui singoli partecipanti): i loro output, prodotti sull'export completo il 3 ottobre 2026, sono in `outputs/`. `inputs/previous_reply/` contiene gli allegati (dati derivati) del riscontro tecnico precedente; i testi delle review e le bozze del manoscritto non sono ridistribuiti.
 
+## Riproduzione (comandi) in questo repository
+
+Gli script leggono per default `../data/export/` (copia anonimizzata dell'export: identificativi dei partecipanti casuali, orari relativi, ruoli rari aggregati). Rieseguiti qui il 4 ottobre 2026: `a00`–`a05`, `a09`, `a10 --dry-run` riproducono gli stessi valori dell'esecuzione sull'export completo; i soli scostamenti sono negli intervalli bootstrap che dipendono dall'ordine degli identificativi (es. bootstrap a due vie dei rating −0,024/+0,235 contro −0,025/+0,233: errore Monte Carlo). `a06_runs_timeline.py` e `a07_documentation.py` richiedono il registro audit completo della piattaforma (non ridistribuito perché contiene eventi sui singoli partecipanti): i loro output, prodotti sull'export completo il 3 ottobre 2026, sono in `outputs/`. `inputs/previous_reply/` contiene gli allegati (dati derivati) del riscontro tecnico precedente; i testi delle review e le bozze del manoscritto non sono ridistribuiti.
+
 ## Riproduzione (comandi)
 
 ```

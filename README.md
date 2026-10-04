@@ -3,7 +3,7 @@
 *From curated references to the generated image: transfer of human preferences in the fine-tuning of diffusion models
 for architectural images* (pilot study)
 
-Data, code, protocol and every result behind the manuscript, prepared for double-blind review. Nothing here identifies
+Published at https://github.com/<redacted>/<redacted> (manuscript revision 16). Data, code, protocol and every result behind the manuscript, prepared for double-blind review. Nothing here identifies
 the participants or the authors (see [ANONYMISATION.md](ANONYMISATION.md)).
 [PAPER_MAP.md](PAPER_MAP.md) links every section, table, figure and number of the manuscript to the file that supports it.
 
