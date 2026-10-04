@@ -1,0 +1,20 @@
+=== a05_captions started 2026-10-03T20:50:28+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+frozen captions: {'AESTHETIC': 89, 'CONTROL': 89} | empty: 0 | mean words A/C: {'AESTHETIC': 35.3, 'CONTROL': 35.1}
+snapshot == current platform caption: 178 of 178
+captions changed between v1 and v2: AESTHETIC 89/89, CONTROL 62/89
+caption.changed events: 554 between 2026-09-27T13:48:08.408Z and 2026-09-28T01:28:28.165Z | by user: {'admin@research.local': 329, 'researcher@research.local': 225}
+caption sources (all versions): {'Imported': 329, 'Manual': 225} | model field non-empty: 0
+lexicon counts identical to the previous reply: 28 of 28
+[variant] curved_organic STRICT (curve*, undulating, organic, sinuous, flowing): A 20 C 14
+[variant] curved_organic EXTENDED (previous reply): A 37 C 27
+[variant] curved_organic: arches/domes/round/circular/cylindrical/shell/sphere/oval ONLY: A 19 C 17
+[variant] curved word alone: A 16 C 14
+[variant] urban EXTENDED (previous reply): A 14 C 12
+[variant] urban without 'city hall/gate/library': A 14 C 12
+[variant] sharpness EXTENDED: A 2 C 0
+[variant] sharpness without shape uses: A 1 C 0
+[variant] brightness EXTENDED: A 4 C 1
+[variant] brightness without colour uses: A 1 C 1
+informative lexical descriptors: 13; profile r(lexical contrast, x photos) = +0.573 (p 0.040); Spearman +0.591; r(lexical, a−c outputs) = +0.324 (p 0.280); Spearman +0.415
+same sign lexical vs x: 7/13; lexical vs outputs: 6/13
+done

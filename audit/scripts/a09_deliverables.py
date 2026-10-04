@@ -1,0 +1,99 @@
+"""
+Audit step 9 — assembles RIPRODUZIONE_PRECEDENTI.csv and TABELLA_CHIUSURA.csv from the outputs of steps 1–7, and writes
+SHA256SUMS.txt of the whole audit folder.
+"""
+import glob
+import os
+
+import pandas as pd
+
+from common import AUDIT, OUT, Log, sha256
+
+log = Log("a09_deliverables")
+rows = []
+
+
+def add(source, quantity, reported, recomputed, diff, cause, files, status="riprodotto"):
+    rows.append(dict(fonte=source, grandezza=quantity, valore_riportato=reported, valore_ricalcolato=recomputed, differenza=diff, causa=cause, file_e_comando=files, esito=status))
+
+
+# --- from the reproduction CSVs (manuscript values)
+for f, cmd in (("human_reproduction.csv", "scripts/a01_human.py"), ("dino_reproduction.csv", "scripts/a03_dino.py"), ("descriptors_reproduction.csv", "scripts/a04_descriptors.py")):
+    d = pd.read_csv(os.path.join(OUT, f))
+    for _, r in d.iterrows():
+        if pd.isna(r.reported) or str(r.reported) in ("", "None", "nan"):
+            continue
+        diff = r.get("difference", "")
+        try:
+            dv = float(diff)
+            if dv != dv: raise ValueError
+            status = "riprodotto" if abs(dv) < 0.0015 else "riprodotto (arrotondamento)" if abs(dv) < 0.006 else "DISCREPANZA"
+            diff = f"{dv:+.4f}"
+        except (TypeError, ValueError):
+            status = "riprodotto (confronto testuale)"; diff = ""
+            if str(r.reported).replace(" ", "") != str(r.recomputed).replace(" ", ""):
+                status = "vedi nota"
+        add(r.get("reported_in", "manuscript rev12"), f"[{r.section}] {r.quantity}", r.reported, r.recomputed, diff, r.get("note", ""), f"{cmd} → outputs/{f}", status)
+
+# --- manual rows: checks of the review's claims and of the previous reply
+M = [
+    ("review (b)", "CONTROL 'abbinato 1:1 per tipologia e stile' contraddetto da Tab. 1", "incoerenza", "procedura reale: conteggi per strato, 20 tipo+stile / 41 tipo / 28 casuali; re-esecuzione esatta con seed 345145722 (stessi 89, stesso ordine)", "", "l'algoritmo abbina conteggi di strato, non fotografie; nessuna coppia 1:1 mai esistita", "scripts/a02_control_matching.py → outputs/report_control.md", "critica CONFERMATA (descrizione errata nel paper); Tab. 1 corretta"),
+    ("review (b)", "squilibri periodo (post-1990 50 vs 40) e geografia (Europa 28 vs 38)", "50/40; 28/38", "50/40; 28/38; chi² periodo p .47, area p .54, industriale p .39", "0", "differenze compatibili con il campionamento, ma non controllate dal matching", "outputs/control_composition.csv", "CONFERMATA come fatto; sensibilità eseguita (direzione aggiustata: R 0,19–0,20 invariato)"),
+    ("review (c)", "incoerenza Fig. 1 (−0,0289/+0,0053/+0,0995) vs testo (+0,0429)", "incoerenza", "Fig. 1 = S (differenza di affinità), testo = P (proiezione unitaria); S = d·P con d = 0,2352; min/mediana/max riprodotti esattamente", "0", "due misure diverse chiamate entrambe 'trasferimento'", "scripts/a03_dino.py → outputs/dino_reproduction.csv", "critica CONFERMATA come difetto espositivo; dati coerenti; etichettare Fig. 1 con P"),
+    ("review (g)", "regola top 35% inoperante: media ≥5 seleziona da sola 89/600 (14,8%)", "14.8%", "89/600 = 14,8%; percentile 30–40% non vincolante (cutoff 4,49–4,60 < 5)", "0", "", "outputs/human_reproduction.csv [selection]", "CONFERMATA"),
+    ("review (h)", "'18% × 0,26 ≈ 0,05 DS' come effetto standardizzato", "0.05", "0,0429/0,916 = 0,047 sulla dispersione multivariata delle fotografie sorgente; NON è una DS degli output né un d di Cohen", "", "denominatore = dispersione delle fotografie, non degli output", "outputs/dino_reproduction.csv [direction]", "parzialmente: numero giusto, interpretazione da qualificare"),
+    ("review (i)", "r=+0,71 deriva quasi per intero dall'allontanamento di CONTROL", "ipotesi", "Cov(x,a−c) = −0,00047 − (−0,03244): il termine CONTROL vale il 101% (IC prompt 73–139%), il termine AESTHETIC ≈ 0", "", "", "scripts/a04_descriptors.py → outputs/report_descriptors.md", "CONFERMATA nello spazio dei descrittori"),
+    ("review (i)", "le due sonde si contraddicono su chi si muove", "contraddizione", "DINOv2: AESTHETIC si avvicina al proprio corpus più che all'altro (Δ −0,011, IC escl. 0, 3 seed su 3), CONTROL no; descrittori: CONTROL si avvicina a entrambi i profili (di più al proprio), AESTHETIC a nessuno", "", "geometrie diverse (768-d vs 31 proxy standardizzati) → risposte diverse; non riconciliabili per costruzione", "outputs/dino_distance_changes.csv; outputs/descriptors_distance_changes.csv", "CONFERMATA come divergenza; quantificata"),
+    ("review minore", "La Fase 1 è proseguita durante la Fase 2?", "domanda", "0 giudizi Fase 1 dopo il primo rating Fase 2; riapertura di 79 s il 27/09 20:45 senza giudizi", "", "", "outputs/report_runs_timeline.md", "SMENTITA (non è proseguita)"),
+    ("review minore", "screening: 2 minuti per 576 immagini", "sospetto", "reviewed_at 15:29:45–15:31:44 = salvataggio massivo della regola; i flag di difetto sono salvati da 13:25 a 15:14 (149 eventi)", "", "il timestamp della regola non misura il tempo di revisione", "outputs/report_runs_timeline.md §3", "SMENTITA come lettura dei tempi; resta lo screening singolo"),
+    ("ultima tabella review n.4", "lessico 'non va nella stessa direzione per automobili (6/8) e vetro (44/38)'", "affermazione", "cars: lessico A<C, fotografie x=−0,41, output a−c=−0,22 → stessa direzione; glass: lessico A>C, x=+0,37, a−c=+0,09 → stessa direzione (entrambe non significative, Fisher p .78 e .45)", "", "", "outputs/report_captions.md §4", "SMENTITA (direzione concorde; differenze non significative)"),
+    ("ultima tabella review n.9", "'cinque misure riassuntive' non ricostruibili → frase da togliere", "affermazione", "le cinque misure sono nominate in anticipo in ANALYSIS_PLAN.md §8.6 e in replication_vlm_analysis.py (NAMED): representation_quality, proportional_coherence, component_coherence, material_rendering, photographic_composition", "", "l'altro assistente non disponeva del piano di analisi", "outputs/report_documentation.md §1", "SMENTITA: frase da completare, non da togliere"),
+    ("review (a)", "effetto umano confuso con il seed di training", "limite", "confermato dai record: seed 1254/9865 fissi dal 27/09, mai variati; nessuna replica umana; replica computazionale stabile su DINO, non sui VLM", "", "", "outputs/report_runs_timeline.md §4", "CONFERMATA come limite; nessuna evidenza di selezione del seed"),
+    ("review (d)", "caption non controllate; armonizzazione v2 non descritta", "lacuna", "v1→v2: 89/89 caption AESTHETIC riscritte, 62/89 CONTROL; 554 eventi (384 A, 170 C) da due account; procedura/autore non registrati; nessun training a caption controllate", "", "", "outputs/report_captions.md; PROTOCOLLO_CAPTION_CONTROLLATE.md", "CONFERMATA; protocollo pronto, non eseguito"),
+    ("riscontro precedente", "tutti i 19 file CSV/JSON di analisi_riscontro.py", "file consegnati", "rieseguito con --bootstrap 3000: 14 file identici byte per byte; 5 differiscono solo per arrotondamento float (numpy 2.5.3 vs 2.3.5) o ordine di riga", "≤1e-9", "versioni numpy", "logs/riscontro_rerun.log; outputs/riscontro_rerun/", "riprodotto"),
+    ("riscontro precedente §8", "quota mezzo punto 51,08% (IC 48,69–53,52)", "0.5108", "pooled 0,5108; per partecipante 0,5076 (IC t 0,481/0,534)", "0", "pooled vs media per partecipante", "outputs/human_reproduction.csv [pairs]", "riprodotto; unità da dichiarare"),
+    ("riscontro precedente §8", "Davidson OR 1,089 IC partecipanti 0,989/1,204; prompt 0,954/1,241", "1.089", "1,0894; cluster-robust 0,985/1,205; bootstrap partecipanti 0,991/1,199; prompt 0,946/1,239; **two-way 0,908/1,313**", "0.0001", "implementazione indipendente (gradiente analitico)", "outputs/human_sensitivities.csv", "riprodotto; aggiunto bootstrap a due vie (versione corretta in v2)"),
+    ("riscontro precedente §4", "conteggi lessicali 28 descrittori", "06_caption_feature_counts.csv", "identici 28/28 con lo stesso codice; snippet salvati; varianti strette/estese aggiunte", "0", "", "outputs/caption_counts_vs_previous_reply.csv", "riprodotto"),
+    ("riscontro precedente §2", "'61 coppie' e 'mappa storica degli abbinamenti' non nel manifest", "mancante", "la mappa non esiste per costruzione (matching di conteggi per strato); gli strati sono ricostruibili e la procedura è stata rieseguita esattamente", "", "", "outputs/report_control.md", "corretto: non 'mancante' ma 'inesistente per disegno'"),
+    ("riscontro precedente §6", "'matrici originali mancanti'", "mancante", "presenti nel progetto: metrics/embeddings_dinov2_vitb14.npz (1176×768), embeddings_replication (960×768), metrics/covariates_images.csv (2136×33)", "", "ambiente dell'altro assistente", "outputs/INVENTARIO_INPUT.csv", "SMENTITA per questo ambiente"),
+    ("manuscript rev12 Tab. 1", "periodi, paesi, Europa, tipologie, industriali, licenze dei due dataset", "8/19/12/27/23; 37;28;49;10;9;41 — 15/22/12/23/17; 33;38;47;15;11;40", "identici", "0", "", "outputs/report_control.md", "riprodotto"),
+    ("manuscript rev12 4.4", "quote della separazione spiegate dai blocchi (8/33/57/65%) e residuo 0,166 (71%, cos 0,85)", "da report storico", "non ricalcolati in questo audit (pipeline ridge di direction_decomposition.py non rieseguita)", "", "tempo; valori letti dal report storico `decomposition_report/report_direction_decomposition.md`", "—", "NON VERIFICATO in questo audit"),
+    ("manuscript rev12 4.3", "AUC 0,78 classificatore; r = 0,64 predizione rating", "0.78; 0.64", "AUC LOO-affinità 0,741 (il report storico dà 0,78 per il classificatore ridge 10-fold e 0,74 per l'affinità); r=0,64 non ricalcolato", "", "il paper non specifica quale AUC", "outputs/dino_reproduction.csv", "parziale: specificare 'ridge, 10-fold CV'"),
+]
+for m in M:
+    add(*m)
+R = pd.DataFrame(rows); R.to_csv(os.path.join(AUDIT, "RIPRODUZIONE_PRECEDENTI.csv"), index=False)
+log("RIPRODUZIONE_PRECEDENTI rows:", len(R), R.esito.value_counts().to_dict())
+
+# --- closure table
+C = [
+    ("a", "Confronto umano confuso con il seed di training (una realizzazione per condizione)", "training_runs.csv: seed 1254/9865 fissi dal 27/09; nessuna replica umana", "audit run e cronologia; replica computazionale 3 seed (DINO stabile; VLM 0/5)", "limite reale, non eliminabile con analisi", "outputs/report_runs_timeline.md", "limite dichiarato", "l'effetto umano è un dato su due realizzazioni", "titolo/abstract/conclusioni: 'nelle due realizzazioni valutate'; non generalizzare alla procedura"),
+    ("b", "CONTROL non abbinato 1:1; squilibri periodo/geografia", "re-esecuzione esatta: 20 tipo+stile, 41 tipo, 28 casuali; chi² periodo/area n.s.", "direzione DINOv2 aggiustata per periodo, area, entrambi: d_adj 0,22/0,22/0,21; R 0,196/0,200/0,202 vs 0,192; contrasti per strato nei descrittori", "la descrizione va corretta; il risultato DINO non dipende dalla composizione registrata; nei descrittori il contrasto degli strati abbinati correla meno con gli output (r 0,03 per i 20 tipo+stile, 0,63 per i 41 tipo, 0,43 per i 61)", "outputs/report_control.md; outputs/report_dino.md; outputs/report_descriptors.md", "chiuso (descrizione) + limite dichiarato (sensibilità lineare su due variabili)", "aggiustamento additivo lineare; celle piccole; 20 fotografie per lo strato esatto", "sostituire 'abbinate 1:1' in abstract, 3.2, Tab. 1, Tab. 2, Fig. 4, conclusioni; aggiungere la sensibilità"),
+    ("c", "Fig. 1 vs testo", "S = d·P verificato (errore 6e-17); min/mediana/max di S riprodotti", "—", "due misure, un nome", "outputs/dino_reproduction.csv", "chiuso", "—", "Fig. 1: etichettare con P (o dichiarare S e il fattore d); 3.7: definire S, P, R; dire quale misura usano Spearman +0,23, 62%, Fig. 3"),
+    ("d", "Caption non controllate", "v1→v2 asimmetrico (89/89 vs 62/89); lessico: unica differenza significativa 'acqua' (28/10, p .002); curve 37/27 esteso, 20/14 stretto; profilo lessicale↔x r +0,57 (IC −0,01/+0,90); presenza lessicale traccia il descrittore della stessa foto (r fino a 0,50)", "ricontato e auditato; protocollo caption comuni v2 pronto e script collaudato in dry run (≈7,5 h GPU, 0,79 €/h verificato → ≈6,0–6,6 €, ≈4–4,5 h di calendario)", "canale testuale confuso con quello visivo; non separabile senza training", "outputs/report_captions.md; PROTOCOLLO_CAPTION_CONTROLLATE.md", "richiede nuovo training (approvazione del responsabile)", "il controllo identifica la differenza fra corpora sotto caption comuni, non la 'bellezza'; letture per categorie (mantenuto/ridotto/non distinguibile/inconclusivo), nessuna soglia di rilevanza", "3.3: descrivere armonizzazione (chi, come, asimmetria); 5.2: 'il trattamento è corpus di fotografie con le rispettive caption'"),
+    ("e", "Corpus non documentato", "criteri scritti il 25/09 (AAR_LNCS_15_pagine.docx); award_or_relevance per 600 opere; note su 'brief' e 'lista batch-1' non reperiti; due batch 300+300", "ricerca documentale", "procedura parzialmente documentata; autore delle liste non registrato", "outputs/report_documentation.md §3", "aperto (richiede dichiarazione degli autori)", "—", "3.1: criteri di ammissione, due batch, chi ha compilato le liste (da dichiarare)"),
+    ("f", "Riproducibilità", "inventario completo con hash; trainer identificato (UNet-LoRA, text encoder congelati); 48 prompt; 31 descrittori; VLM e 9 criteri; 5 misure identificate", "—", "quasi tutto recuperabile dal progetto", "outputs/INVENTARIO_INPUT.csv; outputs/report_documentation.md", "chiuso per i contenuti; aperto per il deposito anonimo", "repository pubblico ancora su account personale", "3.3: nominare trainer e text encoder congelati; 3.7: elencare i 31 descrittori e i 36 metadati (appendice/repo); 5.2: nominare le 5 misure"),
+    ("g", "Agentività esercitata da una soglia di crowd; top 35% inoperante", "89/600 = 14,8%; percentile non vincolante per 30–40%", "—", "critica corretta sul percentile", "outputs/human_reproduction.csv [selection]", "chiuso (riformulazione)", "personalizzazione professionale = ipotesi", "3.2: 'la soglia media ≥5 (con n ≥10) determina da sola i 89 casi; il percentile registrato non ha effetto'; abstract: personalizzazione come ipotesi"),
+    ("h", "Risultato umano più debole dell'abstract; 0,05 DS", "A−C +0,104 (t); mixed model incrociato +0,101 (0,016/0,186); two-way bootstrap corretto −0,025/+0,233; coppie: OR 1,09 (two-way 0,91/1,31); A−BASE −0,036; BASE−C +0,140", "sensibilità congiunte partecipanti×prompt", "l'inferenza sui soli partecipanti sovrastima la precisione; la robustezza del contrasto rating dipende dalla specificazione (regge nel modello incrociato, non nel bootstrap a due vie); le coppie non mostrano vantaggio", "outputs/human_sensitivities.csv", "limite dichiarato", "nessun modello crea repliche di training", "abstract/4.2: riportare l'IC con effetti incrociati e dire che l'inferenza riguarda partecipanti e prompt di queste due realizzazioni; 0,047 = riscalatura sulla dispersione sorgente, non DS degli output"),
+    ("i", "Sonde contraddittorie; r=+0,71 guidato da CONTROL", "Cov: termine CONTROL 101% (73–139%), termine AESTHETIC ≈ 0 con IC incl. 0; distanze (due metriche, IC): DINO → AESTHETIC si avvicina al proprio centroide in entrambe le metriche e 3/3 seed, CONTROL senza avvicinamento differenziale coerente (1/3 seed); descrittori → CONTROL si avvicina a entrambi i profili (di più al proprio), AESTHETIC: centroide più vicino descrittivamente (chiaro in 1/3 seed), distanza media delle immagini non ridotta in modo chiaro", "decomposizione covarianze; test di avvicinamento esplicito in entrambi gli spazi", "divergenza quantificata; non risolta causalmente", "outputs/report_descriptors.md; outputs/report_dino.md", "limite dichiarato", "spazi e metriche diversi, risposte diverse; IC che includono zero non sono prova di assenza", "4.4: 'nei descrittori il contrasto è determinato dallo spostamento di CONTROL contro il segnale (Cov ≈ 100%)'; Fig. 2: la componente (a−c)/2 ha per costruzione lo stesso r (identità); 4.3: aggiungere l'avvicinamento DINOv2 al proprio corpus con la metrica dichiarata"),
+    ("minore", "Perimetri 166/164/161/159, 599/600", "tutti riprodotti; 300 voti rimossi da 2 partecipanti esclusi per 'non finito' (Fase 2 incompleta)", "sensibilità sul campione completo: ICC 0,138 (uguale), LOO +0,944 (vs +0,915)", "il filtro globale ha rimosso voti Fase 1 completi", "outputs/report_human.md", "chiuso", "motivazione del filtro da dichiarare", "3.6: spiegare che il filtro è l'esclusione globale di 2 partecipanti con Fase 2 incompleta"),
+    ("minore", "Cronologia", "timeline completa con fonte e significato di ogni timestamp", "—", "regola al 35% creata 17 s prima dell'ultimo voto; prompt congelati dopo 292 immagini di prova di run intermedie", "outputs/timeline_full.csv; outputs/report_runs_timeline.md", "chiuso", "—", "3.2/3.4: 'regola definita negli ultimi minuti della raccolta e congelata subito dopo la chiusura; prompt congelati prima della generazione finale, dopo prove tecniche delle run intermedie'"),
+    ("minore", "Screening singolo, criteri, 2 minuti", "48 flag, 4 categorie, 149 eventi 13:25–15:14; reviewed_at = salvataggio della regola", "materiale cieco per un secondo valutatore preparato (576 immagini, codici neutri, scheda)", "—", "outputs/second_screening/", "richiede nuova raccolta (secondo valutatore)", "verifica retrospettiva", "3.4: categorie di difetto; dichiarare che il secondo screening è in corso/da fare"),
+    ("minore", "ICC: tipo ed estimatore", "ICC(1) one-way ANOVA su punteggi centrati per partecipante, k0 = 19,7 (Fase 2) e 37,8 (Fase 1); disegno incompleto trattato centrando", "—", "—", "outputs/report_human.md (Definitions)", "chiuso", "non è un modello a fattori incrociati", "3.6 o repo: formula dell'ICC"),
+    ("minore", "726 pareggi scartati", "Davidson con pareggi: OR 1,089 (0,985/1,205); ν=0,36; mezzo punto 50,8–51,1%", "bootstrap a due vie", "—", "outputs/human_sensitivities.csv", "chiuso", "—", "4.2: una riga con il modello Davidson"),
+    ("minore", "collegati/non collegati non potenziato", "−0,116 (−0,289/+0,056), MDE ≈ ±0,25", "—", "—", "outputs/human_reproduction.csv", "chiuso (riformulazione)", "—", "4.2: 'non rileva una differenza; l'intervallo non esclude differenze fino a 0,29'"),
+    ("minore", "Abstract 0,104 attribuito alle 159 triplette", "0,104 = per partecipante (n 158); 0,105 per tripletta", "—", "—", "outputs/human_reproduction.csv", "chiuso", "—", "abstract: 'in 158 partecipanti'"),
+    ("9", "Figure, bibliografia", "non rifatte in questo audit; bibliografia verificata dal riscontro precedente (file 19), non riverificata qui", "—", "—", "—", "aperto (editoriale)", "—", "[4] ICLR 2022; [10] arXiv 2304.07193; [11] OpenReview; [15] Gürer; [8] SPIE confermato"),
+    ("10", "Repository, etica, conflitti", "nessun documento istituzionale; repository anonimo costruito ma su account personale", "—", "—", "outputs/report_documentation.md §4", "aperto (responsabile)", "—", "dichiarazioni: compilare dopo decisione degli autori"),
+]
+T = pd.DataFrame(C, columns=["punto_review", "richiesta_del_revisore", "evidenza", "analisi_eseguita", "risultato", "file_script", "stato", "limite_residuo", "modifica_necessaria_al_paper"])
+T.to_csv(os.path.join(AUDIT, "TABELLA_CHIUSURA.csv"), index=False)
+log("TABELLA_CHIUSURA rows:", len(T), T.stato.value_counts().to_dict())
+
+# --- hashes of the audit folder (excluding the hash file itself and the copied package/second-screening images)
+lines = []
+for p in sorted(glob.glob(os.path.join(AUDIT, "**", "*"), recursive=True)):
+    if os.path.isfile(p) and "SHA256SUMS" not in p and os.sep + "images" + os.sep not in p and "inputs" + os.sep + "package" not in p:
+        lines.append(f"{sha256(p)}  {os.path.relpath(p, AUDIT).replace(os.sep, '/')}")
+open(os.path.join(AUDIT, "SHA256SUMS.txt"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
+log("hashed files:", len(lines))

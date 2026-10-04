@@ -1,0 +1,107 @@
+{
+  "status": "prepared and dry-run tested, NOT executed; requires approval of the responsible researcher (cost in PROTOCOLLO_CAPTION_CONTROLLATE.md section 6: ~7.5 GPU-h, 0.79 EUR/h => ~6-6.6 EUR)",
+  "neutral_caption": "photograph of architecture",
+  "datasets": {
+    "AESTHETIC-v3-neutral": {
+      "images_from": "AESTHETIC-v2 (89 image codes, same files)",
+      "caption": "neutral_caption for every image"
+    },
+    "CONTROL-v3-neutral": {
+      "images_from": "CONTROL-v2 (89 image codes, same files)",
+      "caption": "neutral_caption for every image"
+    }
+  },
+  "training_common": {
+    "base_model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "base_model_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+    "method": "LoRA",
+    "lora_rank": 16,
+    "lora_alpha": 16,
+    "learning_rate": 0.0001,
+    "batch_size": 1,
+    "steps": 1500,
+    "resolution": 1024,
+    "configuration_json": {
+      "noise_offset": 0.0357,
+      "timestep_min": 250
+    },
+    "provider": "Scaleway",
+    "instance_type": "L4-1-24G",
+    "max_simultaneous": 2,
+    "worker_sha256_required": "266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f"
+  },
+  "training_runs": [
+    {
+      "code": "NEU-CTL-S42160",
+      "dataset": "CONTROL-v3-neutral",
+      "seed": 42160,
+      "order": 1
+    },
+    {
+      "code": "NEU-AES-S9865",
+      "dataset": "AESTHETIC-v3-neutral",
+      "seed": 9865,
+      "order": 2
+    },
+    {
+      "code": "NEU-AES-S42160",
+      "dataset": "AESTHETIC-v3-neutral",
+      "seed": 42160,
+      "order": 3
+    },
+    {
+      "code": "NEU-CTL-S1254",
+      "dataset": "CONTROL-v3-neutral",
+      "seed": 1254,
+      "order": 4
+    },
+    {
+      "code": "NEU-AES-S1254",
+      "dataset": "AESTHETIC-v3-neutral",
+      "seed": 1254,
+      "order": 5
+    },
+    {
+      "code": "NEU-CTL-S9865",
+      "dataset": "CONTROL-v3-neutral",
+      "seed": 9865,
+      "order": 6
+    }
+  ],
+  "generation_plan": {
+    "prompt_set_id": 15,
+    "prompts": 48,
+    "seeds": [
+      25478,
+      85,
+      6127,
+      7
+    ],
+    "resolution": "1216x832",
+    "sampler": "dpm++ 2m karras",
+    "guidance_scale": 5,
+    "steps": 40,
+    "conditions": "the six NEU-* adapters (BASE already generated: plans 22/23)",
+    "is_pilot_plan": true
+  },
+  "analysis": {
+    "direction": "analysis/baseline/direction_dinov2.npz (frozen, unchanged)",
+    "embeddings": "facebook/dinov2-base CLS on 480-px thumbnails, L2-normalised (analysis/embedding_analysis.py pipeline)",
+    "descriptors": "analysis/image_scripts/covariates.py, standardised on the 600 photographs",
+    "primary_endpoint": "three separate quantities per seed and pooled: P_neutral, P_original, paired per-cell difference; bootstrap over 48 prompts (5000, seed 20261003)",
+    "secondary": [
+      "r(x, a-c) over 31 descriptors vs +0.71",
+      "paired per-cell difference between regimes per seed",
+      "distances to the corpus centroids as in report_dino.md"
+    ],
+    "categories": {
+      "maintained": "CI(P_neutral)>0 and CI(diff) includes 0",
+      "reduced": "CI(P_neutral)>0 and CI(diff)>0",
+      "not_distinguishable_and_smaller": "CI(P_neutral) includes 0 and CI(diff)>0",
+      "inconclusive": "both CIs include 0",
+      "reversed": "CI(P_neutral)<0"
+    },
+    "script": "scripts/a10_caption_control_analysis.py (dry-run tested 2026-10-03)"
+  },
+  "neutral_caption_note": "chosen after checking the 178 frozen captions: 1 interior, 1 aerial, 10 non-building subjects; 'exterior photograph of a building' (v1) was false for some references"
+}

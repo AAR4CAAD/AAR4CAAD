@@ -1,0 +1,19 @@
+variable,category,AESTHETIC,CONTROL,chi2_p_variable
+period,1919-1945,8,15,0.4673
+period,1946-1969,19,22,0.4673
+period,1970-1989,12,12,0.4673
+period,1990-2009,27,23,0.4673
+period,2010-today,23,17,0.4673
+continent,Africa,3,3,0.537
+continent,Asia,16,12,0.537
+continent,Europe,28,38,0.537
+continent,Japan,6,11,0.537
+continent,Latin America,12,8,0.537
+continent,Middle East,6,3,0.537
+continent,North America,14,10,0.537
+continent,Oceania,4,4,0.537
+industrial_or_nonindustrial,industrial,10,15,0.3882
+industrial_or_nonindustrial,nonindustrial,79,74,0.3882
+building_type,distinct values A / C / shared,49,47,27.0
+architectural_style,distinct values A / C / shared,46,52,15.0
+country,distinct values A / C / shared,37,33,18.0

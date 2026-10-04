@@ -1,0 +1,67 @@
+{
+ "curved_organic": {
+  "issue": "extended set aggregates arches, domes, round, circular, cylindrical, shells, spheres, oval with curved/undulating/organic",
+  "strict": [
+   "\\bcurv(?:e|es|ed|ing|ature)\\b",
+   "\\bundulating\\b",
+   "\\borganic\\b",
+   "\\bsinuous\\b",
+   "\\bflowing\\b"
+  ],
+  "extended": null
+ },
+ "urban": {
+  "issue": "'city' matches building names/types such as 'city hall'",
+  "exclude": [
+   "\\bcity hall\\b",
+   "\\bcity gate\\b",
+   "\\bcity library\\b"
+  ]
+ },
+ "sharpness": {
+  "issue": "'sharp' in captions describes angles/edges (shape), not image sharpness",
+  "exclude": [
+   "\\bsharp(?:ly)?[- ](?:angle|angled|edge|edged|corner|cornered|pointed|prow|fold|folds|lines|geometry)\\b",
+   "\\bsharp angles?\\b",
+   "\\bsharp edges?\\b"
+  ]
+ },
+ "detail": {
+  "issue": "'detailed/details' describes ornament or facade articulation, not pixel detail",
+  "exclude": []
+ },
+ "monumental": {
+  "issue": "'massive' describes volume/material mass; 'imposing' size",
+  "exclude": []
+ },
+ "brightness": {
+  "issue": "'bright' often qualifies a colour (bright red), not luminance",
+  "exclude": [
+   "\\bbright(?:ly)? (?:red|blue|green|yellow|orange|white|colou?rs?|colou?red|painted|mural|tiles?)\\b"
+  ]
+ },
+ "warmth": {
+  "issue": "'warm' qualifies material colour (warm brick) as much as light",
+  "exclude": []
+ },
+ "real_photo": {
+  "issue": "every caption starts with 'exterior photograph of': constant 89/89, not informative",
+  "exclude": []
+ },
+ "colourful": {
+  "issue": "duplicate of colorfulness (same patterns): one test, not two",
+  "exclude": []
+ },
+ "greenery": {
+  "issue": "very broad (trees, lawn, park, plants, landscaped); 55/55 constant-ish",
+  "exclude": []
+ },
+ "water": {
+  "issue": "'pool' may be a swimming pool (water anyway); 'harbour' context",
+  "exclude": []
+ },
+ "white": {
+  "issue": "also 'white' in 'black and white' (vintage) or 'white concrete' (material colour): kept",
+  "exclude": []
+ }
+}

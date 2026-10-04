@@ -1,0 +1,363 @@
+=== a01_human started 2026-10-03T20:35:03+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+=== a01_human started 2026-10-03T20:35:32+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+=== a01_human started 2026-10-03T20:36:08+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+[selection] rule with top 30%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.650 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 33%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.603 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 35%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.562 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 40%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.492 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] share of the 600 selected by mean>=5 and n>=10: reported 14.8% | recomputed 14.8% | CI None None | p None | n None 
+[ratings] AESTHETIC − CONTROL per participant (points): reported 0.104 | recomputed 0.1037 | CI 0.0291 0.1782 | p 0.00673 | n 158 one-sample t on participant mean differences; participants with >= 3 ratings in each condition
+[ratings] d_z: reported 0.22 | recomputed 0.218 | CI 0.061 0.376 | p None | n None 
+[ratings] BASE − CONTROL per participant: reported 0.14 | recomputed 0.1401 | CI 0.0684 0.2118 | p 0.000167 | n 158 
+[ratings] AESTHETIC − BASE per participant: reported -0.036 | recomputed -0.0364 | CI -0.1075 0.0347 | p 0.31325 | n 158 
+[ratings] AESTHETIC − CONTROL per triplet (participant-centred scores): reported 0.105 | recomputed 0.1051 | CI 0.0279 0.1822 | p 0.00791 | n 159 
+[ratings] A−C in architects: reported 0.102 | recomputed 0.1021 | CI -0.0133 0.2175 | p 0.0817 | n 54 
+[ratings] A−C in non-experts: reported 0.056 | recomputed 0.0565 | CI -0.0892 0.2022 | p 0.4401 | n 53 
+[ratings] architects − non-experts difference (p): reported 0.623 | recomputed 0.623 | CI None None | p None | n None difference +0.046
+=== a01_human started 2026-10-03T20:38:00+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+[selection] rule with top 30%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.650 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 33%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.603 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 35%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.562 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 40%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.492 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] share of the 600 selected by mean>=5 and n>=10: reported 14.8% | recomputed 14.8% | CI None None | p None | n None 
+[ratings] AESTHETIC − CONTROL per participant (points): reported 0.104 | recomputed 0.1037 | CI 0.0291 0.1782 | p 0.00673 | n 158 one-sample t on participant mean differences; participants with >= 3 ratings in each condition
+[ratings] d_z: reported 0.22 | recomputed 0.218 | CI 0.061 0.376 | p None | n None 
+[ratings] BASE − CONTROL per participant: reported 0.14 | recomputed 0.1401 | CI 0.0684 0.2118 | p 0.000167 | n 158 
+[ratings] AESTHETIC − BASE per participant: reported -0.036 | recomputed -0.0364 | CI -0.1075 0.0347 | p 0.31325 | n 158 
+[ratings] AESTHETIC − CONTROL per triplet (participant-centred scores): reported 0.105 | recomputed 0.1051 | CI 0.0279 0.1822 | p 0.00791 | n 159 
+[ratings] A−C in architects: reported 0.102 | recomputed 0.1021 | CI -0.0133 0.2175 | p 0.0817 | n 54 
+[ratings] A−C in non-experts: reported 0.056 | recomputed 0.0565 | CI -0.0892 0.2022 | p 0.4401 | n 53 
+[ratings] architects − non-experts difference (p): reported 0.623 | recomputed 0.623 | CI None None | p None | n None difference +0.046
+[ratings] high − low expertise (p): reported 0.717 | recomputed 0.717 | CI None None | p None | n None 
+[ratings] linked − unlinked (No + NotSure) A−C: reported -0.116 | recomputed -0.1163 | CI -0.2891 0.0565 | p 0.183 | n 32+110 Welch; the interval spans −0.29/+0.06: not a demonstration of equivalence (MDE for this comparison ≈ ±0.25 points)
+[pairs] AESTHETIC chosen in decisive A–C comparisons (share, n): reported 51.3% of 1320 | recomputed 51.3% of 1320 | CI None None | p None | n None 
+[pairs] half-point share A vs C per participant: reported 0.5108 | recomputed 0.5076 | CI 0.4811 0.5342 | p 0.57 | n 158 t interval over participants; previous reply gave a participant bootstrap 48.69–53.52
+[pairs] Bradley–Terry OR A vs C (cluster participant): reported 1.09 | recomputed 1.0899 | CI 0.9848 1.2062 | p 0.0957 | n 4010 logistic regression on 'left wins', intercept = position bias; ties excluded
+[pairs] Bradley–Terry OR BASE vs C: reported 1.133 | recomputed 1.1334 | CI 1.0385 1.237 | p 0.0053 | n None 
+[pairs] Bradley–Terry OR A vs BASE: reported 0.962 | recomputed 0.9616 | CI 0.8742 1.0576 | p 0.4176 | n None 
+[pairs] position bias OR (left): reported None | recomputed 0.9738 | CI 0.8933 1.0615 | p 0.5434 | n None not in the manuscript
+[pairs] Bradley–Terry OR A vs C, clustered by PROMPT (48 clusters): reported None | recomputed 1.0899 | CI 0.9503 1.2499 | p 0.2127 | n None sensitivity: inference about prompts rather than participants
+[pairs] Davidson OR A vs C (all 4736 answers incl. ties): reported 1.0893 | recomputed 1.0894 | CI 0.9849 1.2049 | p 0.0955 | n 4736 independent MLE (analytic gradient, BFGS, converged=False, logLik=-4803.889); interval here cluster-robust by participant with t(157); previous reply: participant bootstrap 0.989-1.204
+[pairs] Davidson OR BASE vs C: reported 1.133 | recomputed 1.1331 | CI 1.0382 1.2368 | p 0.0054 | n None 
+[pairs] Davidson OR A vs BASE: reported 0.9614 | recomputed 0.9614 | CI None None | p None | n None derived from the two parameters (BASE reference)
+[pairs] Davidson tie parameter nu: reported 0.3625 | recomputed 0.3625 | CI None None | p None | n None tie probability at parity nu/(2+nu) = 0.153; observed tie share 0.153
+[reliability] phase 2 ICC(1) single rating: reported 0.239 | recomputed 0.239 | CI None None | p None | n 477 one-way ANOVA on participant-centred scores; k0=19.73; ICC(k)=0.861
+[reliability] phase 2 ICC(k) image mean: reported 0.861 | recomputed 0.861 | CI None None | p None | n None 
+[reliability] phase 1 ICC(1) (export filter, 164): reported 0.138 | recomputed 0.138 | CI None None | p None | n 600 k0=37.83
+[reliability] phase 1 ICC(k) (export filter): reported 0.858 | recomputed 0.858 | CI None None | p None | n None 
+[reliability] mean correlation with the aggregate of the others: reported 0.351 | recomputed 0.351 | CI 0.322 0.38 | p None | n 161 
+[reliability] leave-one-rater-out reselection signal (points): reported 0.915 | recomputed 0.915 | CI 0.811 1.019 | p None | n 159 inside each reselection: top set always 89 (164 of 164), CONTROL photographs entering the reselected top: mean 0.1 (removed from the comparison set). NOTE the reselection uses the top-89 by mean, not the frozen rule (n>=10, mean>=5)
+[phase1] AESTHETIC photographs mean of means (complete sample): reported 5.295 | recomputed 5.295 | CI None None | p None | n None 
+[phase1] CONTROL photographs mean of means: reported 4.211 | recomputed 4.211 | CI None None | p None | n None 
+[phase1] mean within-photo SD AESTHETIC / CONTROL: reported 1.444 / 1.556 | recomputed 1.444 / 1.556 | CI None None | p None | n None 
+[phase1] Spearman architects vs non-experts (photograph means): reported 0.425 | recomputed 0.423 | CI None None | p None | n 599 export-filter sample
+[phase1] Spearman high vs low expertise: reported 0.496 | recomputed 0.5 | CI None None | p None | n 600 
+[phase1] role counts NonExpert/Architect/Student/Engineer/other: reported 63/58/8/8/29 | recomputed {'NonExpert': 63, 'Architect': 58, 'Other': 20, 'ArchitectureStudent': 8, 'Engineer': 8, 'CreativeProfessional': 4, 'Designer': 3, 'ConstructionProfessional': 2} | CI None None | p None | n None 
+=== a01_human started 2026-10-03T20:39:54+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+[selection] rule with top 30%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.650 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 33%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.603 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 35%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.562 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 40%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.492 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] share of the 600 selected by mean>=5 and n>=10: reported 14.8% | recomputed 14.8% | CI None None | p None | n None 
+[ratings] AESTHETIC − CONTROL per participant (points): reported 0.104 | recomputed 0.1037 | CI 0.0291 0.1782 | p 0.00673 | n 158 one-sample t on participant mean differences; participants with >= 3 ratings in each condition
+[ratings] d_z: reported 0.22 | recomputed 0.218 | CI 0.061 0.376 | p None | n None 
+[ratings] BASE − CONTROL per participant: reported 0.14 | recomputed 0.1401 | CI 0.0684 0.2118 | p 0.000167 | n 158 
+[ratings] AESTHETIC − BASE per participant: reported -0.036 | recomputed -0.0364 | CI -0.1075 0.0347 | p 0.31325 | n 158 
+[ratings] AESTHETIC − CONTROL per triplet (participant-centred scores): reported 0.105 | recomputed 0.1051 | CI 0.0279 0.1822 | p 0.00791 | n 159 
+[ratings] A−C in architects: reported 0.102 | recomputed 0.1021 | CI -0.0133 0.2175 | p 0.0817 | n 54 
+[ratings] A−C in non-experts: reported 0.056 | recomputed 0.0565 | CI -0.0892 0.2022 | p 0.4401 | n 53 
+[ratings] architects − non-experts difference (p): reported 0.623 | recomputed 0.623 | CI None None | p None | n None difference +0.046
+[ratings] high − low expertise (p): reported 0.717 | recomputed 0.717 | CI None None | p None | n None 
+[ratings] linked − unlinked (No + NotSure) A−C: reported -0.116 | recomputed -0.1163 | CI -0.2891 0.0565 | p 0.183 | n 32+110 Welch; the interval spans −0.29/+0.06: not a demonstration of equivalence (MDE for this comparison ≈ ±0.25 points)
+[pairs] AESTHETIC chosen in decisive A–C comparisons (share, n): reported 51.3% of 1320 | recomputed 51.3% of 1320 | CI None None | p None | n None 
+[pairs] half-point share A vs C per participant: reported None | recomputed 0.5076 | CI 0.4811 0.5342 | p 0.57 | n 158 t interval over participants; previous reply gave a participant bootstrap 48.69–53.52
+[pairs] Bradley–Terry OR A vs C (cluster participant): reported 1.09 | recomputed 1.0899 | CI 0.9848 1.2062 | p 0.0957 | n 4010 logistic regression on 'left wins', intercept = position bias; ties excluded
+[pairs] Bradley–Terry OR BASE vs C: reported 1.133 | recomputed 1.1334 | CI 1.0385 1.237 | p 0.0053 | n None 
+[pairs] Bradley–Terry OR A vs BASE: reported 0.962 | recomputed 0.9616 | CI 0.8742 1.0576 | p 0.4176 | n None 
+[pairs] position bias OR (left): reported None | recomputed 0.9738 | CI 0.8933 1.0615 | p 0.5434 | n None not in the manuscript
+[pairs] Bradley–Terry OR A vs C, clustered by PROMPT (48 clusters): reported None | recomputed 1.0899 | CI 0.9503 1.2499 | p 0.2127 | n None sensitivity: inference about prompts rather than participants
+[pairs] Davidson OR A vs C (all 4736 answers incl. ties): reported 1.0893 | recomputed 1.0894 | CI 0.9849 1.2049 | p 0.0955 | n 4736 independent MLE (analytic gradient, BFGS, converged=True, logLik=-4803.889); interval here cluster-robust by participant with t(157); previous reply: participant bootstrap 0.989-1.204
+[pairs] Davidson OR BASE vs C: reported 1.133 | recomputed 1.1331 | CI 1.0382 1.2368 | p 0.0054 | n None 
+[pairs] Davidson OR A vs BASE: reported 0.9614 | recomputed 0.9614 | CI None None | p None | n None derived from the two parameters (BASE reference)
+[pairs] Davidson tie parameter nu: reported 0.3625 | recomputed 0.3625 | CI None None | p None | n None tie probability at parity nu/(2+nu) = 0.153; observed tie share 0.153
+[reliability] phase 2 ICC(1) single rating: reported 0.239 | recomputed 0.239 | CI None None | p None | n 477 one-way ANOVA on participant-centred scores; k0=19.73; ICC(k)=0.861
+[reliability] phase 2 ICC(k) image mean: reported 0.861 | recomputed 0.861 | CI None None | p None | n None 
+[reliability] phase 1 ICC(1) (export filter, 164): reported 0.138 | recomputed 0.138 | CI None None | p None | n 600 k0=37.83
+[reliability] phase 1 ICC(k) (export filter): reported 0.858 | recomputed 0.858 | CI None None | p None | n None 
+[reliability] mean correlation with the aggregate of the others: reported 0.351 | recomputed 0.351 | CI 0.322 0.38 | p None | n 161 
+[reliability] leave-one-rater-out reselection signal (points): reported 0.915 | recomputed 0.915 | CI 0.811 1.019 | p None | n 159 inside each reselection: top set always 89 (164 of 164), CONTROL photographs entering the reselected top: mean 0.1 (removed from the comparison set). NOTE the reselection uses the top-89 by mean, not the frozen rule (n>=10, mean>=5)
+[phase1] AESTHETIC photographs mean of means (complete sample): reported 5.295 | recomputed 5.295 | CI None None | p None | n None 
+[phase1] CONTROL photographs mean of means: reported 4.211 | recomputed 4.211 | CI None None | p None | n None 
+[phase1] mean within-photo SD AESTHETIC / CONTROL: reported 1.444 / 1.556 | recomputed 1.444 / 1.556 | CI None None | p None | n None 
+[phase1] Spearman architects vs non-experts (photograph means): reported 0.425 | recomputed 0.423 | CI None None | p None | n 599 export-filter sample
+[phase1] Spearman high vs low expertise: reported 0.496 | recomputed 0.5 | CI None None | p None | n 600 
+[phase1] role counts NonExpert/Architect/Student/Engineer/other: reported 63/58/8/8/29 | recomputed {'NonExpert': 63, 'Architect': 58, 'Other': 20, 'ArchitectureStudent': 8, 'Engineer': 8, 'CreativeProfessional': 4, 'Designer': 3, 'ConstructionProfessional': 2} | CI None None | p None | n None 
+            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM  Dependent Variable:  score      
+No. Observations:    9413     Method:              REML       
+No. Groups:          1        Scale:               1.5431     
+Min. group size:     9413     Log-Likelihood:      -16027.8736
+Max. group size:     9413     Converged:           Yes        
+Mean group size:     9413.0                                   
+--------------------------------------------------------------
+                     Coef. Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            3.852    0.102 37.910 0.000  3.652  4.051
+C(cond)[T.AESTHETIC] 0.101    0.043  2.329 0.020  0.016  0.186
+C(cond)[T.BASE]      0.134    0.043  3.097 0.002  0.049  0.219
+cell Var             0.435    0.044                           
+image Var            0.070    0.010                           
+participant Var      1.050    0.099                           
+==============================================================
+
+participant bootstrap 45s
+prompt bootstrap 44s
+two-way bootstrap 57s
+done
+=== a01_human started 2026-10-03T23:33:43+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+[selection] rule with top 30%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.650 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 33%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.603 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 35%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.562 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 40%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.492 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] share of the 600 selected by mean>=5 and n>=10: reported 14.8% | recomputed 14.8% | CI None None | p None | n None 
+[ratings] AESTHETIC − CONTROL per participant (points): reported 0.104 | recomputed 0.1037 | CI 0.0291 0.1782 | p 0.00673 | n 158 one-sample t on participant mean differences; participants with >= 3 ratings in each condition
+[ratings] d_z: reported 0.22 | recomputed 0.218 | CI 0.061 0.376 | p None | n None 
+[ratings] BASE − CONTROL per participant: reported 0.14 | recomputed 0.1401 | CI 0.0684 0.2118 | p 0.000167 | n 158 
+[ratings] AESTHETIC − BASE per participant: reported -0.036 | recomputed -0.0364 | CI -0.1075 0.0347 | p 0.31325 | n 158 
+[ratings] AESTHETIC − CONTROL per triplet (participant-centred scores): reported 0.105 | recomputed 0.1051 | CI 0.0279 0.1822 | p 0.00791 | n 159 
+[ratings] A−C in architects: reported 0.102 | recomputed 0.1021 | CI -0.0133 0.2175 | p 0.0817 | n 54 
+[ratings] A−C in non-experts: reported 0.056 | recomputed 0.0565 | CI -0.0892 0.2022 | p 0.4401 | n 53 
+[ratings] architects − non-experts difference (p): reported 0.623 | recomputed 0.623 | CI None None | p None | n None difference +0.046
+[ratings] high − low expertise (p): reported 0.717 | recomputed 0.717 | CI None None | p None | n None 
+[ratings] linked − unlinked (No + NotSure) A−C: reported -0.116 | recomputed -0.1163 | CI -0.2891 0.0565 | p 0.183 | n 32+110 Welch; the interval spans −0.29/+0.06: not a demonstration of equivalence (MDE for this comparison ≈ ±0.25 points)
+[pairs] AESTHETIC chosen in decisive A–C comparisons (share, n): reported 51.3% of 1320 | recomputed 51.3% of 1320 | CI None None | p None | n None 
+[pairs] half-point share A vs C per participant: reported None | recomputed 0.5076 | CI 0.4811 0.5342 | p 0.57 | n 158 t interval over participants; previous reply gave a participant bootstrap 48.69–53.52
+[pairs] Bradley–Terry OR A vs C (cluster participant): reported 1.09 | recomputed 1.0899 | CI 0.9848 1.2062 | p 0.0957 | n 4010 logistic regression on 'left wins', intercept = position bias; ties excluded
+[pairs] Bradley–Terry OR BASE vs C: reported 1.133 | recomputed 1.1334 | CI 1.0385 1.237 | p 0.0053 | n None 
+[pairs] Bradley–Terry OR A vs BASE: reported 0.962 | recomputed 0.9616 | CI 0.8742 1.0576 | p 0.4176 | n None 
+[pairs] position bias OR (left): reported None | recomputed 0.9738 | CI 0.8933 1.0615 | p 0.5434 | n None not in the manuscript
+[pairs] Bradley–Terry OR A vs C, clustered by PROMPT (48 clusters): reported None | recomputed 1.0899 | CI 0.9503 1.2499 | p 0.2127 | n None sensitivity: inference about prompts rather than participants
+[pairs] Davidson OR A vs C (all 4736 answers incl. ties): reported 1.0893 | recomputed 1.0894 | CI 0.9849 1.2049 | p 0.0955 | n 4736 independent MLE (analytic gradient, BFGS, converged=True, logLik=-4803.889); interval here cluster-robust by participant with t(157); previous reply: participant bootstrap 0.989-1.204
+[pairs] Davidson OR BASE vs C: reported 1.133 | recomputed 1.1331 | CI 1.0382 1.2368 | p 0.0054 | n None 
+[pairs] Davidson OR A vs BASE: reported 0.9614 | recomputed 0.9614 | CI None None | p None | n None derived from the two parameters (BASE reference)
+[pairs] Davidson tie parameter nu: reported 0.3625 | recomputed 0.3625 | CI None None | p None | n None tie probability at parity nu/(2+nu) = 0.153; observed tie share 0.153
+[reliability] phase 2 ICC(1) single rating: reported 0.239 | recomputed 0.239 | CI None None | p None | n 477 one-way ANOVA on participant-centred scores; k0=19.73; ICC(k)=0.861
+[reliability] phase 2 ICC(k) image mean: reported 0.861 | recomputed 0.861 | CI None None | p None | n None 
+[reliability] phase 1 ICC(1) (export filter, 164): reported 0.138 | recomputed 0.138 | CI None None | p None | n 600 k0=37.83
+[reliability] phase 1 ICC(k) (export filter): reported 0.858 | recomputed 0.858 | CI None None | p None | n None 
+[reliability] mean correlation with the aggregate of the others: reported 0.351 | recomputed 0.351 | CI 0.322 0.38 | p None | n 161 
+[reliability] leave-one-rater-out reselection signal (points): reported 0.915 | recomputed 0.915 | CI 0.811 1.019 | p None | n 159 inside each reselection: top set always 89 (164 of 164), CONTROL photographs entering the reselected top: mean 0.1 (removed from the comparison set). NOTE the reselection uses the top-89 by mean, not the frozen rule (n>=10, mean>=5)
+[phase1] AESTHETIC photographs mean of means (complete sample): reported 5.295 | recomputed 5.295 | CI None None | p None | n None 
+[phase1] CONTROL photographs mean of means: reported 4.211 | recomputed 4.211 | CI None None | p None | n None 
+[phase1] mean within-photo SD AESTHETIC / CONTROL: reported 1.444 / 1.556 | recomputed 1.444 / 1.556 | CI None None | p None | n None 
+[phase1] Spearman architects vs non-experts (photograph means): reported 0.425 | recomputed 0.423 | CI None None | p None | n 599 export-filter sample
+[phase1] Spearman high vs low expertise: reported 0.496 | recomputed 0.5 | CI None None | p None | n 600 
+[phase1] role counts NonExpert/Architect/Student/Engineer/other: reported 63/58/8/8/29 | recomputed {'NonExpert': 63, 'Architect': 58, 'Other': 20, 'ArchitectureStudent': 8, 'Engineer': 8, 'CreativeProfessional': 4, 'Designer': 3, 'ConstructionProfessional': 2} | CI None None | p None | n None 
+            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM  Dependent Variable:  score      
+No. Observations:    9413     Method:              REML       
+No. Groups:          1        Scale:               1.5431     
+Min. group size:     9413     Log-Likelihood:      -16027.8736
+Max. group size:     9413     Converged:           Yes        
+Mean group size:     9413.0                                   
+--------------------------------------------------------------
+                     Coef. Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            3.852    0.102 37.910 0.000  3.652  4.051
+C(cond)[T.AESTHETIC] 0.101    0.043  2.329 0.020  0.016  0.186
+C(cond)[T.BASE]      0.134    0.043  3.097 0.002  0.049  0.219
+cell Var             0.435    0.044                           
+image Var            0.070    0.010                           
+participant Var      1.050    0.099                           
+==============================================================
+
+participant bootstrap 55s
+prompt bootstrap 56s
+two-way bootstrap 54s
+done
+=== a01_human started 2026-10-04T01:44:32+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[perimeters] phase 1 participants (all recorded ratings): reported 166 | recomputed 166 | CI None None | p None | n 23012 before the export filter
+[perimeters] phase 1 ratings (all recorded): reported 23012 | recomputed 23012 | CI None None | p None | n None 
+[perimeters] phase 1 participants after the export filter: reported 164 | recomputed 164 | CI None None | p None | n None 
+[perimeters] phase 1 ratings after the export filter: reported 22712 | recomputed 22712 | CI None None | p None | n None 
+[perimeters] phase 1 ratings removed by the filter: reported 300 | recomputed 300 | CI None None | p None | n None participants 2; reasons ['non finito', 'non finito']
+[perimeters] phase 1 participants with >= 10 ratings (consensus agreement n): reported 161 | recomputed 161 | CI None None | p None | n None 
+[perimeters] phase 1 participants with >= 3 ratings in each frozen set (LOO n): reported 159 | recomputed 159 | CI None None | p None | n None 
+[perimeters] photographs rated by both architects and non-experts: reported 599 | recomputed 599 | CI None None | p None | n None architects cover 599, non-experts 600
+[perimeters] photographs rated by both high (4-5) and low (1-2) expertise: reported 600 | recomputed 600 | CI None None | p None | n None 
+[perimeters] phase 2 participants (ratings, included): reported 158 | recomputed 158 | CI None None | p None | n None 
+[perimeters] phase 2 ratings (included): reported 9413 | recomputed 9413 | CI None None | p None | n None 
+[perimeters] phase 2 comparisons answered (included): reported 4736 | recomputed 4736 | CI None None | p None | n None 
+[perimeters] ties: reported 726 | recomputed 726 | CI None None | p None | n None 
+[perimeters] decisive choices: reported 4010 | recomputed 4010 | CI None None | p None | n None 
+[perimeters] ratings per image: min / max / mean: reported 15-22 / 19.7 | recomputed 15-22 / 19.7 | CI None None | p None | n None 
+[perimeters] phase 2 participants linked to phase 1 by id: reported 32 | recomputed 32 | CI None None | p None | n None 
+[perimeters] unlinked: declared Yes / No / NotSure: reported 16 / 99 / 11 | recomputed 16 / 99 / 11 | CI None None | p None | n None all values {'No': 99, 'Yes': 16, 'NotSure': 11}
+[selection] photographs with n>=10 and mean>=5 on the complete phase-1 sample: reported 89 | recomputed 89 | CI None None | p None | n None identical to frozen AESTHETIC: True
+[selection] rule with top 30%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.650 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 33%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.603 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 35%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.562 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] rule with top 40%: cutoff mean / selected / equals frozen: reported 89 | recomputed 4.492 / 89 / True | CI None None | p None | n None percentile cutoff below 5 → mean threshold binds
+[selection] share of the 600 selected by mean>=5 and n>=10: reported 14.8% | recomputed 14.8% | CI None None | p None | n None 
+[ratings] AESTHETIC − CONTROL per participant (points): reported 0.104 | recomputed 0.1037 | CI 0.0291 0.1782 | p 0.00673 | n 158 one-sample t on participant mean differences; participants with >= 3 ratings in each condition
+[ratings] d_z: reported 0.22 | recomputed 0.218 | CI 0.061 0.376 | p None | n None 
+[ratings] BASE − CONTROL per participant: reported 0.14 | recomputed 0.1401 | CI 0.0684 0.2118 | p 0.000167 | n 158 
+[ratings] AESTHETIC − BASE per participant: reported -0.036 | recomputed -0.0364 | CI -0.1075 0.0347 | p 0.31325 | n 158 
+[ratings] AESTHETIC − CONTROL per triplet (participant-centred scores): reported 0.105 | recomputed 0.1051 | CI 0.0279 0.1822 | p 0.00791 | n 159 
+[ratings] A−C in architects: reported 0.102 | recomputed 0.1021 | CI -0.0133 0.2175 | p 0.0817 | n 54 
+[ratings] A−C in non-experts: reported 0.056 | recomputed 0.0565 | CI -0.0892 0.2022 | p 0.4401 | n 53 
+[ratings] architects − non-experts difference (p): reported 0.623 | recomputed 0.623 | CI None None | p None | n None difference +0.046
+[ratings] high − low expertise (p): reported 0.717 | recomputed 0.717 | CI None None | p None | n None 
+[ratings] linked − unlinked (No + NotSure) A−C: reported -0.116 | recomputed -0.1163 | CI -0.2891 0.0565 | p 0.183 | n 32+110 Welch; the interval spans −0.29/+0.06: not a demonstration of equivalence (MDE for this comparison ≈ ±0.25 points)
+[pairs] AESTHETIC chosen in decisive A–C comparisons (share, n): reported 51.3% of 1320 | recomputed 51.3% of 1320 | CI None None | p None | n None 
+[pairs] half-point share A vs C per participant: reported None | recomputed 0.5076 | CI 0.4811 0.5342 | p 0.57 | n 158 t interval over participants; previous reply gave a participant bootstrap 48.69–53.52
+[pairs] Bradley–Terry OR A vs C (cluster participant): reported 1.09 | recomputed 1.0899 | CI 0.9848 1.2062 | p 0.0957 | n 4010 logistic regression on 'left wins', intercept = position bias; ties excluded
+[pairs] Bradley–Terry OR BASE vs C: reported 1.133 | recomputed 1.1334 | CI 1.0385 1.237 | p 0.0053 | n None 
+[pairs] Bradley–Terry OR A vs BASE: reported 0.962 | recomputed 0.9616 | CI 0.8742 1.0576 | p 0.4176 | n None 
+[pairs] position bias OR (left): reported None | recomputed 0.9738 | CI 0.8933 1.0615 | p 0.5434 | n None not in the manuscript
+[pairs] Bradley–Terry OR A vs C, clustered by PROMPT (48 clusters): reported None | recomputed 1.0899 | CI 0.9503 1.2499 | p 0.2127 | n None sensitivity: inference about prompts rather than participants
+[pairs] Davidson OR A vs C (all 4736 answers incl. ties): reported 1.0893 | recomputed 1.0894 | CI 0.9849 1.2049 | p 0.0955 | n 4736 independent MLE (analytic gradient, BFGS, converged=True, logLik=-4803.889); interval here cluster-robust by participant with t(157); previous reply: participant bootstrap 0.989-1.204
+[pairs] Davidson OR BASE vs C: reported 1.133 | recomputed 1.1331 | CI 1.0382 1.2368 | p 0.0054 | n None 
+[pairs] Davidson OR A vs BASE: reported 0.9614 | recomputed 0.9614 | CI None None | p None | n None derived from the two parameters (BASE reference)
+[pairs] Davidson tie parameter nu: reported 0.3625 | recomputed 0.3625 | CI None None | p None | n None tie probability at parity nu/(2+nu) = 0.153; observed tie share 0.153
+[reliability] phase 2 ICC(1) single rating: reported 0.239 | recomputed 0.239 | CI None None | p None | n 477 one-way ANOVA on participant-centred scores; k0=19.73; ICC(k)=0.861
+[reliability] phase 2 ICC(k) image mean: reported 0.861 | recomputed 0.861 | CI None None | p None | n None 
+[reliability] phase 1 ICC(1) (export filter, 164): reported 0.138 | recomputed 0.138 | CI None None | p None | n 600 k0=37.83
+[reliability] phase 1 ICC(k) (export filter): reported 0.858 | recomputed 0.858 | CI None None | p None | n None 
+[reliability] mean correlation with the aggregate of the others: reported 0.351 | recomputed 0.351 | CI 0.322 0.38 | p None | n 161 
+[reliability] leave-one-rater-out reselection signal (points): reported 0.915 | recomputed 0.915 | CI 0.811 1.019 | p None | n 159 inside each reselection: top set always 89 (164 of 164), CONTROL photographs entering the reselected top: mean 0.1 (removed from the comparison set). NOTE the reselection uses the top-89 by mean, not the frozen rule (n>=10, mean>=5)
+[phase1] AESTHETIC photographs mean of means (complete sample): reported 5.295 | recomputed 5.295 | CI None None | p None | n None 
+[phase1] CONTROL photographs mean of means: reported 4.211 | recomputed 4.211 | CI None None | p None | n None 
+[phase1] mean within-photo SD AESTHETIC / CONTROL: reported 1.444 / 1.556 | recomputed 1.444 / 1.556 | CI None None | p None | n None 
+[phase1] Spearman architects vs non-experts (photograph means): reported 0.425 | recomputed 0.423 | CI None None | p None | n 599 export-filter sample
+[phase1] Spearman high vs low expertise: reported 0.496 | recomputed 0.5 | CI None None | p None | n 600 
+[phase1] role counts NonExpert/Architect/Student/Engineer/other: reported 63/58/8/8/29 | recomputed {'NonExpert': 63, 'Architect': 58, 'Other': 29, 'ArchitectureStudent': 8, 'Engineer': 8} | CI None None | p None | n None 
+            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM  Dependent Variable:  score      
+No. Observations:    9413     Method:              REML       
+No. Groups:          1        Scale:               1.5431     
+Min. group size:     9413     Log-Likelihood:      -16027.8736
+Max. group size:     9413     Converged:           Yes        
+Mean group size:     9413.0                                   
+--------------------------------------------------------------
+                     Coef. Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            3.852    0.102 37.910 0.000  3.652  4.051
+C(cond)[T.AESTHETIC] 0.101    0.043  2.329 0.020  0.016  0.186
+C(cond)[T.BASE]      0.134    0.043  3.097 0.002  0.049  0.219
+cell Var             0.435    0.044                           
+image Var            0.070    0.010                           
+participant Var      1.050    0.099                           
+==============================================================
+
+participant bootstrap 44s
+prompt bootstrap 43s
+two-way bootstrap 48s
+done

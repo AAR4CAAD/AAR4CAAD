@@ -1,0 +1,42 @@
+section,quantity,reported,recomputed,difference,ci_low,ci_high,p,n,reported_in,note
+direction,gap between photograph centroids d,0.235,0.235229,0.000229,,,,,manuscript rev12,frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+direction,gap under random relabelling (mean of null),0.138,0.138,0.0,,,0.0,,manuscript rev12,2000 permutations of the 178 labels
+direction,standardised distance d / pooled multivariate dispersion,0.26,0.257,-0.003,,,,,manuscript rev12,"pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258"
+direction,AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity),0.78,0.741,-0.039,,,,,manuscript rev12,AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+direction,"Spearman of the projection on the direction with the mean rating, 422 external photographs",0.39,0.393,0.003,,,4.777269270235928e-17,422.0,manuscript rev12,
+identities,S = d·P max abs error (192 cells),0,5.551115123125783e-17,0.0,,,,,manuscript rev12,"S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding"
+identities,R = P/d = S/d² max abs error,0,6.661338147750939e-16,0.0,,,,,manuscript rev12,
+identities,sign and rank invariance S vs P (Spearman),1,1.0,0.0,,,,,manuscript rev12,conversion by a positive constant
+159 triplets,mean P (unit-direction projection) A−C,0.0429,0.0429,0.0,0.0273,0.0602,0.0,159.0,manuscript rev12,bootstrap over prompts (conditional on the frozen direction)
+159 triplets,mean P A−BASE,0.0443,0.0443,0.0,0.0263,0.0632,0.0,159.0,manuscript rev12,bootstrap over prompts (conditional on the frozen direction)
+159 triplets,mean P C−BASE,0.0014,0.0014,0.0,-0.0125,0.015,0.8432,159.0,manuscript rev12,bootstrap over prompts (conditional on the frozen direction)
+159 triplets,transfer ratio R = mean P / d,0.18,0.1823,0.0023,0.1155,0.2558,0.0,,manuscript rev12,manuscript CI 12–25%
+159 triplets,share of triplets with P > 0,0.62,0.616,-0.004,,,,159.0,manuscript rev12,
+159 triplets,S: min / median / mean / max / SD,"[-0.0289, 0.0053, 0.0101, 0.0995, 0.0212]","[-0.0289, 0.0053, 0.0101, 0.0995, 0.0212]",,,,,,previous reply 09_transfer_scale_check,"Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P"
+159 triplets,P: min / median / mean / max / SD,"[-0.1227, 0.0223, 0.0429, 0.4229, 0.09]","[-0.1227, 0.0223, 0.0429, 0.4229, 0.09]",,,,,,previous reply 09_transfer_scale_check,"Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P"
+159 triplets,"Fig. 1 cells (min, median, max of S)",A07/6127; ?; A08/7,A07_6127; C14_25478; A08_7,,,,,,previous reply,median cell = the 80th of 159 ordered values
+159 triplets,Spearman P vs human Δ rating A−C,0.23,0.233,0.003,,,0.0032,159.0,manuscript rev12,
+159 triplets,Spearman P vs share of A choices,0.04,0.037,-0.003,,,0.648,159.0,manuscript rev12,
+192 cells,"mean P A−C (original pair, all cells)",,0.0415,,0.0279,0.0569,0.0,192.0,manuscript rev12,
+192 cells,"mean P A−BASE (original pair, all cells)",,0.0416,,0.0263,0.0591,0.0,192.0,manuscript rev12,
+192 cells,"mean P C−BASE (original pair, all cells)",,0.0001,,-0.0124,0.0125,0.9812,192.0,manuscript rev12,
+192 cells,"mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE), 159 / 192",0.678 / 0.699 (159); 0.701 / 0.719 (192),0.678 / 0.699 (159); 0.701 / 0.719 (192),,,,,,historical report B5/B6,
+replication,"mean P A−C, paired training seed 1254",0.0435,0.0435,0.0,0.0271,0.0607,0.0,192.0,manuscript rev12,
+replication,AESTHETIC seed 1254: along u / along the shared direction,,+0.0416 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,CONTROL seed 1254: along u / along the shared direction,,-0.0019 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,"mean P A−C, paired training seed 9865",0.0412,0.0412,0.0,0.0255,0.0579,0.0,192.0,manuscript rev12,
+replication,AESTHETIC seed 9865: along u / along the shared direction,,+0.0413 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,CONTROL seed 9865: along u / along the shared direction,,+0.0001 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,"mean P A−C, paired training seed 42160",0.0504,0.0504,0.0,0.0356,0.0684,0.0,192.0,manuscript rev12,
+replication,AESTHETIC seed 42160: along u / along the shared direction,,+0.0320 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,CONTROL seed 42160: along u / along the shared direction,,-0.0185 / see fig_embedding_shifts,,,,,,manuscript rev12,
+replication,AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w,,+0.0416 / +0.1118,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w,,+0.0413 / +0.1040,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w,,+0.0320 / +0.1182,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w,,-0.0019 / +0.1202,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w,,+0.0001 / +0.1229,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w,,-0.0185 / +0.1048,,,,,,manuscript rev12,"w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)"
+replication,determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254,0.32 / 0.63 / 0.68,0.32 / 0.62 / 0.68,,,,,,replication report,
+direction uncertainty,d: 95% interval from resampling the 89+89 photographs,,0.2352,,0.2326,0.3209,,,manuscript rev12,"the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate"
+direction uncertainty,mean P (159) with the direction re-estimated on resampled photographs,,0.0429,,0.0241,0.0482,,,manuscript rev12,outputs fixed; only the direction varies
+direction uncertainty,R with the direction re-estimated,,0.1823,,0.0906,0.1801,,,manuscript rev12,

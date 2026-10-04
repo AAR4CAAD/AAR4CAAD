@@ -1,0 +1,9 @@
+{
+  "symmetric_Davidson_strengths_zero": true,
+  "symmetric_Davidson_nu_0_2": true,
+  "actual_likelihood_multistart_max_parameter_difference": 1.9777467163972773e-10,
+  "negation_coordination_and_but_reset": true,
+  "word_boundary_park_not_parking": true,
+  "transfer_identities": "see transfer_definitions.json",
+  "primary_rating_results": "recomputed, see 12_human_contrasts_recomputed.csv"
+}

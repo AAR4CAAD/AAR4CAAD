@@ -1,0 +1,16 @@
+=== a07_documentation started 2026-10-03T20:57:25+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+NAMED in replication_vlm_analysis.py: "representation_quality", "proportional_coherence", "component_coherence", "material_rendering", "photographic_composition"
+                     measure  estimate    ci_low   ci_high
+3     representation_quality -0.055532 -0.182483  0.072760
+7     proportional_coherence -0.045711 -0.155642  0.058805
+11       component_coherence -0.129638 -0.244639 -0.019130
+15        material_rendering  0.001121 -0.118007  0.118741
+19  photographic_composition -0.026733 -0.179749  0.130695
+results_vlm.csv columns: ['section', 'analysis', 'model', 'measure', 'scale', 'estimate', 'ci_low', 'ci_high', 'p', 'p_holm', 'n']
+   section             analysis             model                   measure   scale  estimate    ci_low   ci_high         p    p_holm    n
+0        1  AESTHETIC − CONTROL  three models (z)  architectural_appearance       z  0.149107  0.027937  0.276558  0.015598  0.015598  159
+1        1  AESTHETIC − CONTROL            openai  architectural_appearance       z  0.062262 -0.122976  0.275961  0.457354       NaN  159
+2        1  AESTHETIC − CONTROL            openai  architectural_appearance  points  0.022013 -0.046487  0.087750  0.453655       NaN  159
+second screening material: 576 images; 576 copied
+done
+=== a07_documentation started 2026-10-04T01:41:42+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6

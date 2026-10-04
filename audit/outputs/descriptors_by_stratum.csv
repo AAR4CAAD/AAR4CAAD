@@ -1,0 +1,13 @@
+stratum,n_control,n_aesthetic,how,output_contrast,r_with_x_stratum,same_sign,r_x_stratum_vs_x_full,mean_abs_x_stratum
+type_and_style,20,20,"19 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",a−c,0.026,17,0.53,0.267
+type_and_style,20,20,"19 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",a,-0.456,8,0.53,0.267
+type_and_style,20,20,"19 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",c,-0.467,9,0.53,0.267
+type_only,41,63,"25 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",a−c,0.632,25,0.795,0.241
+type_only,41,63,"25 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",a,0.305,18,0.795,0.241
+type_only,41,63,"25 strata, each weighted equally: mean over strata of (mean of the AESTHETIC photographs of the stratum − mean of its CONTROL photographs)",c,-0.075,15,0.795,0.241
+random_fill,28,89,all 89 AESTHETIC vs the 28 random CONTROL (unpaired; no counterpart stratum exists),a−c,0.709,24,0.897,0.304
+random_fill,28,89,all 89 AESTHETIC vs the 28 random CONTROL (unpaired; no counterpart stratum exists),a,-0.157,11,0.897,0.304
+random_fill,28,89,all 89 AESTHETIC vs the 28 random CONTROL (unpaired; no counterpart stratum exists),c,-0.578,10,0.897,0.304
+matched_61 (20 type+style + 41 type),61,65,44 strata weighted equally,a−c,0.434,20,0.855,0.178
+matched_61 (20 type+style + 41 type),61,65,44 strata weighted equally,a,-0.082,13,0.855,0.178
+matched_61 (20 type+style + 41 type),61,65,44 strata weighted equally,c,-0.34,12,0.855,0.178

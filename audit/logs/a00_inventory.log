@@ -1,0 +1,144 @@
+=== a00_inventory started 2026-10-03T20:29:54+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+# Inventory checks
+
+Export (original): `FULL_EXPERIMENT_EXPORT_ARCH300_20261001-134634.zip` sha256 `ea0bdbf6faa91396019e31db97f81784957bd80bd84342179670b5cdbc055d1c`
+Export (replication): `FULL_EXPERIMENT_EXPORT_ARCH300_20261002-053652.zip` sha256 `23bcd305fcc75a1c05a3341acd66f3219ae07a4b496f4cd818fb2804e8094fbc`
+
+## Human tables identical in the two exports?
+
+| table | identical | sha(original) | sha(replication) |
+|---|---|---|---|
+| pretraining_ratings.csv | True | 96634cbeb2f3 | 96634cbeb2f3 |
+| posttraining_ratings.csv | True | d506d68e57ac | d506d68e57ac |
+| pairwise_trials.csv | True | 18c15a2914f5 | 18c15a2914f5 |
+| participants.csv | True | d267c373e088 | d267c373e088 |
+| aesthetic_dataset.csv | True | a42647a1fa97 | a42647a1fa97 |
+| control_dataset.csv | True | df4d398f999c | df4d398f999c |
+| captions.csv | True | a4d6c599fb7e | a4d6c599fb7e |
+| image_metadata.csv | True | 9f89b3791642 | 9f89b3791642 |
+| source_images.csv | True | 05af85728aea | 05af85728aea |
+
+## Generated images (original export)
+
+- rows: 576; conditions: {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192}
+- main plans [22, 23]: 576 images = {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192}; prompts 48; seeds [np.int64(7), np.int64(85), np.int64(6127), np.int64(25478)]; cells 192
+- training runs of the main plans: ['RUN-AESTHETIC-4', 'RUN-CONTROL-4'] (BASE has none)
+- duplicated opaque ids: 0; duplicated sha256: 0
+- shown to participants (not excluded by the review rule): 477 images = 159 triplets
+- other plans (tests, not evaluated): 0 images in plans [] with runs []
+
+## Embeddings
+
+- baseline file: kinds {'source': 600, 'generated': 576}; all 600 photograph codes present: True; all 576 main-plan generated ids present: True
+- replication file: 960 ids; runs in the replication export: ['REP-AES-S1254-R', 'REP-AES-S42160', 'REP-AES-S9865', 'REP-CTL-S1254', 'REP-CTL-S42160']; images per run: {'REP-AES-S1254-R': 192, 'REP-AES-S42160': 192, 'REP-AES-S9865': 192, 'REP-CTL-S1254': 192, 'REP-CTL-S42160': 192}
+- replication ids covered by the replication embedding file: 960 of 960
+- excluded from the paired-seed analyses by design: ['REP-AES-S1254-R'] (determinism re-run of seed 1254, same corpus as RUN-AESTHETIC-4)
+
+## Descriptor matrix
+
+- rows 2136: kinds {'generated': 1536, 'source': 600}; duplicated ids 0; missing values 0
+- covers the 600 photographs: True; the 576 original images: True; the replication images: 960 of 960
+
+## Units of observation (to keep separate)
+
+- Human sample: 158 participants of phase 2 on 159 triplets of the two ORIGINAL adapters (RUN-AESTHETIC-4 seed 1254, RUN-CONTROL-4 seed 9865) + BASE.
+- Computational replication: 3 paired training seeds × 2 corpora = 6 adapters, 192 cells each; BASE images are the SAME 192 for every seed (one BASE image per cell, re-used in every contrast: not independent observations).
+- A 7th adapter (REP-AES-S1254-R) repeats seed 1254 on AESTHETIC-v2 to measure training non-determinism; it is not an additional realisation.
+
+inventory rows 127 missing 28
+=== a00_inventory started 2026-10-03T20:30:55+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+# Inventory checks
+
+Export (original): `FULL_EXPERIMENT_EXPORT_ARCH300_20261001-134634.zip` sha256 `ea0bdbf6faa91396019e31db97f81784957bd80bd84342179670b5cdbc055d1c`
+Export (replication): `FULL_EXPERIMENT_EXPORT_ARCH300_20261002-053652.zip` sha256 `23bcd305fcc75a1c05a3341acd66f3219ae07a4b496f4cd818fb2804e8094fbc`
+
+## Human tables identical in the two exports?
+
+| table | identical | sha(original) | sha(replication) |
+|---|---|---|---|
+| pretraining_ratings.csv | True | 96634cbeb2f3 | 96634cbeb2f3 |
+| posttraining_ratings.csv | True | d506d68e57ac | d506d68e57ac |
+| pairwise_trials.csv | True | 18c15a2914f5 | 18c15a2914f5 |
+| participants.csv | True | d267c373e088 | d267c373e088 |
+| aesthetic_dataset.csv | True | a42647a1fa97 | a42647a1fa97 |
+| control_dataset.csv | True | df4d398f999c | df4d398f999c |
+| captions.csv | True | a4d6c599fb7e | a4d6c599fb7e |
+| image_metadata.csv | True | 9f89b3791642 | 9f89b3791642 |
+| source_images.csv | True | 05af85728aea | 05af85728aea |
+
+## Generated images (original export)
+
+- rows: 576; conditions: {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192}
+- main plans [22, 23]: 576 images = {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192}; prompts 48; seeds [np.int64(7), np.int64(85), np.int64(6127), np.int64(25478)]; cells 192
+- training runs of the main plans: ['RUN-AESTHETIC-4', 'RUN-CONTROL-4'] (BASE has none)
+- duplicated opaque ids: 0; duplicated sha256: 0
+- shown to participants (not excluded by the review rule): 477 images = 159 triplets
+- other plans (tests, not evaluated): 0 images in plans [] with runs []
+
+## Embeddings
+
+- baseline file: kinds {'source': 600, 'generated': 576}; all 600 photograph codes present: True; all 576 main-plan generated ids present: True
+- replication file: 960 ids; runs in the replication export: ['REP-AES-S1254-R', 'REP-AES-S42160', 'REP-AES-S9865', 'REP-CTL-S1254', 'REP-CTL-S42160']; images per run: {'REP-AES-S1254-R': 192, 'REP-AES-S42160': 192, 'REP-AES-S9865': 192, 'REP-CTL-S1254': 192, 'REP-CTL-S42160': 192}
+- replication ids covered by the replication embedding file: 960 of 960
+- excluded from the paired-seed analyses by design: ['REP-AES-S1254-R'] (determinism re-run of seed 1254, same corpus as RUN-AESTHETIC-4)
+
+## Descriptor matrix
+
+- rows 2136: kinds {'generated': 1536, 'source': 600}; duplicated ids 0; missing values 0
+- covers the 600 photographs: True; the 576 original images: True; the replication images: 960 of 960
+
+## Units of observation (to keep separate)
+
+- Human sample: 158 participants of phase 2 on 159 triplets of the two ORIGINAL adapters (RUN-AESTHETIC-4 seed 1254, RUN-CONTROL-4 seed 9865) + BASE.
+- Computational replication: 3 paired training seeds × 2 corpora = 6 adapters, 192 cells each; BASE images are the SAME 192 for every seed (one BASE image per cell, re-used in every contrast: not independent observations).
+- A 7th adapter (REP-AES-S1254-R) repeats seed 1254 on AESTHETIC-v2 to measure training non-determinism; it is not an additional realisation.
+
+inventory rows 127 missing 0
+=== a00_inventory started 2026-10-04T01:44:10+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+# Inventory checks
+
+Export (original): `export` sha256 `(folder)`
+Export (replication): `export` sha256 `(folder)`
+
+## Human tables identical in the two exports?
+
+| table | identical | sha(original) | sha(replication) |
+|---|---|---|---|
+| pretraining_ratings.csv | True | 5d2dfbf3ebe5 | 5d2dfbf3ebe5 |
+| posttraining_ratings.csv | True | 7357dd0ac819 | 7357dd0ac819 |
+| pairwise_trials.csv | True | d64d93a4f988 | d64d93a4f988 |
+| participants.csv | True | 95c474fa66f7 | 95c474fa66f7 |
+| aesthetic_dataset.csv | True | a42647a1fa97 | a42647a1fa97 |
+| control_dataset.csv | True | df4d398f999c | df4d398f999c |
+| captions.csv | True | 21a724ec21c0 | 21a724ec21c0 |
+| image_metadata.csv | True | 80fa516ff06b | 80fa516ff06b |
+| source_images.csv | True | 05af85728aea | 05af85728aea |
+
+## Generated images (original export)
+
+- rows: 1536; conditions: {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192, 'T-REP-AES-S42160': 192, 'T-REP-AES-S9865': 192, 'T-REP-CTL-S1254': 192, 'T-REP-CTL-S42160': 192, 'T-REP-AES-S1254-R': 192}
+- main plans [22, 23]: 576 images = {'AESTHETIC': 192, 'BASE': 192, 'CONTROL': 192}; prompts 48; seeds [np.int64(7), np.int64(85), np.int64(6127), np.int64(25478)]; cells 192
+- training runs of the main plans: ['RUN-AESTHETIC-4', 'RUN-CONTROL-4'] (BASE has none)
+- duplicated opaque ids: 0; duplicated sha256: 0
+- shown to participants (not excluded by the review rule): 477 images = 159 triplets
+- other plans (tests, not evaluated): 960 images in plans [24, 25] with runs ['REP-AES-S42160', 'REP-AES-S9865', 'REP-CTL-S1254', 'REP-CTL-S42160', 'REP-AES-S1254-R']
+
+## Embeddings
+
+- baseline file: kinds {'source': 600, 'generated': 576}; all 600 photograph codes present: True; all 576 main-plan generated ids present: True
+- replication file: 960 ids; runs in the replication export: ['REP-AES-S1254-R', 'REP-AES-S42160', 'REP-AES-S9865', 'REP-CTL-S1254', 'REP-CTL-S42160']; images per run: {'REP-AES-S1254-R': 192, 'REP-AES-S42160': 192, 'REP-AES-S9865': 192, 'REP-CTL-S1254': 192, 'REP-CTL-S42160': 192}
+- replication ids covered by the replication embedding file: 960 of 960
+- excluded from the paired-seed analyses by design: ['REP-AES-S1254-R'] (determinism re-run of seed 1254, same corpus as RUN-AESTHETIC-4)
+
+## Descriptor matrix
+
+- rows 2136: kinds {'generated': 1536, 'source': 600}; duplicated ids 0; missing values 0
+- covers the 600 photographs: True; the 576 original images: True; the replication images: 960 of 960
+
+## Units of observation (to keep separate)
+
+- Human sample: 158 participants of phase 2 on 159 triplets of the two ORIGINAL adapters (RUN-AESTHETIC-4 seed 1254, RUN-CONTROL-4 seed 9865) + BASE.
+- Computational replication: 3 paired training seeds × 2 corpora = 6 adapters, 192 cells each; BASE images are the SAME 192 for every seed (one BASE image per cell, re-used in every contrast: not independent observations).
+- A 7th adapter (REP-AES-S1254-R) repeats seed 1254 on AESTHETIC-v2 to measure training non-determinism; it is not an additional realisation.
+
+inventory rows 126 missing 3

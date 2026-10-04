@@ -1,0 +1,369 @@
+=== a03_dino started 2026-10-03T20:42:26+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+[159 triplets] mean P (unit-direction projection) A−C: reported 0.0429 | recomputed 0.0429 | CI 0.0273 0.0602 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P A−BASE: reported 0.0443 | recomputed 0.0443 | CI 0.0263 0.0632 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P C−BASE: reported 0.0014 | recomputed 0.0014 | CI -0.0125 0.015 | p 0.8432 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] transfer ratio R = mean P / d: reported 0.18 | recomputed 0.1823 | CI 0.1155 0.2558 | p 0.0 | n None manuscript CI 12–25%
+[159 triplets] share of triplets with P > 0: reported 0.62 | recomputed 0.616 | CI None None | p None | n 159 
+[159 triplets] S: min / median / mean / max / SD: reported [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | recomputed [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] P: min / median / mean / max / SD: reported [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | recomputed [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] Fig. 1 cells (min, median, max of S): reported A07/6127; ?; A08/7 | recomputed A07_6127; C14_25478; A08_7 | CI None None | p None | n None median cell = the 80th of 159 ordered values
+[159 triplets] Spearman P vs human Δ rating A−C: reported 0.23 | recomputed 0.233 | CI None None | p 0.0032 | n 159 
+[159 triplets] Spearman P vs share of A choices: reported 0.04 | recomputed 0.037 | CI None None | p 0.648 | n 159 
+[192 cells] mean P A−C (original pair, all cells): reported None | recomputed 0.0415 | CI 0.0279 0.0569 | p 0.0 | n 192 
+[192 cells] mean P A−BASE (original pair, all cells): reported None | recomputed 0.0416 | CI 0.0263 0.0591 | p 0.0 | n 192 
+[192 cells] mean P C−BASE (original pair, all cells): reported None | recomputed 0.0001 | CI -0.0124 0.0125 | p 0.9812 | n 192 
+[192 cells] mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE): reported 0.678 / 0.699 | recomputed 0.701 / 0.719 | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 1254: reported 0.0435 | recomputed 0.0435 | CI 0.0271 0.0607 | p 0.0 | n 192 
+[replication] AESTHETIC seed 1254: along u / along the shared direction: reported None | recomputed +0.0416 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 1254: along u / along the shared direction: reported None | recomputed -0.0019 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 9865: reported 0.0412 | recomputed 0.0412 | CI 0.0255 0.0579 | p 0.0 | n 192 
+[replication] AESTHETIC seed 9865: along u / along the shared direction: reported None | recomputed +0.0413 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 9865: along u / along the shared direction: reported None | recomputed +0.0001 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 42160: reported 0.0504 | recomputed 0.0504 | CI 0.0356 0.0684 | p 0.0 | n 192 
+[replication] AESTHETIC seed 42160: along u / along the shared direction: reported None | recomputed +0.0320 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 42160: along u / along the shared direction: reported None | recomputed -0.0185 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0416 / +0.1118 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0413 / +0.1040 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0320 / +0.1182 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0019 / +0.1202 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0001 / +0.1229 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0185 / +0.1048 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254: reported 0.32 / 0.63 / 0.68 | recomputed 0.32 / 0.62 / 0.68 | CI None None | p None | n None 
+[distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0148 (-0.0205/-0.0093) p 0.0
+[distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0037 (-0.0084/+0.0011) p 0.128
+[distances] ('AESTHETIC', 1254): approach to own minus approach to other -0.0111 (-0.0158/-0.0070)
+[distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ per-image distance to centroid -0.0081 (-0.0143/-0.0017) p 0.0152
+[distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0031 (-0.0026/+0.0087) p 0.2612
+[distances] ('AESTHETIC', 9865): approach to own minus approach to other -0.0112 (-0.0161/-0.0067)
+[distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ per-image distance to centroid -0.0095 (-0.0155/-0.0040) p 0.0
+[distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0010 (-0.0063/+0.0041) p 0.718
+[distances] ('AESTHETIC', 42160): approach to own minus approach to other -0.0085 (-0.0126/-0.0048)
+[distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0065 (-0.0117/-0.0016) p 0.0104
+[distances] ('CONTROL', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0071 (-0.0123/-0.0021) p 0.0052
+[distances] ('CONTROL', 1254): approach to own minus approach to other -0.0006 (-0.0033/+0.0021)
+[distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ per-image distance to centroid +0.0009 (-0.0043/+0.0060) p 0.6992
+[distances] ('CONTROL', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0013 (-0.0032/+0.0056) p 0.5884
+[distances] ('CONTROL', 9865): approach to own minus approach to other +0.0004 (-0.0029/+0.0036)
+[distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ per-image distance to centroid +0.0019 (-0.0032/+0.0071) p 0.4636
+[distances] ('CONTROL', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0025 (-0.0066/+0.0015) p 0.2084
+[distances] ('CONTROL', 42160): approach to own minus approach to other -0.0045 (-0.0081/-0.0010)
+[direction uncertainty] d: 95% interval from resampling the 89+89 photographs: reported None | recomputed 0.2352 | CI 0.2282 0.3202 | p None | n None the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate
+[direction uncertainty] mean P (159) with the direction re-estimated on resampled photographs: reported None | recomputed 0.0429 | CI 0.025 0.0485 | p None | n None outputs fixed; only the direction varies
+[direction uncertainty] R with the direction re-estimated: reported None | recomputed 0.1823 | CI 0.0936 0.1802 | p None | n None 
+[adjusted] original (no adjustment): d_adj 0.2352 (100% of d), cos +1.000, R2 0.000; A−C pooled +0.0451 → R 0.192; per seed +0.0435 [+0.0274,+0.0623], +0.0412 [+0.0254,+0.0580], +0.0504 [+0.0355,+0.0681]; dir-boot R 0.114-0.175
+[adjusted] adjusted for period: d_adj 0.2197 (93% of d), cos +0.991, R2 0.027; A−C pooled +0.0430 → R 0.196; per seed +0.0437 [+0.0280,+0.0609], +0.0373 [+0.0215,+0.0529], +0.0480 [+0.0330,+0.0644]; dir-boot R 0.107-0.181
+[adjusted] adjusted for area: d_adj 0.2231 (95% of d), cos +0.990, R2 0.042; A−C pooled +0.0446 → R 0.200; per seed +0.0436 [+0.0280,+0.0615], +0.0426 [+0.0275,+0.0587], +0.0475 [+0.0329,+0.0636]; dir-boot R 0.117-0.185
+[adjusted] adjusted for period and area (additive): d_adj 0.2092 (89% of d), cos +0.982, R2 0.067; A−C pooled +0.0423 → R 0.202; per seed +0.0437 [+0.0286,+0.0602], +0.0380 [+0.0225,+0.0541], +0.0454 [+0.0313,+0.0615]; dir-boot R 0.114-0.184
+=== a03_dino started 2026-10-03T20:43:41+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+[159 triplets] mean P (unit-direction projection) A−C: reported 0.0429 | recomputed 0.0429 | CI 0.0273 0.0602 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P A−BASE: reported 0.0443 | recomputed 0.0443 | CI 0.0263 0.0632 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P C−BASE: reported 0.0014 | recomputed 0.0014 | CI -0.0125 0.015 | p 0.8432 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] transfer ratio R = mean P / d: reported 0.18 | recomputed 0.1823 | CI 0.1155 0.2558 | p 0.0 | n None manuscript CI 12–25%
+[159 triplets] share of triplets with P > 0: reported 0.62 | recomputed 0.616 | CI None None | p None | n 159 
+[159 triplets] S: min / median / mean / max / SD: reported [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | recomputed [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] P: min / median / mean / max / SD: reported [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | recomputed [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] Fig. 1 cells (min, median, max of S): reported A07/6127; ?; A08/7 | recomputed A07_6127; C14_25478; A08_7 | CI None None | p None | n None median cell = the 80th of 159 ordered values
+[159 triplets] Spearman P vs human Δ rating A−C: reported 0.23 | recomputed 0.233 | CI None None | p 0.0032 | n 159 
+[159 triplets] Spearman P vs share of A choices: reported 0.04 | recomputed 0.037 | CI None None | p 0.648 | n 159 
+[192 cells] mean P A−C (original pair, all cells): reported None | recomputed 0.0415 | CI 0.0279 0.0569 | p 0.0 | n 192 
+[192 cells] mean P A−BASE (original pair, all cells): reported None | recomputed 0.0416 | CI 0.0263 0.0591 | p 0.0 | n 192 
+[192 cells] mean P C−BASE (original pair, all cells): reported None | recomputed 0.0001 | CI -0.0124 0.0125 | p 0.9812 | n 192 
+[192 cells] mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE), 159 / 192: reported 0.678 / 0.699 (159); 0.701 / 0.719 (192) | recomputed 0.678 / 0.699 (159); 0.701 / 0.719 (192) | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 1254: reported 0.0435 | recomputed 0.0435 | CI 0.0271 0.0607 | p 0.0 | n 192 
+[replication] AESTHETIC seed 1254: along u / along the shared direction: reported None | recomputed +0.0416 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 1254: along u / along the shared direction: reported None | recomputed -0.0019 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 9865: reported 0.0412 | recomputed 0.0412 | CI 0.0255 0.0579 | p 0.0 | n 192 
+[replication] AESTHETIC seed 9865: along u / along the shared direction: reported None | recomputed +0.0413 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 9865: along u / along the shared direction: reported None | recomputed +0.0001 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 42160: reported 0.0504 | recomputed 0.0504 | CI 0.0356 0.0684 | p 0.0 | n 192 
+[replication] AESTHETIC seed 42160: along u / along the shared direction: reported None | recomputed +0.0320 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 42160: along u / along the shared direction: reported None | recomputed -0.0185 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0416 / +0.1118 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0413 / +0.1040 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0320 / +0.1182 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0019 / +0.1202 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0001 / +0.1229 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0185 / +0.1048 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254: reported 0.32 / 0.63 / 0.68 | recomputed 0.32 / 0.62 / 0.68 | CI None None | p None | n None 
+[distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0148 (-0.0205/-0.0093) p 0.0
+[distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0037 (-0.0084/+0.0011) p 0.128
+[distances] ('AESTHETIC', 1254): approach to own minus approach to other -0.0111 (-0.0158/-0.0070)
+[distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ per-image distance to centroid -0.0081 (-0.0143/-0.0017) p 0.0152
+[distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0031 (-0.0026/+0.0087) p 0.2612
+[distances] ('AESTHETIC', 9865): approach to own minus approach to other -0.0112 (-0.0161/-0.0067)
+[distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ per-image distance to centroid -0.0095 (-0.0155/-0.0040) p 0.0
+[distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0010 (-0.0063/+0.0041) p 0.718
+[distances] ('AESTHETIC', 42160): approach to own minus approach to other -0.0085 (-0.0126/-0.0048)
+[distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0065 (-0.0117/-0.0016) p 0.0104
+[distances] ('CONTROL', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0071 (-0.0123/-0.0021) p 0.0052
+[distances] ('CONTROL', 1254): approach to own minus approach to other -0.0006 (-0.0033/+0.0021)
+[distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ per-image distance to centroid +0.0009 (-0.0043/+0.0060) p 0.6992
+[distances] ('CONTROL', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0013 (-0.0032/+0.0056) p 0.5884
+[distances] ('CONTROL', 9865): approach to own minus approach to other +0.0004 (-0.0029/+0.0036)
+[distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ per-image distance to centroid +0.0019 (-0.0032/+0.0071) p 0.4636
+[distances] ('CONTROL', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0025 (-0.0066/+0.0015) p 0.2084
+[distances] ('CONTROL', 42160): approach to own minus approach to other -0.0045 (-0.0081/-0.0010)
+[direction uncertainty] d: 95% interval from resampling the 89+89 photographs: reported None | recomputed 0.2352 | CI 0.2282 0.3202 | p None | n None the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate
+[direction uncertainty] mean P (159) with the direction re-estimated on resampled photographs: reported None | recomputed 0.0429 | CI 0.025 0.0485 | p None | n None outputs fixed; only the direction varies
+[direction uncertainty] R with the direction re-estimated: reported None | recomputed 0.1823 | CI 0.0936 0.1802 | p None | n None 
+[adjusted] original (no adjustment): d_adj 0.2352 (100% of d), cos +1.000, R2 0.000; A−C pooled +0.0451 → R 0.192; per seed +0.0435 [+0.0274,+0.0623], +0.0412 [+0.0254,+0.0580], +0.0504 [+0.0355,+0.0681]; dir-boot R 0.114-0.175
+[adjusted] adjusted for period: d_adj 0.2197 (93% of d), cos +0.991, R2 0.027; A−C pooled +0.0430 → R 0.196; per seed +0.0437 [+0.0280,+0.0609], +0.0373 [+0.0215,+0.0529], +0.0480 [+0.0330,+0.0644]; dir-boot R 0.107-0.181
+[adjusted] adjusted for area: d_adj 0.2231 (95% of d), cos +0.990, R2 0.042; A−C pooled +0.0446 → R 0.200; per seed +0.0436 [+0.0280,+0.0615], +0.0426 [+0.0275,+0.0587], +0.0475 [+0.0329,+0.0636]; dir-boot R 0.117-0.185
+[adjusted] adjusted for period and area (additive): d_adj 0.2092 (89% of d), cos +0.982, R2 0.067; A−C pooled +0.0423 → R 0.202; per seed +0.0437 [+0.0286,+0.0602], +0.0380 [+0.0225,+0.0541], +0.0454 [+0.0313,+0.0615]; dir-boot R 0.114-0.184
+done
+=== a03_dino started 2026-10-03T23:34:32+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+[159 triplets] mean P (unit-direction projection) A−C: reported 0.0429 | recomputed 0.0429 | CI 0.0273 0.0602 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P A−BASE: reported 0.0443 | recomputed 0.0443 | CI 0.0263 0.0632 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P C−BASE: reported 0.0014 | recomputed 0.0014 | CI -0.0125 0.015 | p 0.8432 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] transfer ratio R = mean P / d: reported 0.18 | recomputed 0.1823 | CI 0.1155 0.2558 | p 0.0 | n None manuscript CI 12–25%
+[159 triplets] share of triplets with P > 0: reported 0.62 | recomputed 0.616 | CI None None | p None | n 159 
+[159 triplets] S: min / median / mean / max / SD: reported [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | recomputed [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] P: min / median / mean / max / SD: reported [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | recomputed [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] Fig. 1 cells (min, median, max of S): reported A07/6127; ?; A08/7 | recomputed A07_6127; C14_25478; A08_7 | CI None None | p None | n None median cell = the 80th of 159 ordered values
+[159 triplets] Spearman P vs human Δ rating A−C: reported 0.23 | recomputed 0.233 | CI None None | p 0.0032 | n 159 
+[159 triplets] Spearman P vs share of A choices: reported 0.04 | recomputed 0.037 | CI None None | p 0.648 | n 159 
+[192 cells] mean P A−C (original pair, all cells): reported None | recomputed 0.0415 | CI 0.0279 0.0569 | p 0.0 | n 192 
+[192 cells] mean P A−BASE (original pair, all cells): reported None | recomputed 0.0416 | CI 0.0263 0.0591 | p 0.0 | n 192 
+[192 cells] mean P C−BASE (original pair, all cells): reported None | recomputed 0.0001 | CI -0.0124 0.0125 | p 0.9812 | n 192 
+[192 cells] mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE), 159 / 192: reported 0.678 / 0.699 (159); 0.701 / 0.719 (192) | recomputed 0.678 / 0.699 (159); 0.701 / 0.719 (192) | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 1254: reported 0.0435 | recomputed 0.0435 | CI 0.0271 0.0607 | p 0.0 | n 192 
+[replication] AESTHETIC seed 1254: along u / along the shared direction: reported None | recomputed +0.0416 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 1254: along u / along the shared direction: reported None | recomputed -0.0019 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 9865: reported 0.0412 | recomputed 0.0412 | CI 0.0255 0.0579 | p 0.0 | n 192 
+[replication] AESTHETIC seed 9865: along u / along the shared direction: reported None | recomputed +0.0413 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 9865: along u / along the shared direction: reported None | recomputed +0.0001 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 42160: reported 0.0504 | recomputed 0.0504 | CI 0.0356 0.0684 | p 0.0 | n 192 
+[replication] AESTHETIC seed 42160: along u / along the shared direction: reported None | recomputed +0.0320 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 42160: along u / along the shared direction: reported None | recomputed -0.0185 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0416 / +0.1118 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0413 / +0.1040 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0320 / +0.1182 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0019 / +0.1202 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0001 / +0.1229 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0185 / +0.1048 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254: reported 0.32 / 0.63 / 0.68 | recomputed 0.32 / 0.62 / 0.68 | CI None None | p None | n None 
+[distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0148 (-0.0205/-0.0093) p 0.0
+[distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0037 (-0.0084/+0.0011) p 0.128
+[distances] ('AESTHETIC', 1254): approach to own minus approach to other -0.0111 (-0.0158/-0.0070)
+[distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ per-image distance to centroid -0.0081 (-0.0143/-0.0017) p 0.0152
+[distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0031 (-0.0026/+0.0087) p 0.2612
+[distances] ('AESTHETIC', 9865): approach to own minus approach to other -0.0112 (-0.0161/-0.0067)
+[distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ per-image distance to centroid -0.0095 (-0.0155/-0.0040) p 0.0
+[distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0010 (-0.0063/+0.0041) p 0.718
+[distances] ('AESTHETIC', 42160): approach to own minus approach to other -0.0085 (-0.0126/-0.0048)
+[distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0065 (-0.0117/-0.0016) p 0.0104
+[distances] ('CONTROL', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0071 (-0.0123/-0.0021) p 0.0052
+[distances] ('CONTROL', 1254): approach to own minus approach to other -0.0006 (-0.0033/+0.0021)
+[distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ per-image distance to centroid +0.0009 (-0.0043/+0.0060) p 0.6992
+[distances] ('CONTROL', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0013 (-0.0032/+0.0056) p 0.5884
+[distances] ('CONTROL', 9865): approach to own minus approach to other +0.0004 (-0.0029/+0.0036)
+[distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ per-image distance to centroid +0.0019 (-0.0032/+0.0071) p 0.4636
+[distances] ('CONTROL', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0025 (-0.0066/+0.0015) p 0.2084
+[distances] ('CONTROL', 42160): approach to own minus approach to other -0.0045 (-0.0081/-0.0010)
+[centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ centroid distance -0.0525 (-0.0653/-0.0344) p 0.0
+[centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ centroid distance -0.0277 (-0.0404/-0.0099) p 0.0016
+[centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ centroid distance -0.0395 (-0.0538/-0.0209) p 0.0
+[centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ centroid distance -0.0143 (-0.0290/+0.0043) p 0.1308
+[centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ centroid distance -0.0493 (-0.0588/-0.0338) p 0.0
+[centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ centroid distance -0.0314 (-0.0417/-0.0146) p 0.0004
+[centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ centroid distance -0.0354 (-0.0477/-0.0193) p 0.0
+[centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ centroid distance -0.0415 (-0.0527/-0.0259) p 0.0
+[centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ centroid distance -0.0470 (-0.0607/-0.0260) p 0.0
+[centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ centroid distance -0.0534 (-0.0672/-0.0320) p 0.0
+[centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ centroid distance +0.0035 (-0.0109/+0.0189) p 0.6324
+[centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ centroid distance -0.0086 (-0.0202/+0.0050) p 0.2268
+[direction uncertainty] d: 95% interval from resampling the 89+89 photographs: reported None | recomputed 0.2352 | CI 0.2326 0.3209 | p None | n None the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate
+[direction uncertainty] mean P (159) with the direction re-estimated on resampled photographs: reported None | recomputed 0.0429 | CI 0.0241 0.0482 | p None | n None outputs fixed; only the direction varies
+[direction uncertainty] R with the direction re-estimated: reported None | recomputed 0.1823 | CI 0.0906 0.1801 | p None | n None 
+[adjusted] original (no adjustment): d_adj 0.2352 (100% of d), cos +1.000, R2 0.000; A−C pooled +0.0451 → R 0.192; per seed +0.0435 [+0.0271,+0.0609], +0.0412 [+0.0252,+0.0577], +0.0504 [+0.0356,+0.0669]; dir-boot R 0.113-0.180
+[adjusted] adjusted for period: d_adj 0.2197 (93% of d), cos +0.991, R2 0.027; A−C pooled +0.0430 → R 0.196; per seed +0.0437 [+0.0280,+0.0605], +0.0373 [+0.0219,+0.0531], +0.0480 [+0.0331,+0.0650]; dir-boot R 0.108-0.179
+[adjusted] adjusted for area: d_adj 0.2231 (95% of d), cos +0.990, R2 0.042; A−C pooled +0.0446 → R 0.200; per seed +0.0436 [+0.0281,+0.0609], +0.0426 [+0.0272,+0.0587], +0.0475 [+0.0334,+0.0640]; dir-boot R 0.113-0.183
+[adjusted] adjusted for period and area (additive): d_adj 0.2092 (89% of d), cos +0.982, R2 0.067; A−C pooled +0.0423 → R 0.202; per seed +0.0437 [+0.0281,+0.0605], +0.0380 [+0.0221,+0.0543], +0.0454 [+0.0312,+0.0615]; dir-boot R 0.110-0.187
+done
+=== a03_dino started 2026-10-04T01:41:34+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+=== a03_dino started 2026-10-04T01:42:49+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+[159 triplets] mean P (unit-direction projection) A−C: reported 0.0429 | recomputed 0.0415 | CI 0.0277 0.0567 | p 0.0 | n 192 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P A−BASE: reported 0.0443 | recomputed 0.0416 | CI 0.0262 0.0582 | p 0.0 | n 192 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P C−BASE: reported 0.0014 | recomputed 0.0001 | CI -0.0128 0.0124 | p 0.9804 | n 192 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] transfer ratio R = mean P / d: reported 0.18 | recomputed 0.1765 | CI 0.1174 0.2413 | p 0.0 | n None manuscript CI 12–25%
+[159 triplets] share of triplets with P > 0: reported 0.62 | recomputed 0.63 | CI None None | p None | n 192 
+[159 triplets] S: min / median / mean / max / SD: reported [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | recomputed [-0.0299, 0.0064, 0.0098, 0.0995, 0.0202] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] P: min / median / mean / max / SD: reported [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | recomputed [-0.1271, 0.027, 0.0415, 0.4229, 0.086] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] Fig. 1 cells (min, median, max of S): reported A07/6127; ?; A08/7 | recomputed A07_85; B08_7; A08_7 | CI None None | p None | n None median cell = the 80th of 159 ordered values
+[159 triplets] Spearman P vs human Δ rating A−C: reported 0.23 | recomputed 0.233 | CI None None | p 0.0032 | n 159 
+[159 triplets] Spearman P vs share of A choices: reported 0.04 | recomputed 0.037 | CI None None | p 0.648 | n 159 
+[192 cells] mean P A−C (original pair, all cells): reported None | recomputed 0.0415 | CI 0.0279 0.0569 | p 0.0 | n 192 
+[192 cells] mean P A−BASE (original pair, all cells): reported None | recomputed 0.0416 | CI 0.0263 0.0591 | p 0.0 | n 192 
+[192 cells] mean P C−BASE (original pair, all cells): reported None | recomputed 0.0001 | CI -0.0124 0.0125 | p 0.9812 | n 192 
+[192 cells] mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE), 159 / 192: reported 0.678 / 0.699 (159); 0.701 / 0.719 (192) | recomputed 0.701 / 0.719 (159); 0.701 / 0.719 (192) | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 1254: reported 0.0435 | recomputed 0.0435 | CI 0.0271 0.0607 | p 0.0 | n 192 
+[replication] AESTHETIC seed 1254: along u / along the shared direction: reported None | recomputed +0.0416 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 1254: along u / along the shared direction: reported None | recomputed -0.0019 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 9865: reported 0.0412 | recomputed 0.0412 | CI 0.0255 0.0579 | p 0.0 | n 192 
+[replication] AESTHETIC seed 9865: along u / along the shared direction: reported None | recomputed +0.0413 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 9865: along u / along the shared direction: reported None | recomputed +0.0001 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 42160: reported 0.0504 | recomputed 0.0504 | CI 0.0356 0.0684 | p 0.0 | n 192 
+[replication] AESTHETIC seed 42160: along u / along the shared direction: reported None | recomputed +0.0320 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 42160: along u / along the shared direction: reported None | recomputed -0.0185 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0416 / +0.1118 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0413 / +0.1040 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0320 / +0.1182 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0019 / +0.1202 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0001 / +0.1229 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0185 / +0.1048 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254: reported 0.32 / 0.63 / 0.68 | recomputed 0.32 / 0.62 / 0.68 | CI None None | p None | n None 
+[distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0148 (-0.0205/-0.0093) p 0.0
+[distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0037 (-0.0084/+0.0011) p 0.128
+[distances] ('AESTHETIC', 1254): approach to own minus approach to other -0.0111 (-0.0158/-0.0070)
+[distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ per-image distance to centroid -0.0081 (-0.0143/-0.0017) p 0.0152
+[distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0031 (-0.0026/+0.0087) p 0.2612
+[distances] ('AESTHETIC', 9865): approach to own minus approach to other -0.0112 (-0.0161/-0.0067)
+[distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ per-image distance to centroid -0.0095 (-0.0155/-0.0040) p 0.0
+[distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0010 (-0.0063/+0.0041) p 0.718
+[distances] ('AESTHETIC', 42160): approach to own minus approach to other -0.0085 (-0.0126/-0.0048)
+[distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0065 (-0.0117/-0.0016) p 0.0104
+[distances] ('CONTROL', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0071 (-0.0123/-0.0021) p 0.0052
+[distances] ('CONTROL', 1254): approach to own minus approach to other -0.0006 (-0.0033/+0.0021)
+[distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ per-image distance to centroid +0.0009 (-0.0043/+0.0060) p 0.6992
+[distances] ('CONTROL', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0013 (-0.0032/+0.0056) p 0.5884
+[distances] ('CONTROL', 9865): approach to own minus approach to other +0.0004 (-0.0029/+0.0036)
+[distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ per-image distance to centroid +0.0019 (-0.0032/+0.0071) p 0.4636
+[distances] ('CONTROL', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0025 (-0.0066/+0.0015) p 0.2084
+[distances] ('CONTROL', 42160): approach to own minus approach to other -0.0045 (-0.0081/-0.0010)
+[centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ centroid distance -0.0525 (-0.0653/-0.0344) p 0.0
+[centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ centroid distance -0.0277 (-0.0404/-0.0099) p 0.0016
+[centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ centroid distance -0.0395 (-0.0538/-0.0209) p 0.0
+[centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ centroid distance -0.0143 (-0.0290/+0.0043) p 0.1308
+[centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ centroid distance -0.0493 (-0.0588/-0.0338) p 0.0
+[centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ centroid distance -0.0314 (-0.0417/-0.0146) p 0.0004
+[centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ centroid distance -0.0354 (-0.0477/-0.0193) p 0.0
+[centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ centroid distance -0.0415 (-0.0527/-0.0259) p 0.0
+[centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ centroid distance -0.0470 (-0.0607/-0.0260) p 0.0
+[centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ centroid distance -0.0534 (-0.0672/-0.0320) p 0.0
+[centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ centroid distance +0.0035 (-0.0109/+0.0189) p 0.6324
+[centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ centroid distance -0.0086 (-0.0202/+0.0050) p 0.2268
+[direction uncertainty] d: 95% interval from resampling the 89+89 photographs: reported None | recomputed 0.2352 | CI 0.2326 0.3209 | p None | n None the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate
+[direction uncertainty] mean P (159) with the direction re-estimated on resampled photographs: reported None | recomputed 0.0415 | CI 0.0219 0.048 | p None | n None outputs fixed; only the direction varies
+[direction uncertainty] R with the direction re-estimated: reported None | recomputed 0.1765 | CI 0.0827 0.1803 | p None | n None 
+[adjusted] original (no adjustment): d_adj 0.2352 (100% of d), cos +1.000, R2 0.000; A−C pooled +0.0451 → R 0.192; per seed +0.0435 [+0.0271,+0.0609], +0.0412 [+0.0252,+0.0577], +0.0504 [+0.0356,+0.0669]; dir-boot R 0.113-0.180
+[adjusted] adjusted for period: d_adj 0.2197 (93% of d), cos +0.991, R2 0.027; A−C pooled +0.0430 → R 0.196; per seed +0.0437 [+0.0280,+0.0605], +0.0373 [+0.0219,+0.0531], +0.0480 [+0.0331,+0.0650]; dir-boot R 0.108-0.179
+[adjusted] adjusted for area: d_adj 0.2231 (95% of d), cos +0.990, R2 0.042; A−C pooled +0.0446 → R 0.200; per seed +0.0436 [+0.0281,+0.0609], +0.0426 [+0.0272,+0.0587], +0.0475 [+0.0334,+0.0640]; dir-boot R 0.113-0.183
+[adjusted] adjusted for period and area (additive): d_adj 0.2092 (89% of d), cos +0.982, R2 0.067; A−C pooled +0.0423 → R 0.202; per seed +0.0437 [+0.0281,+0.0605], +0.0380 [+0.0221,+0.0543], +0.0454 [+0.0312,+0.0615]; dir-boot R 0.110-0.187
+done
+=== a03_dino started 2026-10-04T01:49:15+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[direction] gap between photograph centroids d: reported 0.235 | recomputed 0.235229 | CI None None | p None | n None frozen file: 0.235229; identical True; u·u_frozen = 1.000000000
+[direction] gap under random relabelling (mean of null): reported 0.138 | recomputed 0.138 | CI None None | p 0.0 | n None 2000 permutations of the 178 labels
+[direction] standardised distance d / pooled multivariate dispersion: reported 0.26 | recomputed 0.257 | CI None None | p None | n None pooled dispersion 0.9161 (root mean squared distance to the own centroid, averaged over the two sets); previous reply used 0.9131288332377052 with the same meaning → 0.258
+[direction] AUC AESTHETIC vs CONTROL photographs (leave-one-out affinity): reported 0.78 | recomputed 0.741 | CI None None | p None | n None AUC of the LOO relative affinity; the manuscript's 0.78 refers to the classifier of the historical report
+[direction] Spearman of the projection on the direction with the mean rating, 422 external photographs: reported 0.39 | recomputed 0.393 | CI None None | p 4.777269270235928e-17 | n 422 
+[identities] S = d·P max abs error (192 cells): reported 0 | recomputed 5.551115123125783e-17 | CI None None | p None | n None S = difference of relative affinities (e·g), P = projection on the unit direction; exact up to rounding
+[identities] R = P/d = S/d² max abs error: reported 0 | recomputed 6.661338147750939e-16 | CI None None | p None | n None 
+[identities] sign and rank invariance S vs P (Spearman): reported 1 | recomputed 1.0 | CI None None | p None | n None conversion by a positive constant
+[159 triplets] mean P (unit-direction projection) A−C: reported 0.0429 | recomputed 0.0429 | CI 0.0273 0.0602 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P A−BASE: reported 0.0443 | recomputed 0.0443 | CI 0.0263 0.0632 | p 0.0 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] mean P C−BASE: reported 0.0014 | recomputed 0.0014 | CI -0.0125 0.015 | p 0.8432 | n 159 bootstrap over prompts (conditional on the frozen direction)
+[159 triplets] transfer ratio R = mean P / d: reported 0.18 | recomputed 0.1823 | CI 0.1155 0.2558 | p 0.0 | n None manuscript CI 12–25%
+[159 triplets] share of triplets with P > 0: reported 0.62 | recomputed 0.616 | CI None None | p None | n 159 
+[159 triplets] S: min / median / mean / max / SD: reported [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | recomputed [-0.0289, 0.0053, 0.0101, 0.0995, 0.0212] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] P: min / median / mean / max / SD: reported [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | recomputed [-0.1227, 0.0223, 0.0429, 0.4229, 0.09] | CI None None | p None | n None Fig. 1 of the manuscript labels −0.0289 / +0.0053 / +0.0995: these are S (affinity difference), while the text's +0.0429 is the mean of P
+[159 triplets] Fig. 1 cells (min, median, max of S): reported A07/6127; ?; A08/7 | recomputed A07_6127; C14_25478; A08_7 | CI None None | p None | n None median cell = the 80th of 159 ordered values
+[159 triplets] Spearman P vs human Δ rating A−C: reported 0.23 | recomputed 0.233 | CI None None | p 0.0032 | n 159 
+[159 triplets] Spearman P vs share of A choices: reported 0.04 | recomputed 0.037 | CI None None | p 0.648 | n 159 
+[192 cells] mean P A−C (original pair, all cells): reported None | recomputed 0.0415 | CI 0.0279 0.0569 | p 0.0 | n 192 
+[192 cells] mean P A−BASE (original pair, all cells): reported None | recomputed 0.0416 | CI 0.0263 0.0591 | p 0.0 | n 192 
+[192 cells] mean P C−BASE (original pair, all cells): reported None | recomputed 0.0001 | CI -0.0124 0.0125 | p 0.9812 | n 192 
+[192 cells] mean ‖Δ_A‖ / ‖Δ_C‖ (size of the shift from BASE), 159 / 192: reported 0.678 / 0.699 (159); 0.701 / 0.719 (192) | recomputed 0.678 / 0.699 (159); 0.701 / 0.719 (192) | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 1254: reported 0.0435 | recomputed 0.0435 | CI 0.0271 0.0607 | p 0.0 | n 192 
+[replication] AESTHETIC seed 1254: along u / along the shared direction: reported None | recomputed +0.0416 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 1254: along u / along the shared direction: reported None | recomputed -0.0019 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 9865: reported 0.0412 | recomputed 0.0412 | CI 0.0255 0.0579 | p 0.0 | n 192 
+[replication] AESTHETIC seed 9865: along u / along the shared direction: reported None | recomputed +0.0413 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 9865: along u / along the shared direction: reported None | recomputed +0.0001 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] mean P A−C, paired training seed 42160: reported 0.0504 | recomputed 0.0504 | CI 0.0356 0.0684 | p 0.0 | n 192 
+[replication] AESTHETIC seed 42160: along u / along the shared direction: reported None | recomputed +0.0320 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] CONTROL seed 42160: along u / along the shared direction: reported None | recomputed -0.0185 / see fig_embedding_shifts | CI None None | p None | n None 
+[replication] AESTHETIC seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0416 / +0.1118 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0413 / +0.1040 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] AESTHETIC seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0320 / +0.1182 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 1254: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0019 / +0.1202 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 9865: mean projection on u / on the shared orthogonal direction w: reported None | recomputed +0.0001 / +0.1229 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] CONTROL seed 42160: mean projection on u / on the shared orthogonal direction w: reported None | recomputed -0.0185 / +0.1048 | CI None None | p None | n None w = mean shift of the six adapters, orthogonalised to u (same construction as fig_embedding_shifts)
+[replication] determinism: mean distance between the two runs of seed 1254 (AESTHETIC) / between seeds 1254 and 9865 / between AESTHETIC and CONTROL at seed 1254: reported 0.32 / 0.63 / 0.68 | recomputed 0.32 / 0.62 / 0.68 | CI None None | p None | n None 
+[distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0148 (-0.0205/-0.0093) p 0.0
+[distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0037 (-0.0084/+0.0011) p 0.128
+[distances] ('AESTHETIC', 1254): approach to own minus approach to other -0.0111 (-0.0158/-0.0070)
+[distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ per-image distance to centroid -0.0081 (-0.0143/-0.0017) p 0.0152
+[distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0031 (-0.0026/+0.0087) p 0.2612
+[distances] ('AESTHETIC', 9865): approach to own minus approach to other -0.0112 (-0.0161/-0.0067)
+[distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ per-image distance to centroid -0.0095 (-0.0155/-0.0040) p 0.0
+[distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0010 (-0.0063/+0.0041) p 0.718
+[distances] ('AESTHETIC', 42160): approach to own minus approach to other -0.0085 (-0.0126/-0.0048)
+[distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ per-image distance to centroid -0.0065 (-0.0117/-0.0016) p 0.0104
+[distances] ('CONTROL', 1254) → CONTROL photographs: Δ per-image distance to centroid -0.0071 (-0.0123/-0.0021) p 0.0052
+[distances] ('CONTROL', 1254): approach to own minus approach to other -0.0006 (-0.0033/+0.0021)
+[distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ per-image distance to centroid +0.0009 (-0.0043/+0.0060) p 0.6992
+[distances] ('CONTROL', 9865) → CONTROL photographs: Δ per-image distance to centroid +0.0013 (-0.0032/+0.0056) p 0.5884
+[distances] ('CONTROL', 9865): approach to own minus approach to other +0.0004 (-0.0029/+0.0036)
+[distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ per-image distance to centroid +0.0019 (-0.0032/+0.0071) p 0.4636
+[distances] ('CONTROL', 42160) → CONTROL photographs: Δ per-image distance to centroid -0.0025 (-0.0066/+0.0015) p 0.2084
+[distances] ('CONTROL', 42160): approach to own minus approach to other -0.0045 (-0.0081/-0.0010)
+[centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ centroid distance -0.0525 (-0.0653/-0.0344) p 0.0
+[centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ centroid distance -0.0277 (-0.0404/-0.0099) p 0.0016
+[centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ centroid distance -0.0395 (-0.0538/-0.0209) p 0.0
+[centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ centroid distance -0.0143 (-0.0290/+0.0043) p 0.1308
+[centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ centroid distance -0.0493 (-0.0588/-0.0338) p 0.0
+[centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ centroid distance -0.0314 (-0.0417/-0.0146) p 0.0004
+[centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ centroid distance -0.0354 (-0.0477/-0.0193) p 0.0
+[centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ centroid distance -0.0415 (-0.0527/-0.0259) p 0.0
+[centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ centroid distance -0.0470 (-0.0607/-0.0260) p 0.0
+[centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ centroid distance -0.0534 (-0.0672/-0.0320) p 0.0
+[centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ centroid distance +0.0035 (-0.0109/+0.0189) p 0.6324
+[centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ centroid distance -0.0086 (-0.0202/+0.0050) p 0.2268
+[direction uncertainty] d: 95% interval from resampling the 89+89 photographs: reported None | recomputed 0.2352 | CI 0.2326 0.3209 | p None | n None the bootstrap d is biased upwards (noise adds length): shown as a scale of uncertainty, not as a corrected estimate
+[direction uncertainty] mean P (159) with the direction re-estimated on resampled photographs: reported None | recomputed 0.0429 | CI 0.0241 0.0482 | p None | n None outputs fixed; only the direction varies
+[direction uncertainty] R with the direction re-estimated: reported None | recomputed 0.1823 | CI 0.0906 0.1801 | p None | n None 
+[adjusted] original (no adjustment): d_adj 0.2352 (100% of d), cos +1.000, R2 0.000; A−C pooled +0.0451 → R 0.192; per seed +0.0435 [+0.0271,+0.0609], +0.0412 [+0.0252,+0.0577], +0.0504 [+0.0356,+0.0669]; dir-boot R 0.113-0.180
+[adjusted] adjusted for period: d_adj 0.2197 (93% of d), cos +0.991, R2 0.027; A−C pooled +0.0430 → R 0.196; per seed +0.0437 [+0.0280,+0.0605], +0.0373 [+0.0219,+0.0531], +0.0480 [+0.0331,+0.0650]; dir-boot R 0.108-0.179
+[adjusted] adjusted for area: d_adj 0.2231 (95% of d), cos +0.990, R2 0.042; A−C pooled +0.0446 → R 0.200; per seed +0.0436 [+0.0281,+0.0609], +0.0426 [+0.0272,+0.0587], +0.0475 [+0.0334,+0.0640]; dir-boot R 0.113-0.183
+[adjusted] adjusted for period and area (additive): d_adj 0.2092 (89% of d), cos +0.982, R2 0.067; A−C pooled +0.0423 → R 0.202; per seed +0.0437 [+0.0281,+0.0605], +0.0380 [+0.0221,+0.0543], +0.0454 [+0.0312,+0.0615]; dir-boot R 0.110-0.187
+done

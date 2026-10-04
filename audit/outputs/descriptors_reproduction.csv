@@ -1,0 +1,26 @@
+section,quantity,reported,recomputed,ci_low,ci_high,n,note
+profile,"r(x, a−c)",0.71,0.707,0.567,0.827,31.0,bootstrap over the 31 descriptors (as in the historical figure)
+profile,"r(x, a)",-0.01,-0.006,-0.3,0.29,,
+profile,"r(x, c)",-0.43,-0.427,-0.68,-0.123,,
+profile,same sign as x: a−c / a / c,27 / 14 / 13,27 / 14 / 13,,,,
+profile,"a and c same sign / r(a,c)",26 / +0.82,26 / +0.82,,,,
+profile,'shared component' 0.21 SD: definition = mean |(a+c)/2|; 'specific' 0.07 = mean |(a−c)/2|,0.21 / 0.07,0.206 / 0.069,,,,"mean absolute value over the 31 descriptors of the signed cell-mean differences; r(x,m) and r(x,h) below"
+profile,"r(x, (a+c)/2) / r(x, (a−c)/2)",-0.23 / +0.71,-0.228 / +0.707,,,,"r(x,(a−c)/2) = r(x,a−c) EXACTLY: a positive constant does not change a correlation. It is an identity, not independent evidence"
+profile,mean |x| / |a−c| / |a| / |c|,0.22 / 0.14 / 0.21 / 0.21,0.22 / 0.14 / 0.21 / 0.21,,,,
+profile,"r(x,a−c): prompt-bootstrap 95%",,0.707,0.537,0.79,,"uncertainty from the prompts, descriptors fixed"
+profile,"r(x,a): prompt-bootstrap 95%",,-0.006,-0.14,0.125,,
+profile,"r(x,c): prompt-bootstrap 95%",,-0.427,-0.51,-0.32,,
+covariance,"Cov(x,a−c) = Cov(x,a) − Cov(x,c)",0.03198,-0.00047 − (-0.03244) = 0.03198,,,,identity error 6.9e-18
+covariance,"share of Cov(x,a−c) carried by −Cov(x,c) (the CONTROL term)",,1.015,0.734,1.387,,"prompt bootstrap; descriptor bootstrap 0.31–1.74. Shares are ratios of covariances with uncertain denominators: read as 'most of the covariance comes from CONTROL moving against x', not as an exact percentage"
+covariance,"share carried by Cov(x,a) (the AESTHETIC term)",,-0.015,,,,"= 1 − the previous row; point estimate near zero or slightly negative because r(x,a) ≈ −0.01"
+covariance,"slopes of a−c, a, c on x (SD per SD)",,+0.382 / -0.006 / -0.387,,,,
+descriptor signs,curved_organic: x (photos) / a−c / a / c,,+0.61 / +0.10 / +0.22 / +0.12,,,,same direction photos→outputs
+descriptor signs,concrete: x (photos) / a−c / a / c,,-0.58 / -0.10 / -0.16 / -0.06,,,,same direction photos→outputs
+descriptor signs,low_angle: x (photos) / a−c / a / c,,+0.41 / +0.20 / -0.16 / -0.36,,,,same direction photos→outputs
+descriptor signs,cars: x (photos) / a−c / a / c,,-0.41 / -0.22 / +0.17 / +0.40,,,,same direction photos→outputs
+descriptor signs,glass: x (photos) / a−c / a / c,,+0.37 / +0.09 / -0.32 / -0.41,,,,same direction photos→outputs
+descriptor signs,iconic_design: x (photos) / a−c / a / c,,+0.58 / +0.19 / -0.11 / -0.30,,,,same direction photos→outputs
+descriptor signs,contemporary: x (photos) / a−c / a / c,,+0.43 / +0.29 / -0.04 / -0.33,,,,same direction photos→outputs
+descriptor signs,monumental: x (photos) / a−c / a / c,,+0.42 / +0.11 / +0.08 / -0.03,,,,same direction photos→outputs
+descriptor signs,interior: x (photos) / a−c / a / c,,+0.45 / +0.09 / -0.35 / -0.44,,,,same direction photos→outputs
+redundancy,descriptor correlations on the 600 photographs: mean |r| / max |r| / effective number of descriptors,,0.14 / 0.88 / 14.4,,,,"effective number = (Σλ)²/Σλ²; the 31 descriptors are not independent, the profile r treats them as 31 equally weighted points"

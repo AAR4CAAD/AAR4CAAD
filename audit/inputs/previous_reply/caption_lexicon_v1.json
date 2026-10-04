@@ -1,0 +1,376 @@
+{
+  "version": "AAR-caption-lexicon-v1",
+  "analysis_status": "new_exploratory_post_review",
+  "construction": "Defined from the 31 descriptor names before computing this version’s group frequencies. Analyst had access to prior plots and previous word counts. Not blinded or preregistered.",
+  "unit": "caption-level presence of an affirmative lexical match, with negative/ambiguous matches retained separately",
+  "normalization": "Unicode NFKC, lowercase, Unicode dashes to ASCII hyphen",
+  "negation": "Within the same punctuation-delimited clause: negation markers no/not/without/lack/lacking/absence/absent/never and adversatives but/however reset. Coordinated phrases retain negation. Not only is not treated as negation. Heuristic; audited matched contexts are retained.",
+  "features": [
+    {
+      "feature": "brightness",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bbright(?:ness|ly|er)?\\b",
+        "\\bwell[- ]lit\\b",
+        "\\bhigh[- ]key\\b"
+      ],
+      "note": "Menzioni di luminosità; non stima della luminanza media dei pixel."
+    },
+    {
+      "feature": "contrast",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bcontrast(?:y)?\\b"
+      ],
+      "note": "Menzione del contrasto, senza dedurre un valore numerico o la direzione alto/basso."
+    },
+    {
+      "feature": "saturation",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bsaturat(?:ed|ion)\\b"
+      ],
+      "note": "Menzione di saturazione; non metrica cromatica dell’immagine."
+    },
+    {
+      "feature": "colorfulness",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bcolou?rful\\b",
+        "\\bmulticolou?red\\b",
+        "\\bmulti[- ]colou?red\\b",
+        "\\bvivid colou?rs?\\b"
+      ],
+      "note": "Lessico condiviso con colourful: le due variabili lessicali non sono evidenze indipendenti."
+    },
+    {
+      "feature": "warmth",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bwarm(?:th)?\\b",
+        "\\bgolden light\\b",
+        "\\bgolden hour\\b"
+      ],
+      "note": "Solo menzioni del polo caldo, non stima dell’indice pixel."
+    },
+    {
+      "feature": "sharpness",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bsharp(?:ness|ly)?\\b",
+        "\\bcrisp\\b",
+        "\\bin focus\\b"
+      ],
+      "note": "Le menzioni possono qualificare componenti e non l’intera immagine."
+    },
+    {
+      "feature": "detail",
+      "group": "photography",
+      "status": "exploratory_lexical_proxy",
+      "patterns": [
+        "\\bdetail(?:s|ed)?\\b"
+      ],
+      "note": "Menzioni di dettaglio: contenuto descritto e resa fotografica non sono separabili."
+    },
+    {
+      "feature": "sky_brightness",
+      "group": "photography",
+      "status": "not_operationalised",
+      "patterns": [],
+      "note": "Il lessico del cielo non quantifica la luminosità del terzo superiore; non codificato come zero."
+    },
+    {
+      "feature": "dark_share",
+      "group": "photography",
+      "status": "not_operationalised",
+      "patterns": [],
+      "note": "Menzioni di superfici scure non quantificano una quota di pixel scuri; non codificato come zero."
+    },
+    {
+      "feature": "bright_share",
+      "group": "photography",
+      "status": "not_operationalised",
+      "patterns": [],
+      "note": "Menzioni di superfici chiare non quantificano una quota di pixel chiari; non codificato come zero."
+    },
+    {
+      "feature": "interior",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\binteriors?\\b",
+        "\\bindoors?\\b",
+        "\\binside\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "cars",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bcars?\\b",
+        "\\bautomobiles?\\b",
+        "\\bvehicles?\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "low_angle",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\blow[- ]angle\\b",
+        "\\bfrom below\\b",
+        "\\blooking up\\b",
+        "\\blow viewpoint\\b"
+      ],
+      "note": "Eye level e street level non sono assimilati automaticamente a vista dal basso."
+    },
+    {
+      "feature": "urban",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\burban\\b",
+        "\\bcity\\b",
+        "\\bcityscape\\b"
+      ],
+      "note": "Street isolato non implica necessariamente contesto urbano."
+    },
+    {
+      "feature": "vintage_photo",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bvintage\\b",
+        "\\barchival\\b",
+        "\\bsepia\\b",
+        "\\bblack[- ]and[- ]white\\b",
+        "\\b(?:historic|historical|old) photograph\\b"
+      ],
+      "note": "Historic relativo all’edificio non vale come fotografia d’epoca."
+    },
+    {
+      "feature": "people",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bpeople\\b",
+        "\\bpersons?\\b",
+        "\\bpedestrians?\\b",
+        "\\bcrowds?\\b",
+        "\\bvisitors?\\b",
+        "\\bhuman figures?\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "greenery",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bgreenery\\b",
+        "\\bvegetation\\b",
+        "\\bfoliage\\b",
+        "\\btrees?\\b",
+        "\\blawns?\\b",
+        "\\bgrass\\b",
+        "\\bgrassy\\b",
+        "\\bgardens?\\b",
+        "\\bshrubs?\\b",
+        "\\bhedges?\\b",
+        "\\bparks?\\b",
+        "\\bforest\\b",
+        "\\bpines?\\b",
+        "\\bpalms?\\b",
+        "\\bplants?\\b",
+        "\\blandscap(?:ed|ing)\\b"
+      ],
+      "note": "Park non intercetta parking. Landscape isolato escluso."
+    },
+    {
+      "feature": "real_photo",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bphotographs?\\b",
+        "\\bphotographic\\b",
+        "\\bphotography\\b",
+        "\\bphotos?\\b",
+        "\\bphotorealistic\\b"
+      ],
+      "note": "Photograph è un’indicazione del tipo d’immagine, non una misura della qualità del realismo."
+    },
+    {
+      "feature": "water",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bwater\\b",
+        "\\bsea\\b",
+        "\\bocean\\b",
+        "\\brivers?\\b",
+        "\\blakes?\\b",
+        "\\bpools?\\b",
+        "\\bcanals?\\b",
+        "\\bharbou?rs?\\b",
+        "\\bponds?\\b",
+        "\\bwaterfront\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "whole_building",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bwhole building\\b",
+        "\\bentire building\\b",
+        "\\bfull building\\b",
+        "\\bbuilding (?:is )?fully visible\\b"
+      ],
+      "note": "Panoramic non è equiparato ad edificio interamente visibile."
+    },
+    {
+      "feature": "sunny",
+      "group": "framing_scene",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bsunny\\b",
+        "\\bsunlight\\b",
+        "\\bsunshine\\b",
+        "\\bsunlit\\b",
+        "\\bdirect sun\\b"
+      ],
+      "note": "Daylight e clear sky non sono equiparati automaticamente a luce solare diretta."
+    },
+    {
+      "feature": "curved_organic",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bcurv(?:e|es|ed|ing|ature)\\b",
+        "\\borganic\\b",
+        "\\bround(?:ed)?\\b",
+        "\\bcircular\\b",
+        "\\bcylindrical\\b",
+        "\\bdomes?\\b",
+        "\\barches?\\b",
+        "\\barched\\b",
+        "\\bundulating\\b",
+        "\\bshells?\\b",
+        "\\bspher(?:es?|ical)\\b",
+        "\\boval\\b"
+      ],
+      "note": "Categoria ampia dichiarata. Conteggi stretti di curved e organic riportati separatamente."
+    },
+    {
+      "feature": "concrete",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bconcrete\\b",
+        "\\bb[eé]ton\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "iconic_design",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\biconic\\b",
+        "\\blandmark\\b"
+      ],
+      "note": "Landmark è un termine semantico affine, non un giudizio umano di qualità."
+    },
+    {
+      "feature": "contemporary",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bcontemporary\\b"
+      ],
+      "note": "Modern e modernism non sono considerati sinonimi di contemporary."
+    },
+    {
+      "feature": "monumental",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bmonumental\\b",
+        "\\bimposing\\b",
+        "\\bmassive\\b"
+      ],
+      "note": "Proxy semantico non validato contro annotazioni umane."
+    },
+    {
+      "feature": "glass",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bglass\\b",
+        "\\bglazed\\b",
+        "\\bglazing\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "complex_form",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bcomplex (?:forms?|geometr(?:y|ies)|shapes?|massing|composition|facades?)\\b",
+        "\\bintricate\\b",
+        "\\binterlocking\\b",
+        "\\bfragmented\\b",
+        "\\birregular\\b",
+        "\\bfaceted\\b",
+        "\\bsculptural\\b"
+      ],
+      "note": "Complex isolato escluso perché può denominare un insieme edilizio; si richiede un riferimento esplicito a forma o geometria."
+    },
+    {
+      "feature": "colourful",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bcolou?rful\\b",
+        "\\bmulticolou?red\\b",
+        "\\bmulti[- ]colou?red\\b",
+        "\\bvivid colou?rs?\\b"
+      ],
+      "note": "Lessico condiviso con colorfulness; non una misura indipendente."
+    },
+    {
+      "feature": "wood",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bwood(?:en)?\\b",
+        "\\btimber\\b",
+        "\\bplywood\\b",
+        "\\bcedar\\b",
+        "\\boak\\b"
+      ],
+      "note": ""
+    },
+    {
+      "feature": "white",
+      "group": "content",
+      "status": "lexical_content",
+      "patterns": [
+        "\\bwhite\\b",
+        "\\bwhitewashed\\b"
+      ],
+      "note": ""
+    }
+  ]
+}

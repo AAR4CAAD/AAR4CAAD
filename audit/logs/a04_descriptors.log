@@ -1,0 +1,232 @@
+=== a04_descriptors started 2026-10-03T20:46:35+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[profile] r(x, a−c): reported 0.71 | recomputed 0.707 | CI 0.567 0.827 bootstrap over the 31 descriptors (as in the historical figure)
+[profile] r(x, a): reported -0.01 | recomputed -0.006 | CI -0.3 0.29 
+[profile] r(x, c): reported -0.43 | recomputed -0.427 | CI -0.68 -0.123 
+[profile] same sign as x: a−c / a / c: reported 27 / 14 / 13 | recomputed 27 / 14 / 13 | CI None None 
+[profile] a and c same sign / r(a,c): reported 26 / +0.82 | recomputed 26 / +0.82 | CI None None 
+[profile] 'shared component' 0.21 SD: definition = mean |(a+c)/2|; 'specific' 0.07 = mean |(a−c)/2|: reported 0.21 / 0.07 | recomputed 0.206 / 0.069 | CI None None mean absolute value over the 31 descriptors of the signed cell-mean differences; r(x,m) and r(x,h) below
+[profile] r(x, (a+c)/2) / r(x, (a−c)/2): reported -0.23 / +0.71 | recomputed -0.228 / +0.707 | CI None None r(x,(a−c)/2) = r(x,a−c) EXACTLY: a positive constant does not change a correlation. It is an identity, not independent evidence
+[profile] mean |x| / |a−c| / |a| / |c|: reported 0.22 / 0.14 / 0.21 / 0.21 | recomputed 0.22 / 0.14 / 0.21 / 0.21 | CI None None 
+[profile] r(x,a−c): prompt-bootstrap 95%: reported None | recomputed 0.707 | CI 0.537 0.79 uncertainty from the prompts, descriptors fixed
+[profile] r(x,a): prompt-bootstrap 95%: reported None | recomputed -0.006 | CI -0.14 0.125 
+[profile] r(x,c): prompt-bootstrap 95%: reported None | recomputed -0.427 | CI -0.51 -0.32 
+[covariance] Cov(x,a−c) = Cov(x,a) − Cov(x,c): reported 0.03198 | recomputed -0.00047 − (-0.03244) = 0.03198 | CI None None identity error 6.9e-18
+[covariance] share of Cov(x,a−c) carried by −Cov(x,c) (the CONTROL term): reported None | recomputed 1.015 | CI 0.734 1.387 prompt bootstrap; descriptor bootstrap 0.31–1.74. Shares are ratios of covariances with uncertain denominators: read as 'most of the covariance comes from CONTROL moving against x', not as an exact percentage
+[covariance] share carried by Cov(x,a) (the AESTHETIC term): reported None | recomputed -0.015 | CI None None = 1 − the previous row; point estimate near zero or slightly negative because r(x,a) ≈ −0.01
+[covariance] slopes of a−c, a, c on x (SD per SD): reported None | recomputed +0.382 / -0.006 / -0.387 | CI None None 
+[descriptor signs] curved_organic: x (photos) / a−c / a / c: reported None | recomputed +0.61 / +0.10 / +0.22 / +0.12 | CI None None same direction photos→outputs
+[descriptor signs] concrete: x (photos) / a−c / a / c: reported None | recomputed -0.58 / -0.10 / -0.16 / -0.06 | CI None None same direction photos→outputs
+[descriptor signs] low_angle: x (photos) / a−c / a / c: reported None | recomputed +0.41 / +0.20 / -0.16 / -0.36 | CI None None same direction photos→outputs
+[descriptor signs] cars: x (photos) / a−c / a / c: reported None | recomputed -0.41 / -0.22 / +0.17 / +0.40 | CI None None same direction photos→outputs
+[descriptor signs] glass: x (photos) / a−c / a / c: reported None | recomputed +0.37 / +0.09 / -0.32 / -0.41 | CI None None same direction photos→outputs
+[descriptor signs] iconic_design: x (photos) / a−c / a / c: reported None | recomputed +0.58 / +0.19 / -0.11 / -0.30 | CI None None same direction photos→outputs
+[descriptor signs] contemporary: x (photos) / a−c / a / c: reported None | recomputed +0.43 / +0.29 / -0.04 / -0.33 | CI None None same direction photos→outputs
+[descriptor signs] monumental: x (photos) / a−c / a / c: reported None | recomputed +0.42 / +0.11 / +0.08 / -0.03 | CI None None same direction photos→outputs
+[descriptor signs] interior: x (photos) / a−c / a / c: reported None | recomputed +0.45 / +0.09 / -0.35 / -0.44 | CI None None same direction photos→outputs
+[stratum] type_and_style: n_C 20, n_A 20; r(x_stratum, x_full) +0.530; r with a−c +0.026, a -0.456, c -0.467
+[stratum] type_only: n_C 41, n_A 63; r(x_stratum, x_full) +0.795; r with a−c +0.632, a +0.305, c -0.075
+[stratum] random_fill: n_C 28, n_A 89; r(x_stratum, x_full) +0.897; r with a−c +0.709, a -0.157, c -0.578
+[stratum] matched_61: r(x61, x_full) +0.855; r with a−c +0.434, a -0.082, c -0.340
+[desc distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.010 (-0.216/+0.204) p 0.9436
+[desc distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.008 (-0.222/+0.211) p 0.9512
+[desc distances] ('AESTHETIC', 1254): own − other -0.002 (-0.065/+0.064)
+[desc distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ +0.108 (-0.035/+0.256) p 0.1404
+[desc distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ +0.101 (-0.048/+0.240) p 0.1748
+[desc distances] ('AESTHETIC', 9865): own − other +0.008 (-0.047/+0.063)
+[desc distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ +0.197 (-0.012/+0.415) p 0.0688
+[desc distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ +0.163 (-0.055/+0.392) p 0.1468
+[desc distances] ('AESTHETIC', 42160): own − other +0.033 (-0.023/+0.090)
+[desc distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.157 (-0.341/+0.025) p 0.088
+[desc distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.251 (-0.442/-0.064) p 0.0076
+[desc distances] ('CONTROL', 1254): own − other -0.093 (-0.141/-0.046)
+[desc distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.363 (-0.485/-0.241) p 0.0
+[desc distances] ('CONTROL', 9865) → CONTROL photographs: Δ -0.529 (-0.673/-0.390) p 0.0
+[desc distances] ('CONTROL', 9865): own − other -0.165 (-0.223/-0.110)
+[desc distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.101 (-0.275/+0.077) p 0.2728
+[desc distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.325 (-0.530/-0.114) p 0.0024
+[desc distances] ('CONTROL', 42160): own − other -0.223 (-0.296/-0.150)
+[redundancy] descriptor correlations on the 600 photographs: mean |r| / max |r| / effective number of descriptors: reported None | recomputed 0.14 / 0.88 / 14.4 | CI None None effective number = (Σλ)²/Σλ²; the 31 descriptors are not independent, the profile r treats them as 31 equally weighted points
+done
+=== a04_descriptors started 2026-10-03T23:35:56+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[profile] r(x, a−c): reported 0.71 | recomputed 0.707 | CI 0.567 0.827 bootstrap over the 31 descriptors (as in the historical figure)
+[profile] r(x, a): reported -0.01 | recomputed -0.006 | CI -0.3 0.29 
+[profile] r(x, c): reported -0.43 | recomputed -0.427 | CI -0.68 -0.123 
+[profile] same sign as x: a−c / a / c: reported 27 / 14 / 13 | recomputed 27 / 14 / 13 | CI None None 
+[profile] a and c same sign / r(a,c): reported 26 / +0.82 | recomputed 26 / +0.82 | CI None None 
+[profile] 'shared component' 0.21 SD: definition = mean |(a+c)/2|; 'specific' 0.07 = mean |(a−c)/2|: reported 0.21 / 0.07 | recomputed 0.206 / 0.069 | CI None None mean absolute value over the 31 descriptors of the signed cell-mean differences; r(x,m) and r(x,h) below
+[profile] r(x, (a+c)/2) / r(x, (a−c)/2): reported -0.23 / +0.71 | recomputed -0.228 / +0.707 | CI None None r(x,(a−c)/2) = r(x,a−c) EXACTLY: a positive constant does not change a correlation. It is an identity, not independent evidence
+[profile] mean |x| / |a−c| / |a| / |c|: reported 0.22 / 0.14 / 0.21 / 0.21 | recomputed 0.22 / 0.14 / 0.21 / 0.21 | CI None None 
+[profile] r(x,a−c): prompt-bootstrap 95%: reported None | recomputed 0.707 | CI 0.537 0.79 uncertainty from the prompts, descriptors fixed
+[profile] r(x,a): prompt-bootstrap 95%: reported None | recomputed -0.006 | CI -0.14 0.125 
+[profile] r(x,c): prompt-bootstrap 95%: reported None | recomputed -0.427 | CI -0.51 -0.32 
+[covariance] Cov(x,a−c) = Cov(x,a) − Cov(x,c): reported 0.03198 | recomputed -0.00047 − (-0.03244) = 0.03198 | CI None None identity error 6.9e-18
+[covariance] share of Cov(x,a−c) carried by −Cov(x,c) (the CONTROL term): reported None | recomputed 1.015 | CI 0.734 1.387 prompt bootstrap; descriptor bootstrap 0.31–1.74. Shares are ratios of covariances with uncertain denominators: read as 'most of the covariance comes from CONTROL moving against x', not as an exact percentage
+[covariance] share carried by Cov(x,a) (the AESTHETIC term): reported None | recomputed -0.015 | CI None None = 1 − the previous row; point estimate near zero or slightly negative because r(x,a) ≈ −0.01
+[covariance] slopes of a−c, a, c on x (SD per SD): reported None | recomputed +0.382 / -0.006 / -0.387 | CI None None 
+[descriptor signs] curved_organic: x (photos) / a−c / a / c: reported None | recomputed +0.61 / +0.10 / +0.22 / +0.12 | CI None None same direction photos→outputs
+[descriptor signs] concrete: x (photos) / a−c / a / c: reported None | recomputed -0.58 / -0.10 / -0.16 / -0.06 | CI None None same direction photos→outputs
+[descriptor signs] low_angle: x (photos) / a−c / a / c: reported None | recomputed +0.41 / +0.20 / -0.16 / -0.36 | CI None None same direction photos→outputs
+[descriptor signs] cars: x (photos) / a−c / a / c: reported None | recomputed -0.41 / -0.22 / +0.17 / +0.40 | CI None None same direction photos→outputs
+[descriptor signs] glass: x (photos) / a−c / a / c: reported None | recomputed +0.37 / +0.09 / -0.32 / -0.41 | CI None None same direction photos→outputs
+[descriptor signs] iconic_design: x (photos) / a−c / a / c: reported None | recomputed +0.58 / +0.19 / -0.11 / -0.30 | CI None None same direction photos→outputs
+[descriptor signs] contemporary: x (photos) / a−c / a / c: reported None | recomputed +0.43 / +0.29 / -0.04 / -0.33 | CI None None same direction photos→outputs
+[descriptor signs] monumental: x (photos) / a−c / a / c: reported None | recomputed +0.42 / +0.11 / +0.08 / -0.03 | CI None None same direction photos→outputs
+[descriptor signs] interior: x (photos) / a−c / a / c: reported None | recomputed +0.45 / +0.09 / -0.35 / -0.44 | CI None None same direction photos→outputs
+[stratum] type_and_style: n_C 20, n_A 20; r(x_stratum, x_full) +0.530; r with a−c +0.026, a -0.456, c -0.467
+[stratum] type_only: n_C 41, n_A 63; r(x_stratum, x_full) +0.795; r with a−c +0.632, a +0.305, c -0.075
+[stratum] random_fill: n_C 28, n_A 89; r(x_stratum, x_full) +0.897; r with a−c +0.709, a -0.157, c -0.578
+[stratum] matched_61: r(x61, x_full) +0.855; r with a−c +0.434, a -0.082, c -0.340
+[desc distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.010 (-0.216/+0.204) p 0.9436
+[desc distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.008 (-0.222/+0.211) p 0.9512
+[desc distances] ('AESTHETIC', 1254): own − other -0.002 (-0.065/+0.064)
+[desc distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ +0.108 (-0.035/+0.256) p 0.1404
+[desc distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ +0.101 (-0.048/+0.240) p 0.1748
+[desc distances] ('AESTHETIC', 9865): own − other +0.008 (-0.047/+0.063)
+[desc distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ +0.197 (-0.012/+0.415) p 0.0688
+[desc distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ +0.163 (-0.055/+0.392) p 0.1468
+[desc distances] ('AESTHETIC', 42160): own − other +0.033 (-0.023/+0.090)
+[desc distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.157 (-0.341/+0.025) p 0.088
+[desc distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.251 (-0.442/-0.064) p 0.0076
+[desc distances] ('CONTROL', 1254): own − other -0.093 (-0.141/-0.046)
+[desc distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.363 (-0.485/-0.241) p 0.0
+[desc distances] ('CONTROL', 9865) → CONTROL photographs: Δ -0.529 (-0.673/-0.390) p 0.0
+[desc distances] ('CONTROL', 9865): own − other -0.165 (-0.223/-0.110)
+[desc distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.101 (-0.275/+0.077) p 0.2728
+[desc distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.325 (-0.530/-0.114) p 0.0024
+[desc distances] ('CONTROL', 42160): own − other -0.223 (-0.296/-0.150)
+[desc centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.235 (-0.496/+0.070) p 0.1344
+[desc centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.179 (-0.456/+0.132) p 0.2668
+[desc centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ -0.420 (-0.568/-0.192) p 0.0
+[desc centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ -0.343 (-0.520/-0.109) p 0.0044
+[desc centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ -0.074 (-0.337/+0.282) p 0.658
+[desc centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ -0.121 (-0.383/+0.201) p 0.4572
+[desc centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.333 (-0.576/-0.044) p 0.0212
+[desc centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.502 (-0.734/-0.220) p 0.0004
+[desc centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.859 (-1.070/-0.559) p 0.0
+[desc centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ -1.160 (-1.382/-0.858) p 0.0
+[desc centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.425 (-0.613/-0.168) p 0.0008
+[desc centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.918 (-1.125/-0.631) p 0.0
+[redundancy] descriptor correlations on the 600 photographs: mean |r| / max |r| / effective number of descriptors: reported None | recomputed 0.14 / 0.88 / 14.4 | CI None None effective number = (Σλ)²/Σλ²; the 31 descriptors are not independent, the profile r treats them as 31 equally weighted points
+done
+=== a04_descriptors started 2026-10-04T01:41:36+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[profile] r(x, a−c): reported 0.71 | recomputed 0.707 | CI 0.567 0.827 bootstrap over the 31 descriptors (as in the historical figure)
+[profile] r(x, a): reported -0.01 | recomputed -0.006 | CI -0.3 0.29 
+[profile] r(x, c): reported -0.43 | recomputed -0.427 | CI -0.68 -0.123 
+[profile] same sign as x: a−c / a / c: reported 27 / 14 / 13 | recomputed 27 / 14 / 13 | CI None None 
+[profile] a and c same sign / r(a,c): reported 26 / +0.82 | recomputed 26 / +0.82 | CI None None 
+[profile] 'shared component' 0.21 SD: definition = mean |(a+c)/2|; 'specific' 0.07 = mean |(a−c)/2|: reported 0.21 / 0.07 | recomputed 0.206 / 0.069 | CI None None mean absolute value over the 31 descriptors of the signed cell-mean differences; r(x,m) and r(x,h) below
+[profile] r(x, (a+c)/2) / r(x, (a−c)/2): reported -0.23 / +0.71 | recomputed -0.228 / +0.707 | CI None None r(x,(a−c)/2) = r(x,a−c) EXACTLY: a positive constant does not change a correlation. It is an identity, not independent evidence
+[profile] mean |x| / |a−c| / |a| / |c|: reported 0.22 / 0.14 / 0.21 / 0.21 | recomputed 0.22 / 0.14 / 0.21 / 0.21 | CI None None 
+[profile] r(x,a−c): prompt-bootstrap 95%: reported None | recomputed 0.707 | CI 0.537 0.79 uncertainty from the prompts, descriptors fixed
+[profile] r(x,a): prompt-bootstrap 95%: reported None | recomputed -0.006 | CI -0.14 0.125 
+[profile] r(x,c): prompt-bootstrap 95%: reported None | recomputed -0.427 | CI -0.51 -0.32 
+[covariance] Cov(x,a−c) = Cov(x,a) − Cov(x,c): reported 0.03198 | recomputed -0.00047 − (-0.03244) = 0.03198 | CI None None identity error 6.9e-18
+[covariance] share of Cov(x,a−c) carried by −Cov(x,c) (the CONTROL term): reported None | recomputed 1.015 | CI 0.734 1.387 prompt bootstrap; descriptor bootstrap 0.31–1.74. Shares are ratios of covariances with uncertain denominators: read as 'most of the covariance comes from CONTROL moving against x', not as an exact percentage
+[covariance] share carried by Cov(x,a) (the AESTHETIC term): reported None | recomputed -0.015 | CI None None = 1 − the previous row; point estimate near zero or slightly negative because r(x,a) ≈ −0.01
+[covariance] slopes of a−c, a, c on x (SD per SD): reported None | recomputed +0.382 / -0.006 / -0.387 | CI None None 
+[descriptor signs] curved_organic: x (photos) / a−c / a / c: reported None | recomputed +0.61 / +0.10 / +0.22 / +0.12 | CI None None same direction photos→outputs
+[descriptor signs] concrete: x (photos) / a−c / a / c: reported None | recomputed -0.58 / -0.10 / -0.16 / -0.06 | CI None None same direction photos→outputs
+[descriptor signs] low_angle: x (photos) / a−c / a / c: reported None | recomputed +0.41 / +0.20 / -0.16 / -0.36 | CI None None same direction photos→outputs
+[descriptor signs] cars: x (photos) / a−c / a / c: reported None | recomputed -0.41 / -0.22 / +0.17 / +0.40 | CI None None same direction photos→outputs
+[descriptor signs] glass: x (photos) / a−c / a / c: reported None | recomputed +0.37 / +0.09 / -0.32 / -0.41 | CI None None same direction photos→outputs
+[descriptor signs] iconic_design: x (photos) / a−c / a / c: reported None | recomputed +0.58 / +0.19 / -0.11 / -0.30 | CI None None same direction photos→outputs
+[descriptor signs] contemporary: x (photos) / a−c / a / c: reported None | recomputed +0.43 / +0.29 / -0.04 / -0.33 | CI None None same direction photos→outputs
+[descriptor signs] monumental: x (photos) / a−c / a / c: reported None | recomputed +0.42 / +0.11 / +0.08 / -0.03 | CI None None same direction photos→outputs
+[descriptor signs] interior: x (photos) / a−c / a / c: reported None | recomputed +0.45 / +0.09 / -0.35 / -0.44 | CI None None same direction photos→outputs
+[stratum] type_and_style: n_C 20, n_A 20; r(x_stratum, x_full) +0.530; r with a−c +0.026, a -0.456, c -0.467
+[stratum] type_only: n_C 41, n_A 63; r(x_stratum, x_full) +0.795; r with a−c +0.632, a +0.305, c -0.075
+[stratum] random_fill: n_C 28, n_A 89; r(x_stratum, x_full) +0.897; r with a−c +0.709, a -0.157, c -0.578
+[stratum] matched_61: r(x61, x_full) +0.855; r with a−c +0.434, a -0.082, c -0.340
+[desc distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.010 (-0.216/+0.204) p 0.9436
+[desc distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.008 (-0.222/+0.211) p 0.9512
+[desc distances] ('AESTHETIC', 1254): own − other -0.002 (-0.065/+0.064)
+[desc distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ +0.108 (-0.035/+0.256) p 0.1404
+[desc distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ +0.101 (-0.048/+0.240) p 0.1748
+[desc distances] ('AESTHETIC', 9865): own − other +0.008 (-0.047/+0.063)
+[desc distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ +0.197 (-0.012/+0.415) p 0.0688
+[desc distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ +0.163 (-0.055/+0.392) p 0.1468
+[desc distances] ('AESTHETIC', 42160): own − other +0.033 (-0.023/+0.090)
+[desc distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.157 (-0.341/+0.025) p 0.088
+[desc distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.251 (-0.442/-0.064) p 0.0076
+[desc distances] ('CONTROL', 1254): own − other -0.093 (-0.141/-0.046)
+[desc distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.363 (-0.485/-0.241) p 0.0
+[desc distances] ('CONTROL', 9865) → CONTROL photographs: Δ -0.529 (-0.673/-0.390) p 0.0
+[desc distances] ('CONTROL', 9865): own − other -0.165 (-0.223/-0.110)
+[desc distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.101 (-0.275/+0.077) p 0.2728
+[desc distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.325 (-0.530/-0.114) p 0.0024
+[desc distances] ('CONTROL', 42160): own − other -0.223 (-0.296/-0.150)
+[desc centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.235 (-0.496/+0.070) p 0.1344
+[desc centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.179 (-0.456/+0.132) p 0.2668
+[desc centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ -0.420 (-0.568/-0.192) p 0.0
+[desc centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ -0.343 (-0.520/-0.109) p 0.0044
+[desc centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ -0.074 (-0.337/+0.282) p 0.658
+[desc centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ -0.121 (-0.383/+0.201) p 0.4572
+[desc centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.333 (-0.576/-0.044) p 0.0212
+[desc centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.502 (-0.734/-0.220) p 0.0004
+[desc centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.859 (-1.070/-0.559) p 0.0
+[desc centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ -1.160 (-1.382/-0.858) p 0.0
+[desc centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.425 (-0.613/-0.168) p 0.0008
+[desc centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.918 (-1.125/-0.631) p 0.0
+[redundancy] descriptor correlations on the 600 photographs: mean |r| / max |r| / effective number of descriptors: reported None | recomputed 0.14 / 0.88 / 14.4 | CI None None effective number = (Σλ)²/Σλ²; the 31 descriptors are not independent, the profile r treats them as 31 equally weighted points
+done
+=== a04_descriptors started 2026-10-04T01:50:38+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+[profile] r(x, a−c): reported 0.71 | recomputed 0.707 | CI 0.567 0.827 bootstrap over the 31 descriptors (as in the historical figure)
+[profile] r(x, a): reported -0.01 | recomputed -0.006 | CI -0.3 0.29 
+[profile] r(x, c): reported -0.43 | recomputed -0.427 | CI -0.68 -0.123 
+[profile] same sign as x: a−c / a / c: reported 27 / 14 / 13 | recomputed 27 / 14 / 13 | CI None None 
+[profile] a and c same sign / r(a,c): reported 26 / +0.82 | recomputed 26 / +0.82 | CI None None 
+[profile] 'shared component' 0.21 SD: definition = mean |(a+c)/2|; 'specific' 0.07 = mean |(a−c)/2|: reported 0.21 / 0.07 | recomputed 0.206 / 0.069 | CI None None mean absolute value over the 31 descriptors of the signed cell-mean differences; r(x,m) and r(x,h) below
+[profile] r(x, (a+c)/2) / r(x, (a−c)/2): reported -0.23 / +0.71 | recomputed -0.228 / +0.707 | CI None None r(x,(a−c)/2) = r(x,a−c) EXACTLY: a positive constant does not change a correlation. It is an identity, not independent evidence
+[profile] mean |x| / |a−c| / |a| / |c|: reported 0.22 / 0.14 / 0.21 / 0.21 | recomputed 0.22 / 0.14 / 0.21 / 0.21 | CI None None 
+[profile] r(x,a−c): prompt-bootstrap 95%: reported None | recomputed 0.707 | CI 0.537 0.79 uncertainty from the prompts, descriptors fixed
+[profile] r(x,a): prompt-bootstrap 95%: reported None | recomputed -0.006 | CI -0.14 0.125 
+[profile] r(x,c): prompt-bootstrap 95%: reported None | recomputed -0.427 | CI -0.51 -0.32 
+[covariance] Cov(x,a−c) = Cov(x,a) − Cov(x,c): reported 0.03198 | recomputed -0.00047 − (-0.03244) = 0.03198 | CI None None identity error 6.9e-18
+[covariance] share of Cov(x,a−c) carried by −Cov(x,c) (the CONTROL term): reported None | recomputed 1.015 | CI 0.734 1.387 prompt bootstrap; descriptor bootstrap 0.31–1.74. Shares are ratios of covariances with uncertain denominators: read as 'most of the covariance comes from CONTROL moving against x', not as an exact percentage
+[covariance] share carried by Cov(x,a) (the AESTHETIC term): reported None | recomputed -0.015 | CI None None = 1 − the previous row; point estimate near zero or slightly negative because r(x,a) ≈ −0.01
+[covariance] slopes of a−c, a, c on x (SD per SD): reported None | recomputed +0.382 / -0.006 / -0.387 | CI None None 
+[descriptor signs] curved_organic: x (photos) / a−c / a / c: reported None | recomputed +0.61 / +0.10 / +0.22 / +0.12 | CI None None same direction photos→outputs
+[descriptor signs] concrete: x (photos) / a−c / a / c: reported None | recomputed -0.58 / -0.10 / -0.16 / -0.06 | CI None None same direction photos→outputs
+[descriptor signs] low_angle: x (photos) / a−c / a / c: reported None | recomputed +0.41 / +0.20 / -0.16 / -0.36 | CI None None same direction photos→outputs
+[descriptor signs] cars: x (photos) / a−c / a / c: reported None | recomputed -0.41 / -0.22 / +0.17 / +0.40 | CI None None same direction photos→outputs
+[descriptor signs] glass: x (photos) / a−c / a / c: reported None | recomputed +0.37 / +0.09 / -0.32 / -0.41 | CI None None same direction photos→outputs
+[descriptor signs] iconic_design: x (photos) / a−c / a / c: reported None | recomputed +0.58 / +0.19 / -0.11 / -0.30 | CI None None same direction photos→outputs
+[descriptor signs] contemporary: x (photos) / a−c / a / c: reported None | recomputed +0.43 / +0.29 / -0.04 / -0.33 | CI None None same direction photos→outputs
+[descriptor signs] monumental: x (photos) / a−c / a / c: reported None | recomputed +0.42 / +0.11 / +0.08 / -0.03 | CI None None same direction photos→outputs
+[descriptor signs] interior: x (photos) / a−c / a / c: reported None | recomputed +0.45 / +0.09 / -0.35 / -0.44 | CI None None same direction photos→outputs
+[stratum] type_and_style: n_C 20, n_A 20; r(x_stratum, x_full) +0.530; r with a−c +0.026, a -0.456, c -0.467
+[stratum] type_only: n_C 41, n_A 63; r(x_stratum, x_full) +0.795; r with a−c +0.632, a +0.305, c -0.075
+[stratum] random_fill: n_C 28, n_A 89; r(x_stratum, x_full) +0.897; r with a−c +0.709, a -0.157, c -0.578
+[stratum] matched_61: r(x61, x_full) +0.855; r with a−c +0.434, a -0.082, c -0.340
+[desc distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.010 (-0.216/+0.204) p 0.9436
+[desc distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.008 (-0.222/+0.211) p 0.9512
+[desc distances] ('AESTHETIC', 1254): own − other -0.002 (-0.065/+0.064)
+[desc distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ +0.108 (-0.035/+0.256) p 0.1404
+[desc distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ +0.101 (-0.048/+0.240) p 0.1748
+[desc distances] ('AESTHETIC', 9865): own − other +0.008 (-0.047/+0.063)
+[desc distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ +0.197 (-0.012/+0.415) p 0.0688
+[desc distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ +0.163 (-0.055/+0.392) p 0.1468
+[desc distances] ('AESTHETIC', 42160): own − other +0.033 (-0.023/+0.090)
+[desc distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.157 (-0.341/+0.025) p 0.088
+[desc distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.251 (-0.442/-0.064) p 0.0076
+[desc distances] ('CONTROL', 1254): own − other -0.093 (-0.141/-0.046)
+[desc distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.363 (-0.485/-0.241) p 0.0
+[desc distances] ('CONTROL', 9865) → CONTROL photographs: Δ -0.529 (-0.673/-0.390) p 0.0
+[desc distances] ('CONTROL', 9865): own − other -0.165 (-0.223/-0.110)
+[desc distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.101 (-0.275/+0.077) p 0.2728
+[desc distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.325 (-0.530/-0.114) p 0.0024
+[desc distances] ('CONTROL', 42160): own − other -0.223 (-0.296/-0.150)
+[desc centroid distances] ('AESTHETIC', 1254) → AESTHETIC photographs: Δ -0.235 (-0.496/+0.070) p 0.1344
+[desc centroid distances] ('AESTHETIC', 1254) → CONTROL photographs: Δ -0.179 (-0.456/+0.132) p 0.2668
+[desc centroid distances] ('AESTHETIC', 9865) → AESTHETIC photographs: Δ -0.420 (-0.568/-0.192) p 0.0
+[desc centroid distances] ('AESTHETIC', 9865) → CONTROL photographs: Δ -0.343 (-0.520/-0.109) p 0.0044
+[desc centroid distances] ('AESTHETIC', 42160) → AESTHETIC photographs: Δ -0.074 (-0.337/+0.282) p 0.658
+[desc centroid distances] ('AESTHETIC', 42160) → CONTROL photographs: Δ -0.121 (-0.383/+0.201) p 0.4572
+[desc centroid distances] ('CONTROL', 1254) → AESTHETIC photographs: Δ -0.333 (-0.576/-0.044) p 0.0212
+[desc centroid distances] ('CONTROL', 1254) → CONTROL photographs: Δ -0.502 (-0.734/-0.220) p 0.0004
+[desc centroid distances] ('CONTROL', 9865) → AESTHETIC photographs: Δ -0.859 (-1.070/-0.559) p 0.0
+[desc centroid distances] ('CONTROL', 9865) → CONTROL photographs: Δ -1.160 (-1.382/-0.858) p 0.0
+[desc centroid distances] ('CONTROL', 42160) → AESTHETIC photographs: Δ -0.425 (-0.613/-0.168) p 0.0008
+[desc centroid distances] ('CONTROL', 42160) → CONTROL photographs: Δ -0.918 (-1.125/-0.631) p 0.0
+[redundancy] descriptor correlations on the 600 photographs: mean |r| / max |r| / effective number of descriptors: reported None | recomputed 0.14 / 0.88 / 14.4 | CI None None effective number = (Σλ)²/Σλ²; the 31 descriptors are not independent, the profile r treats them as 31 equally weighted points
+done

@@ -1,0 +1,74 @@
+time,action,job_id,kind,training_run_id,plan_id,worker_sha256,status,note
+2026-09-27T21:38:14.253Z,cloud_job.finished,1,,,,,Failed,Scaleway user_data: 400 Content-Type must be text/plain and not text/plain; charset=utf-8
+2026-09-27T21:38:22.789Z,cloud_job.finished,2,,,,,Failed,Scaleway user_data: 400 Content-Type must be text/plain and not text/plain; charset=utf-8
+2026-09-27T21:42:48.811Z,cloud_job.started,3,Training,6.0,,1bf6933cbc55399b0ae7c716459f04d696d8e0d4281d07c6306b34ee8db8ad73,,
+2026-09-27T21:42:51.038Z,cloud_job.started,4,Training,5.0,,1bf6933cbc55399b0ae7c716459f04d696d8e0d4281d07c6306b34ee8db8ad73,,
+2026-09-27T21:46:55.232Z,cloud_job.finished,3,,,,,Succeeded,weights uploaded; final loss 1.1577
+2026-09-27T21:46:56.783Z,cloud_job.finished,4,,,,,Succeeded,weights uploaded; final loss nan
+2026-09-27T22:19:41.819Z,cloud_job.started,5,Training,5.0,,ea8418526d1541c81fdbef0a1a1c4a43c844a639fd9998a7ed8b03bc3ba865ac,,
+2026-09-27T22:19:54.103Z,cloud_job.started,6,Training,6.0,,ea8418526d1541c81fdbef0a1a1c4a43c844a639fd9998a7ed8b03bc3ba865ac,,
+2026-09-27T22:42:57.490Z,cloud_job.finished,5,,,,,Succeeded,weights uploaded; final loss 0.1214
+2026-09-27T22:43:12.094Z,cloud_job.finished,6,,,,,Succeeded,weights uploaded; final loss 0.1408
+2026-09-27T23:22:59.103Z,cloud_job.started,7,Generation,,3.0,ea8418526d1541c81fdbef0a1a1c4a43c844a639fd9998a7ed8b03bc3ba865ac,,
+2026-09-28T00:18:07.866Z,cloud_job.started,8,Training,7.0,,ea8418526d1541c81fdbef0a1a1c4a43c844a639fd9998a7ed8b03bc3ba865ac,,
+2026-09-28T00:18:15.075Z,cloud_job.finished,9,,,,,Failed,"Scaleway POST /instance/v1/zones/fr-par-2/servers: 403 {""type"": ""quotas_exceeded"", ""message"": ""quota(s) exceeded for this resource"", ""details"": [{""resource"": ""cp_servers_type_L4_1_24G"", ""quota"": 2, ""current"": 2, ""organization_id"": ""35ce661d-a256-4a86-b6e7-6a0393d59a8f""}, {""resource"": ""cp_servers_type_L4_1_24G"", ""quota"": 2, ""current"": 2, ""project_id"": ""5edca60c-ca75-4da6-b382-3ec3fdc32cef""}]}"
+2026-09-28T00:28:09.031Z,cloud_job.finished,8,,,,,Succeeded,weights uploaded; final loss 0.1531
+2026-09-28T00:30:22.592Z,cloud_job.started,10,Training,8.0,,ea8418526d1541c81fdbef0a1a1c4a43c844a639fd9998a7ed8b03bc3ba865ac,,
+2026-09-28T00:39:49.050Z,cloud_job.finished,7,,,,,Succeeded,generation completed: 360 images
+2026-09-28T00:54:03.467Z,cloud_job.finished,10,,,,,Succeeded,weights uploaded; final loss 0.1219
+2026-09-28T01:03:38.539Z,cloud_job.started,11,Generation,,4.0,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T01:03:40.416Z,cloud_job.started,12,Generation,,5.0,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T01:11:36.558Z,cloud_job.finished,12,,,,,Succeeded,generation completed: 24 images
+2026-09-28T01:18:42.453Z,cloud_job.finished,11,,,,,Succeeded,generation completed: 60 images
+2026-09-28T01:29:48.053Z,cloud_job.started,13,Training,9.0,,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T01:30:00.495Z,cloud_job.started,14,Training,10.0,,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T01:53:03.265Z,cloud_job.finished,14,,,,,Succeeded,weights uploaded; final loss 0.1408
+2026-09-28T01:53:36.997Z,cloud_job.finished,13,,,,,Succeeded,weights uploaded; final loss 0.1214
+2026-09-28T01:56:12.485Z,cloud_job.started,15,Generation,,6.0,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T02:07:11.321Z,cloud_job.finished,15,,,,,Succeeded,generation completed: 36 images
+2026-09-28T02:10:12.801Z,cloud_job.started,16,Generation,,7.0,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T03:29:23.846Z,cloud_job.finished,16,,,,,Succeeded,generation completed: 360 images
+2026-09-28T04:22:58.477Z,cloud_job.started,17,Generation,,8.0,159eaf5430ab8da50564a5bf1a0f97f1bd0369879aa515bcf33ef6ed7f8564d9,,
+2026-09-28T04:33:06.690Z,cloud_job.finished,17,,,,,Succeeded,generation completed: 36 images
+2026-09-28T04:46:40.603Z,cloud_job.started,18,Training,11.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T04:46:52.436Z,cloud_job.started,19,Training,12.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T05:09:44.986Z,cloud_job.finished,18,,,,,Succeeded,weights uploaded; final loss 0.1236
+2026-09-28T05:10:10.262Z,cloud_job.finished,19,,,,,Succeeded,weights uploaded; final loss 0.1309
+2026-09-28T05:17:11.111Z,cloud_job.started,20,Generation,,9.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T05:33:36.987Z,cloud_job.finished,20,,,,,Succeeded,generation completed: 60 images
+2026-09-28T05:37:30.024Z,cloud_job.started,21,Generation,,10.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T05:55:35.745Z,cloud_job.cancelled,21,,,,,Cancelled,"cancelled: Stopped to improve residual artefacts (garbled lettering, blotchy panels, wavy mullions) before generating the main plan."
+2026-09-28T05:55:49.175Z,cloud_job.started,22,Training,13.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T05:56:01.349Z,cloud_job.started,23,Training,14.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T06:19:22.301Z,cloud_job.finished,22,,,,,Succeeded,weights uploaded; final loss 0.0863
+2026-09-28T06:19:23.180Z,cloud_job.finished,23,,,,,Succeeded,weights uploaded; final loss 0.0723
+2026-09-28T06:23:03.060Z,cloud_job.started,24,Generation,,11.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T06:34:43.546Z,cloud_job.finished,24,,,,,Succeeded,generation completed: 40 images
+2026-09-28T06:45:32.724Z,cloud_job.started,25,Training,15.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T06:45:45.110Z,cloud_job.started,26,Training,16.0,,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T07:08:47.314Z,cloud_job.finished,25,,,,,Succeeded,weights uploaded; final loss 0.0868
+2026-09-28T07:08:57.825Z,cloud_job.finished,26,,,,,Succeeded,weights uploaded; final loss 0.0725
+2026-09-28T07:11:57.857Z,cloud_job.started,27,Generation,,12.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T07:27:54.821Z,cloud_job.finished,27,,,,,Succeeded,generation completed: 48 images
+2026-09-28T07:32:10.318Z,cloud_job.started,28,Generation,,13.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T07:32:12.207Z,cloud_job.started,29,Generation,,14.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T08:22:45.013Z,cloud_job.finished,28,,,,,Succeeded,generation completed: 180 images
+2026-09-28T08:23:39.295Z,cloud_job.finished,29,,,,,Succeeded,generation completed: 180 images
+2026-09-28T08:36:50.032Z,cloud_job.started,30,Generation,,15.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T08:52:18.135Z,cloud_job.finished,30,,,,,Succeeded,generation completed: 48 images
+2026-09-28T08:59:07.606Z,cloud_job.started,31,Generation,,16.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T08:59:09.692Z,cloud_job.started,32,Generation,,17.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T09:49:48.188Z,cloud_job.finished,32,,,,,Succeeded,generation completed: 180 images
+2026-09-28T09:50:29.235Z,cloud_job.finished,31,,,,,Succeeded,generation completed: 180 images
+2026-09-28T10:43:46.144Z,cloud_job.started,33,Generation,,18.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T10:43:48.121Z,cloud_job.started,34,Generation,,19.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T11:02:36.757Z,cloud_job.finished,33,,,,,Succeeded,generation completed: 60 images
+2026-09-28T11:02:47.393Z,cloud_job.finished,34,,,,,Succeeded,generation completed: 60 images
+2026-09-28T11:09:42.167Z,cloud_job.started,35,Generation,,20.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T11:09:44.283Z,cloud_job.started,36,Generation,,21.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T11:35:44.362Z,cloud_job.finished,36,,,,,Succeeded,generation completed: 87 images
+2026-09-28T11:35:50.077Z,cloud_job.finished,35,,,,,Succeeded,generation completed: 87 images
+2026-09-28T13:09:15.717Z,cloud_job.started,37,Generation,,22.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T13:09:17.723Z,cloud_job.started,38,Generation,,23.0,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,,
+2026-09-28T14:28:26.149Z,cloud_job.finished,37,,,,,Succeeded,generation completed: 288 images
+2026-09-28T14:28:28.734Z,cloud_job.finished,38,,,,,Succeeded,generation completed: 288 images

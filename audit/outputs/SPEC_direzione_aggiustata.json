@@ -1,0 +1,21 @@
+{
+  "written_before_results": "2026-10-03T20:45:00+02:00",
+  "status": "post-review sensitivity, not preregistered, defined before computing any adjusted projection",
+  "space": "DINOv2 facebook/dinov2-base CLS token, L2-normalised per image, exactly as in baseline/direction_dinov2.npz (gap 0.235)",
+  "estimation_sample": "all 600 photographs of the corpus (phase-1 ratings and phase-2 ratings never used)",
+  "covariates": {
+    "period": "image_metadata.period as recorded; the single 'pre-1919' photograph is merged with '1919-1945' (rare category, declared here)",
+    "area": "image_metadata.continent as recorded (8 labels: Europe, Asia, Latin America, Japan, North America, Middle East, Africa, Oceania); NOT renamed 'continent' because Japan and Middle East are not continents; no merging",
+    "joint": "additive dummies of period and area (no interaction: 5x8 cells would be too sparse for 600 photographs)"
+  },
+  "model": "for every embedding dimension, ordinary least squares of the embedding on an intercept plus the dummies, fitted on the 600 photographs; residuals keep the part of the embedding not explained by period/area",
+  "adjusted_direction": "g_adj = mean residual of the 89 AESTHETIC photographs minus mean residual of the 89 CONTROL photographs; d_adj = ||g_adj||; u_adj = g_adj / d_adj. The original direction is the same construction without covariates",
+  "outputs_projected": "original 192 cells of RUN-AESTHETIC-4 / RUN-CONTROL-4 / BASE and the paired-seed adapters (seeds 1254, 9865, 42160); generated images are NOT residualised (they have no period or area): the quantity is 'projection of the original outputs on a source direction adjusted for composition', never 'outputs purified of confounders'",
+  "contrasts": "per cell: (E_A - E_C).u_adj, (E_A - E_BASE).u_adj, (E_C - E_BASE).u_adj; mean over cells per training seed and pooled over the three seeds (explicit mean of three seed means); ratio R = mean contrast / d_adj",
+  "uncertainty": {
+    "conditional_on_direction": "bootstrap over the 48 prompts (5000 resamples, percentile 95%), as in the historical report",
+    "direction_uncertainty": "bootstrap of the photographs: resample the 89 AESTHETIC and the 89 CONTROL photographs with replacement (the 422 others fixed), refit the covariate model on the resampled 600, recompute d_adj and the mean projection of the FIXED outputs (2000 resamples); reported as the interval of d_adj, of the mean contrast and of R"
+  },
+  "diagnostics_to_report": "R2 of each covariate model per dimension (mean over dimensions), cosine between original and adjusted directions, ratio d_adj/d, overlap of the categories between the two sets, number of photographs per category",
+  "what_this_is_not": "the adjustment does not turn the design into an experiment that isolates preference from every difference of composition; it removes only linear additive effects of the two recorded variables"
+}

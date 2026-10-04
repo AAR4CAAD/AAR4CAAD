@@ -1,0 +1,12 @@
+{
+ "same_membership": true,
+ "same_order": true,
+ "same_reasons": true,
+ "strata": {
+  "type_only": 41,
+  "random_fill": 28,
+  "type_and_style": 20
+ },
+ "seed": 345145722,
+ "pool": 511
+}

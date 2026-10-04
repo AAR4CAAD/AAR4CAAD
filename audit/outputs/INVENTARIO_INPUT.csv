@@ -1,0 +1,127 @@
+path,exists,sha256,size_bytes,shape,row_identifiers,version,role
+data\export,True,(folder: see SHA256SUMS.txt of the repository),,,,,"original export of 2026-10-01 13:46 UTC: human data, frozen datasets, captions, training runs, generation, audit log (used by the manuscript and by the previous reply)"
+data\export,True,(folder: see SHA256SUMS.txt of the repository),,,,,export of 2026-10-02 05:36 UTC: same experiment after the paired-seed replication trainings (adds REP-* runs and 960 generated images)
+data\export\aesthetic_dataset.csv,True,a42647a1fa975346af00ab00358b189403397b73da170586316953178aab8ed4,65557,178x14,,,member of the original export
+data\export\captions.csv,True,21a724ec21c0af1dd244abfc184308f69df29cf17ee6dc9b7c603af3c379a312,158602,554x10,,,member of the original export
+data\export\consent_versions.csv,True,1dd8c7ab985f8d80e96990dae9fb04bebac0d3c4b042bcf79614f694174aa110,3149,1x10,,,member of the original export
+data\export\control_dataset.csv,True,df4d398f999c768e568f562b4012b5c1886dfced4b2c43d7912e62e95bb56715,70936,178x14,,,member of the original export
+data\export\experiment.json,True,66907d9144c0b66720cad0dc16096735029041f60a81c6be0718515426453e02,1980,,,,member of the original export
+data\export\generated_images.csv,True,b7e866c1fcc7ecef88dd327a0c47be824ecb546738aa248d7613eacfbe979b97,2562600,1536x20,,,member of the original export
+data\export\generation_plan.csv,True,667eb76599c89fb5a425cef31729d80e57d8c6b945c37c2edbd4328f967a83c2,720,4x11,,,member of the original export
+data\export\image_metadata.csv,True,80fa516ff06b7e6730f55aaee6e5a7d8087e5094d118d773c3876fd24cf0fa7c,282223,600x19,,,member of the original export
+data\export\model_conditions.csv,True,0e4412d14a041255f27a9f8fab7972a01d1ccb18a1c8c805345f722f9f756062,1455,8x8,,,member of the original export
+data\export\pairwise_trials.csv,True,d64d93a4f988a2769f0d804b829538cb707085926b9cc81e9f9c2f8353fa2d1a,818179,5130x21,,,member of the original export
+data\export\participants.csv,True,95c474fa66f73a6e3f13e50d10bc9a3dd81b8c619b707a014fcfa6404b274b06,34133,311x14,,,member of the original export
+data\export\posttraining_ratings.csv,True,7357dd0ac819c9ce934434401ff4d9cd12aa6461e746806374dd06bd3bb352f8,1374757,9932x20,,,member of the original export
+data\export\posttraining_sessions.csv,True,431a4ef6b733b2bd21f0acff20ebff4b87906fa35624b1cc840d0950ce9a13ac,42985,343x12,,,member of the original export
+data\export\pretraining_ratings.csv,True,5d2dfbf3ebe56c75a5955e8d8306f3e11820fdc33f9e6fe17078f1eb63c689bf,2516777,23012x15,,,member of the original export
+data\export\pretraining_sessions.csv,True,ebfc08b5d3fa886f154a25a26d38ef89b11840c9ecb608164577ba5b64d36f17,20415,166x12,,,member of the original export
+data\export\pretraining_summary.csv,True,cc1a31c48582142577d884425c4413400fe0efb9620f5d5b413de608786bb1c0,45137,600x17,,,member of the original export
+data\export\prompt_sets.csv,True,8595695648b4982aef998d727939f8540a84855e2d1301d9a1a3a886aa479e93,164678,309x10,,,member of the original export
+data\export\protocol.json,True,45f019bd3aa7630086b3d7a9ecc58ae5e06cfa0052f42cd641e454655e52b3d9,4284,,,,member of the original export
+data\export\quality_flags.csv,True,595be2396f598d7595cb98a575814bfd1a2b7872dd24e4eebfea2858aae76738,111939,1191x11,,,member of the original export
+data\export\results_summary.csv,True,1760a2d3d4c613f7865e298fce8f1eee111f934789bf233d35b98f5aeff048b7,129482,2138x5,,,member of the original export
+data\export\selection_rules.json,True,ae73bebe88c43f547f9f224088a358ec4ca131c44925a9c18b1090546ecb7eae,401,,,,member of the original export
+data\export\session_items.csv,True,fb6fac6525667f06b4ebdacd784e29b07061fe22da90d27f9f72844000f1965f,3131454,40350x7,,,member of the original export
+data\export\source_images.csv,True,05af85728aea03fdcb6cc15ce7d2b586566e55df0bcec67fd380a69931078481,120188,600x13,,,member of the original export
+data\export\training_runs.csv,True,8698991621c5d8046ffa6d5960396839cdb943f4d4289f23a1acee93506920af,8262,17x22,,,member of the original export
+analysis\metrics\embeddings_dinov2_vitb14.npz,True,d13481a1524e469b88f38e2512945c2bacd50c32107e1d612aac6beaa1b59ce3,6709078,"cls (1176, 768)","id = ARCH_xxxx for photographs, opaque_id (32 hex) for generated images","model facebook/dinov2-base; preprocessing whole image, short side 224px, multiples of 14px, bicubic, ImageNet mean/std","DINOv2 CLS and patch-mean embeddings: 600 photographs + 576 original generated images (keys kind,id,cls,patch_mean)"
+analysis\metrics\embeddings_replication_dinov2_vitb14.npz,True,b451484e1d61049b4b0c5928fc13b47d939f342843aa546e8c53a1f4116e0986,5482433,"cls (960, 768)",opaque_id,model facebook/dinov2-base,DINOv2 embeddings of the 960 images of the five replication adapters
+analysis\baseline\direction_dinov2.npz,True,03da62aa8e813924ce96a70029d50c1c700eec007a7b14fa0e83b1a477f47941,86474,"cls_v (768,)",,gap 0.235229; datasets AESTHETIC-v2 / CONTROL-v2,"frozen source direction (tag baseline-v1): centroids of the 89+89 photographs, unit vector, gap"
+analysis\metrics\covariates_images.csv,True,48ede853ffb780d09741251eb3f527f13db8096e2ef48a0fdd09ffc084ebdff9,1389540,2136x34,id (image_code or opaque_id),,"31 descriptors (+elegant): 10 pixel measures and 22 CLIP ViT-L/14 zero-shot attributes for all 2136 images (600 photographs, 576 original, 960 replication)"
+analysis\image_scripts\covariates.py,True,0d759af8f87854c81b98b3603a8fcb4baea6dcab8cad1cbba7f744bad2470421,6167,,,,pipeline of the 31 descriptors (CLIP prompts and pixel measures)
+analysis\images\manifest.csv,False,,,,,,mapping kind/image_code/opaque_id of the 1176 images used for the baseline embeddings
+analysis\replication\images\manifest.csv,False,,,,,,mapping of the 768 replication images downloaded for embeddings (+192 determinism run in images/det)
+analysis\replication\design.json,True,246b2e734ed957840b08c9e624c383c79c8fd36aedaea5b83d211beda7fbee44,949,,,,"replication design: seeds, training order, criterion written before the trainings"
+analysis\embedding_report\report_dino.md,True,12a33fa6ce1f17cbd9c8f5170a2049a2fb85ff1005369be2effdbe84fd5be624,11376,,,,historical report/result (read only; compared with the recomputed values)
+analysis\embedding_report\results_dino.csv,True,f8ec03277f5557585908109e236193e2aa7dcd524e8393a29079569ada3d8793,14336,,,,historical report/result (read only; compared with the recomputed values)
+analysis\embedding_report\source_affinity_dino.csv,True,35bab18b56a5aeba1c9a60ff2bd4c23332518440d7705120e231818f198d18d4,63183,,,,historical report/result (read only; compared with the recomputed values)
+analysis\embedding_report\triplet_transfer_dino.csv,True,f7fd4477284881717da4fa8284a8caa0626b78f8e3da370ce4c69ef5359e9bec,55778,,,,historical report/result (read only; compared with the recomputed values)
+analysis\replication_report\cells_replication_dino.csv,True,00545351ec2c8613a68590072dbe212cf99576ffe0b9df42cc1c9309056d314e,30277,,,,historical report/result (read only; compared with the recomputed values)
+analysis\replication_report\report_replication_dino.md,True,3f736b717a8cf075c449f8658b46947bd37a52f6fffa69bbd090892f0fe49e26,4837,,,,historical report/result (read only; compared with the recomputed values)
+analysis\replication_report\results_replication_dino.csv,True,5edafda79061f3e3bf085d8f2617d9e685374eff41e96146ba8ad16fdf48f9fc,13089,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\covariate_profile_direction_decomposition.csv,True,877df2246bbf4d332caa991a8f094e70e23c3277737b4bf28f491bd85b89599d,6502,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\report_captions.md,True,868f3e785fc082a4a82db14dfc4462e8d2c2e8ecc9e5362ef97bbe53eea45c97,2974,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\report_direction_decomposition.md,True,a54364609506e3463048a420a97be957d6e9d0c123a0097246f222cd0c580fc8,7107,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\results_captions.csv,True,f15b7a456c83f657079a706e8cc58cd759bcd6a72775ddbc8cdc20e1d1aa45f3,828,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\results_direction_decomposition.csv,True,c7347ef54eb27a54dffa89992de307a15906209f1584ab548c9c2d2d0e877903,15420,,,,historical report/result (read only; compared with the recomputed values)
+analysis\decomposition_report\words_captions.csv,True,7eff8ef5b8cb58bb092ff592c1ec522ecef05ebcce32ffa34dea31ee1cd85025,17447,,,,historical report/result (read only; compared with the recomputed values)
+analysis\figures\feature_base_contrasts.csv,True,049b79d01b05c0739c89ea3562e248a7cab48d395be967a7794035030fdfc6fc,8560,,,,historical report/result (read only; compared with the recomputed values)
+analysis\figures\feature_base_analysis.md,True,214a36ab6bb7deae24464a7cc2dc8dd5e84ef1e3f6b1a26b62666bd32504cb80,5125,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\report_human_votes.md,True,0d3195fc9a6853e45eb9b7c47045eeadc4068da2f06f3d12d38bcd8188cf97ba,9473,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\report_paper_participant_level.md,True,1e1cbbd81daa4e17d6a9610a8a589f336b8e61c5bb2c187cdb7f7c77d36d217b,5543,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\report_selection_rule.md,True,0163b9fd84ad161605027cc9223f8cbe9df1c09aa0faf6ff3531a023c077675d,1840,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\results_human_votes.csv,True,f7ce96817f916c94608a83b83eba223c11364cc8f9305901e4416a49c350f557,6308,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\results_paper_participant_level.csv,True,9e3d41cf3bf0d9d402946d9c98f5c10b21f7676d5b71b5d810077bf5d228cd49,6292,,,,historical report/result (read only; compared with the recomputed values)
+analysis\human_report\results_selection_rule.csv,True,fdef65d503d0f3a672357f92170ee3f407d4d34e2a5fd043e075b269043c6709,561,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\cells_replication_vlm.csv,True,3567ffd98d1c8ea7122ce2a507be83808f96ef201d0dfd8dd072d0723d3d0a1d,61847,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\full_instrument_report.md,True,aee241d16340b3908f7a8513e6c56f89c0ab4669194f585dcb29180051f7c23d,4493,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\pilot_instrument_report.md,True,a349824dac7fb529a86162d505da46d059a232855b941965095266dd428ba171,12416,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\replication_instrument_report.md,True,9d8b10c95304cf376aba4d40b4a5a6363bcbbcedcdbb5561028ea737e2236a46,3973,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\report_replication_vlm.md,True,3c4258b6007de29b53c68f77e3ad33dbf46991d4d8f05639baa8bacec1199dc6,9243,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\report_vlm.md,True,5f05d5c40af86cee4d1f63e78d5c93cded63d1fab18613da56e9387848ebeb07,9149,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\results_replication_vlm.csv,True,b6cc21735f4393fdab7b3ecac067e70097c5cd827d011c40c96afbe9e21a84f2,15137,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\results_vlm.csv,True,c4f92d238a730fe3149cd2fb51b274b545143cafce59e32e06443af58f807940,20727,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\triplet_vlm.csv,True,5ae75e9ce86df342d2aa4535c5536822130b5a867ed4df09e1270713cdf2a660,188144,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\vlm_scores_unblinded.csv,True,12bfa67e29dc581486b5a5896dae26beb7502e2606667b7919b60eaa13cf18bb,279314,,,,historical report/result (read only; compared with the recomputed values)
+analysis\vlm_report\vlm_scores_unblinded_replication.csv,True,d984e36edf67b3992651dbe32bc5bd5064b867ed22be57df9e40f685a7c86db4,148994,,,,historical report/result (read only; compared with the recomputed values)
+analysis\embedding_analysis.py,True,15afdd7a9a9d0b0e2ecf505ca1141ece1d1dbd40fd9c386bd33b808d504fb519,43305,,,,historical analysis code
+analysis\replication_analysis.py,True,4fd2ec0e7258f57f161a67ec65e058655314f740ef72f3a5963e71ecee8f982b,19100,,,,historical analysis code
+analysis\direction_decomposition.py,True,44c3e54e3d24d0ba01620c2e17837fc87c9f36fd9662a97d3a562845a31bf383,21374,,,,historical analysis code
+analysis\caption_analysis.py,True,a9f00523ab15a270058e1e89f03c491d2b4d9d3c9450c1d20f2e3913c0daaff3,8500,,,,historical analysis code
+analysis\figures_transfer.py,True,035ef48b128a7584373b8e5eb543d109bc71227a47884d10c37e85083d17574f,25792,,,,historical analysis code
+analysis\arch300_analysis.py,True,3b36393b0035c56307b863fb990a88f445ee2e42bd5c0107bd421383fc85f4c4,44310,,,,historical analysis code
+analysis\vlm_analysis.py,True,7e96a103e9735430fe465f703ca8bf3b7408237791098c06e8941a4e11b047a4,19669,,,,historical analysis code
+analysis\replication_vlm_analysis.py,True,3196cd6086831ed699b71828b6566c9b40e38b25ce5e345f2e9495ed250d3220,15329,,,,historical analysis code
+analysis\baseline\freeze.py,True,038c86ab1b7e8d93850eb405992de640d972c1686370eb977b31fa966b6a60ec,6276,,,,historical analysis code
+analysis\ANALYSIS_PLAN.md,False,,,,,,historical analysis code
+training\aar_worker.py,True,266541cf200e590dd5a1d6fd68429c50858b0c48eb64172507220882f833b95f,24672,,,,trainer and generator actually run on the cloud GPU (LoRA on the UNet attention projections; text encoders frozen)
+training\platform\TrainingDatasetService.cs,True,72b2855c56951fc0aea273ca7722b3263ea4ac51f96e065064606864bbf477e9,19396,,,,selection rule and CONTROL sampling algorithm (SampleControl)
+training\platform\DeterministicRandom.cs,True,977e394f38e676ad50d497983bf27f0f74669692c3925bf248860ee6bcbe4c60,2510,,,,xoshiro256** generator used by SampleControl
+analysis\vlm\outputs\full\anthropic.jsonl,True,09ac9121ccf5a402fbefa53ebcdd444f09ad7d56614e52e154e221b87d070322,613242,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\full\google.jsonl,True,ee75bdc94e809492dc3762739582536050de8f495a3a9db75b129bcc38267445,567592,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\full\openai.jsonl,True,e47e9a93b6205cee0e1c98119f7b90e61c22be23504ee2462265d1724b67bde2,528245,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\pilot\anthropic.jsonl,True,79909a4fecfe80405284df1603682ae801894494426fe274220b5aacc79ffb18,73457,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\pilot\google.jsonl,True,a453467f05130a41bf55593a5437acd4d73c1eed955d17c883d806333a93f678,62325,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\pilot\openai.jsonl,True,257394377f2c75bf03169ea7f13f51ef5182496714dd2c5f2259fc095520c85a,61660,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\replication\anthropic.jsonl,True,0ab9b014d1ce7c3f9431969eec009a412208dbdfe872cc763addd4fb13b940ed,306188,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\replication\google.jsonl,True,a40c77fb30a40ded90d05bc9488cc99ccdb9759fc33d8fad43373a171f8b0adf,286458,,,,VLM raw responses / blind manifests
+analysis\vlm\outputs\replication\openai.jsonl,True,e9c199847f1d2ae344ffe58316cb6a960f000aa602f71fb3f8e20fda986e5ef2,267429,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\full_manifest_blind.csv,True,0901b5c6a31bd415eeb123f3d5ff8fff2ed130a59aeac1a16aad3633c3a542e9,17126,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\full_repeats.csv,True,60f0cf3cbcaac2e3a9655a2f45f434dfff7f6f84c6a1f292eee87b62be22fd79,2675,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\pilot_manifest_blind.csv,True,fc7aca7e28c06d99bb5b2ad0a951e1868f8d36ce75f00721fdc0b8a8941d2590,1275,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\pilot_repeats.csv,True,45cec17e3746616698a068f8c3583391dbe5a00236d1dcb2c5be592664f9b2af,237,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\replication_manifest_blind.csv,True,6fbf5d15d88db87605fe1918fc7b4ca16872a6ddbd534aff52ce9a927a31d5bf,8336,,,,VLM raw responses / blind manifests
+analysis\vlm\manifests\replication_repeats.csv,True,17d5eadb465adf7707c029841f72947ab43185d542ea890b34c4ff1b675eb85d,1364,,,,VLM raw responses / blind manifests
+<home>/Downloads\job3-run-control_lora.safetensors,True,c69793fffdff53c2f826d3657eda5b24cabc00156c354be0bdd27fa15d8d8bf8,93065304,,,,LoRA weights downloaded locally (jobs 3-6 = RUN-AESTHETIC/RUN-CONTROL v1 and tests; NOT the RUN-*-4 adapters used for the evaluated images)
+<home>/Downloads\job4-run-aesthetic_lora.safetensors,True,8aea68e33bf62d659792670096798e574a5471d02ffd535ce72aa160b24cb559,93065304,,,,LoRA weights downloaded locally (jobs 3-6 = RUN-AESTHETIC/RUN-CONTROL v1 and tests; NOT the RUN-*-4 adapters used for the evaluated images)
+<home>/Downloads\job5-run-aesthetic_lora.safetensors,True,194624ac6f0a23a6658c8a88dbe4be4d482c1db4fd262fd198772239e6dac8b8,93065304,,,,LoRA weights downloaded locally (jobs 3-6 = RUN-AESTHETIC/RUN-CONTROL v1 and tests; NOT the RUN-*-4 adapters used for the evaluated images)
+<home>/Downloads\job6-run-control_lora.safetensors,True,6d19f812ce498a2b5291dce88e19389d9c7bf99bbc206833cef9ba36e118a99f,93065304,,,,LoRA weights downloaded locally (jobs 3-6 = RUN-AESTHETIC/RUN-CONTROL v1 and tests; NOT the RUN-*-4 adapters used for the evaluated images)
+audit\inputs\previous_reply\01_training_manifest.csv,True,dc1c4b12f71ec9be94a03179ffc6910512be816d89c0b056af98209469bfca95,69319,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\02_control_construction.csv,True,87221e8cfcd9c34ff7047d790c961f194ef13e46337f3cf5409c220043cead4a,123,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\03_composition_by_stratum.csv,True,c7ac95a0687c7c23afb1d520b781e0106126d6df3845de3512308d8fe8fd0065,19130,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\04_pairing_identifiability.csv,True,de2871064265736b8a598a2ad6565e77b3ec106da2d7acd565ac83015e72393e,4663,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\05_caption_hits.csv,True,d3ff17d79d24e2d70c2143cd5a250b4b3d2fdead0d5057a3567061fac4cd86a8,135661,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\06_caption_feature_counts.csv,True,1fcafbb9b9c5240974806154f8b7e5c39214dba98afc47e9ee21a8026275b7e8,4681,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\06b_caption_presence_matrix.csv,True,83dc80ad0daad09b682df1e0fac7856aaa4109e7d5aa88cc9129a78e73457ff3,14391,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\07_caption_affinity_diagnostic.csv,True,90eac58480e266e3c1b4f7cd06b08e98c41bfa3335c968c2702799edc967ecb6,7005,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\08_exact_word_counts.csv,True,842a8e7585308e026644978251dd1fb39702cc7dec72af0078cdb6b1a277a106,232,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\09_transfer_scale_check.csv,True,9ceddc21b58ed1c88348a8e69f86aaf15930967c049c3224a2593191a38a198d,611,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\10_transfer_triplets.csv,True,a5b107a0bfd78877b949d54940c3f7d4a5468e7aeb53c5bd7a89f82dae0bb8bf,14720,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\11_sample_counts.csv,True,da9f15ccad2d4195a17cf67e1050571e389ce7acbb763fbc284c5a40e8768d24,290,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\12_human_contrasts_recomputed.csv,True,673e7592db842c131fd6d2cb5002011f09916c6d8c3a3333b6cd2282edf270b3,1237,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\13_pairwise_counts_including_ties.csv,True,7be3ef7748a737bd3481c487a332e84211e6572e1a8c8e688d471cbb3fbfa327,361,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\14_pairwise_new_sensitivity.csv,True,ee0892e5bc1f944df9b40c8a9f6449ca37205b2542ec84dacb552ef553b2a7c7,1298,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\15_final_prompts.csv,True,092ed401e8837d80657e05fd618e9b2849cbbc0535aa8b84593723918c9e70d2,40003,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\16_timeline.csv,True,0496334ce0349beb00e1ae2d539dad3c2b76e4aa8b3a8bf9e2a2494a22c21414,736,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\17_export_inventory.csv,True,841af029c853d80a1df507820baef7e019de7cb8ebfa204bb02eaf1747b5bd87,3617,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\18_source_inventory.csv,True,966ef0e7667561aa89adfbcf7648a627d31a609b8e85ab34cc93bc3d45909290,252435,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\19_bibliographic_verification.csv,True,c37d3b648ae11fe27ce553b27bc37e7477cb63b5a2a93ed44504f07a46fdd287,3009,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\MATERIALI_MANCANTI.md,True,4f8557b92932fd1a009708d995d049431efc7b0b37ef389c8488770d49ed7789,2379,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\README.md,True,e4569c8f579731335a906eeec552e7c669a8ca30fbda0c602b3cb6df1af94e05,7437,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\SHA256SUMS.txt,True,b97ec24596c67d83382c819cbd0b42d30bbd4668b13a0d455ceaa2f3658caf0f,2482,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\analisi_riscontro.py,True,e7cc40fac540c3a8d41f68822ad7332b0d950a3ea9400d43696e0a5ac715d615,22724,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\caption_lexicon_v1.json,True,7717724f0e0a971e433cf265826b61d47f56069fbc99a9db74120d5a608c9c98,10790,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\test_results.json,True,fa87cbbdf681d817c43fa3cf8775c04e002dcb277dc3f612a257529a2d0935e0,395,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\transfer_definitions.json,True,fc455ac93d511ac55f8d1eb9a01b6f3bfa749c4a97f058494db1b5cd11c3029f,422,,,,"attachment of the previous reply (other assistant) — verified, not trusted"
+audit\inputs\previous_reply\verification_summary.json,True,385051e23926a16bf06dbbb2d135c24767cd3ac8092a72caf89778ab16ed91d7,1140,,,,"attachment of the previous reply (other assistant) — verified, not trusted"

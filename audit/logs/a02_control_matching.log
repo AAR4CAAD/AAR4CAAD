@@ -1,0 +1,37 @@
+=== a02_control_matching started 2026-10-03T20:38:12+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+v1 == v2 membership: AESTHETIC True CONTROL True | same order: True
+stored: method MatchedControl variables BuildingType,Style seed 345145722 reference AESTHETIC-v1 excluded_reference True
+RE-EXECUTION: same membership True | same order True | same reasons True | n 89
+strata: {'type_only': 41, 'random_fill': 28, 'type_and_style': 20}
+AESTHETIC type+style strata: 85 | strata fully matchable in the pool: 19 | total deficit: 69
+period chi2 p 0.4673 {'AESTHETIC': {'1919-1945': 8, '1946-1969': 19, '1970-1989': 12, '1990-2009': 27, '2010-today': 23}, 'CONTROL': {'1919-1945': 15, '1946-1969': 22, '1970-1989': 12, '1990-2009': 23, '2010-today': 17}}
+continent chi2 p 0.537 {'AESTHETIC': {'Africa': 3, 'Asia': 16, 'Europe': 28, 'Japan': 6, 'Latin America': 12, 'Middle East': 6, 'North America': 14, 'Oceania': 4}, 'CONTROL': {'Africa': 3, 'Asia': 12, 'Europe': 38, 'Japan': 11, 'Latin America': 8, 'Middle East': 3, 'North America': 10, 'Oceania': 4}}
+industrial_or_nonindustrial chi2 p 0.3882 {'AESTHETIC': {'industrial': 10, 'nonindustrial': 79}, 'CONTROL': {'industrial': 15, 'nonindustrial': 74}}
+building_type distinct 49 47 shared 27
+architectural_style distinct 46 52 shared 15
+country distinct 37 33 shared 18
+          stratum   n  post_1990  europe  industrial
+0  type_and_style  20         10       7           1
+1       type_only  41         20      16           6
+2     random_fill  28         10      15           8
+Tab.1 recomputed: {"AESTHETIC": {"periods": [8, 19, 12, 27, 23], "countries": 37, "europe": 28, "types": 49, "industrial": 10, "licences": 9, "ccbysa4": 41}, "CONTROL": {"periods": [15, 22, 12, 23, 17], "countries": 33, "europe": 38, "types": 47, "industrial": 15, "licences": 11, "ccbysa4": 40}}
+licence values: {'CC BY-SA-4.0': 280, 'CC BY-SA-3.0': 89, 'CC BY-2.0': 66, 'CC BY-SA-2.0': 38, 'CC0': 31, 'CC BY-4.0': 30, 'CC BY-3.0': 22, 'PD': 19, 'CC BY-2.5': 6, 'CC BY-SA-2.5': 5, 'FAL': 4, 'CC BY-SA-3.0-DE': 2, 'CC BY-3.0-AT': 1, 'CC BY-2.1-JP': 1, 'CC BY-SA-3.0-FR': 1, 'CC BY-SA-3.0-NL': 1, 'CC BY-3.0-PL': 1, 'CC BY-3.0-BR': 1, 'CC BY-SA-3.0-PL': 1, 'CC BY-3.0-CH': 1}
+=== a02_control_matching started 2026-10-04T01:40:51+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+=== a02_control_matching started 2026-10-04T01:41:30+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+v1 == v2 membership: AESTHETIC True CONTROL True | same order: True
+stored: method MatchedControl variables BuildingType,Style seed 345145722 reference AESTHETIC-v1 excluded_reference True
+RE-EXECUTION: same membership True | same order True | same reasons True | n 89
+strata: {'type_only': 41, 'random_fill': 28, 'type_and_style': 20}
+AESTHETIC type+style strata: 85 | strata fully matchable in the pool: 19 | total deficit: 69
+period chi2 p 0.4673 {'AESTHETIC': {'1919-1945': 8, '1946-1969': 19, '1970-1989': 12, '1990-2009': 27, '2010-today': 23}, 'CONTROL': {'1919-1945': 15, '1946-1969': 22, '1970-1989': 12, '1990-2009': 23, '2010-today': 17}}
+continent chi2 p 0.537 {'AESTHETIC': {'Africa': 3, 'Asia': 16, 'Europe': 28, 'Japan': 6, 'Latin America': 12, 'Middle East': 6, 'North America': 14, 'Oceania': 4}, 'CONTROL': {'Africa': 3, 'Asia': 12, 'Europe': 38, 'Japan': 11, 'Latin America': 8, 'Middle East': 3, 'North America': 10, 'Oceania': 4}}
+industrial_or_nonindustrial chi2 p 0.3882 {'AESTHETIC': {'industrial': 10, 'nonindustrial': 79}, 'CONTROL': {'industrial': 15, 'nonindustrial': 74}}
+building_type distinct 49 47 shared 27
+architectural_style distinct 46 52 shared 15
+country distinct 37 33 shared 18
+          stratum   n  post_1990  europe  industrial
+0  type_and_style  20         10       7           1
+1       type_only  41         20      16           6
+2     random_fill  28         10      15           8
+Tab.1 recomputed: {"AESTHETIC": {"periods": [8, 19, 12, 27, 23], "countries": 37, "europe": 28, "types": 49, "industrial": 10, "licences": 9, "ccbysa4": 41}, "CONTROL": {"periods": [15, 22, 12, 23, 17], "countries": 33, "europe": 38, "types": 47, "industrial": 15, "licences": 11, "ccbysa4": 40}}
+licence values: {'CC BY-SA-4.0': 280, 'CC BY-SA-3.0': 89, 'CC BY-2.0': 66, 'CC BY-SA-2.0': 38, 'CC0': 31, 'CC BY-4.0': 30, 'CC BY-3.0': 22, 'PD': 19, 'CC BY-2.5': 6, 'CC BY-SA-2.5': 5, 'FAL': 4, 'CC BY-SA-3.0-DE': 2, 'CC BY-3.0-AT': 1, 'CC BY-2.1-JP': 1, 'CC BY-SA-3.0-FR': 1, 'CC BY-SA-3.0-NL': 1, 'CC BY-3.0-PL': 1, 'CC BY-3.0-BR': 1, 'CC BY-SA-3.0-PL': 1, 'CC BY-3.0-CH': 1}

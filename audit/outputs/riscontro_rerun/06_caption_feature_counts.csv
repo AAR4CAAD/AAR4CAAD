@@ -1,0 +1,32 @@
+feature,group,status,A_n,C_n,A_negative,C_negative,A_share,C_share,difference_A_minus_C,note
+brightness,photography,exploratory_lexical_proxy,4,1,0,0,0.0449438202247191,0.011235955056179775,0.033707865168539325,Menzioni di luminosità; non stima della luminanza media dei pixel.
+contrast,photography,exploratory_lexical_proxy,0,0,0,0,0.0,0.0,0.0,"Menzione del contrasto, senza dedurre un valore numerico o la direzione alto/basso."
+saturation,photography,exploratory_lexical_proxy,0,0,0,0,0.0,0.0,0.0,Menzione di saturazione; non metrica cromatica dell’immagine.
+colorfulness,photography,exploratory_lexical_proxy,1,2,0,0,0.011235955056179775,0.02247191011235955,-0.011235955056179775,Lessico condiviso con colourful: le due variabili lessicali non sono evidenze indipendenti.
+warmth,photography,exploratory_lexical_proxy,2,0,0,0,0.02247191011235955,0.0,0.02247191011235955,"Solo menzioni del polo caldo, non stima dell’indice pixel."
+sharpness,photography,exploratory_lexical_proxy,2,0,0,0,0.02247191011235955,0.0,0.02247191011235955,Le menzioni possono qualificare componenti e non l’intera immagine.
+detail,photography,exploratory_lexical_proxy,0,0,0,0,0.0,0.0,0.0,Menzioni di dettaglio: contenuto descritto e resa fotografica non sono separabili.
+sky_brightness,photography,not_operationalised,,,,,,,,Il lessico del cielo non quantifica la luminosità del terzo superiore; non codificato come zero.
+dark_share,photography,not_operationalised,,,,,,,,Menzioni di superfici scure non quantificano una quota di pixel scuri; non codificato come zero.
+bright_share,photography,not_operationalised,,,,,,,,Menzioni di superfici chiare non quantificano una quota di pixel chiari; non codificato come zero.
+interior,framing_scene,lexical_content,1,0,0,0,0.011235955056179775,0.0,0.011235955056179775,
+cars,framing_scene,lexical_content,6,8,0,0,0.06741573033707865,0.0898876404494382,-0.02247191011235955,
+low_angle,framing_scene,lexical_content,20,12,0,0,0.2247191011235955,0.1348314606741573,0.0898876404494382,Eye level e street level non sono assimilati automaticamente a vista dal basso.
+urban,framing_scene,lexical_content,14,12,0,0,0.15730337078651685,0.1348314606741573,0.02247191011235955,Street isolato non implica necessariamente contesto urbano.
+vintage_photo,framing_scene,lexical_content,0,1,0,0,0.0,0.011235955056179775,-0.011235955056179775,Historic relativo all’edificio non vale come fotografia d’epoca.
+people,framing_scene,lexical_content,15,9,0,0,0.16853932584269662,0.10112359550561797,0.06741573033707865,
+greenery,framing_scene,lexical_content,55,55,0,0,0.6179775280898876,0.6179775280898876,0.0,Park non intercetta parking. Landscape isolato escluso.
+real_photo,framing_scene,lexical_content,89,89,0,0,1.0,1.0,0.0,"Photograph è un’indicazione del tipo d’immagine, non una misura della qualità del realismo."
+water,framing_scene,lexical_content,28,10,0,0,0.3146067415730337,0.11235955056179775,0.20224719101123595,
+whole_building,framing_scene,lexical_content,0,0,0,0,0.0,0.0,0.0,Panoramic non è equiparato ad edificio interamente visibile.
+sunny,framing_scene,lexical_content,1,1,0,0,0.011235955056179775,0.011235955056179775,0.0,Daylight e clear sky non sono equiparati automaticamente a luce solare diretta.
+curved_organic,content,lexical_content,37,27,0,0,0.4157303370786517,0.30337078651685395,0.11235955056179775,Categoria ampia dichiarata. Conteggi stretti di curved e organic riportati separatamente.
+concrete,content,lexical_content,17,27,0,0,0.19101123595505617,0.30337078651685395,-0.11235955056179778,
+iconic_design,content,lexical_content,0,0,0,0,0.0,0.0,0.0,"Landmark è un termine semantico affine, non un giudizio umano di qualità."
+contemporary,content,lexical_content,0,0,0,0,0.0,0.0,0.0,Modern e modernism non sono considerati sinonimi di contemporary.
+monumental,content,lexical_content,0,1,0,0,0.0,0.011235955056179775,-0.011235955056179775,Proxy semantico non validato contro annotazioni umane.
+glass,content,lexical_content,44,38,0,0,0.4943820224719101,0.42696629213483145,0.06741573033707865,
+complex_form,content,lexical_content,6,7,0,0,0.06741573033707865,0.07865168539325842,-0.011235955056179775,Complex isolato escluso perché può denominare un insieme edilizio; si richiede un riferimento esplicito a forma o geometria.
+colourful,content,lexical_content,1,2,0,0,0.011235955056179775,0.02247191011235955,-0.011235955056179775,Lessico condiviso con colorfulness; non una misura indipendente.
+wood,content,lexical_content,8,4,0,0,0.0898876404494382,0.0449438202247191,0.0449438202247191,
+white,content,lexical_content,46,41,0,0,0.5168539325842697,0.4606741573033708,0.0561797752808989,

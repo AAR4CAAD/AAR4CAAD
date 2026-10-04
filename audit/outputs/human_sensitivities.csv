@@ -1,0 +1,23 @@
+analysis,estimate,note,ci_low,ci_high,n,p
+"phase 1 ICC on the COMPLETE sample (166, 23012)",0.138,ICC(k)=0.860; export-filter values 0.138/0.858,,,,
+LOO reselection signal on the COMPLETE phase-1 sample (166),0.944,separate sensitivity; the manuscript value 0.915 uses the export filter,0.842,1.045,161,
+"A−C ratings: without global participant exclusions, >=3 per condition",0.1295,,0.0482,0.2109,167,0.002
+"A−C ratings: without global exclusions, >=1 per condition",0.1258,,0.0446,0.207,168,0.0026
+"A−C ratings: included sample, >=1 per condition",0.1037,,0.0291,0.1782,158,0.0067
+A−C ratings: responses < 500 ms removed,0.1037,0 ratings removed,0.0291,0.1782,158,0.0067
+A−C ratings: responses < 1000 ms removed,0.1199,571 ratings removed,0.0414,0.1985,158,0.003
+phase 2 participants globally excluded,18.0,"reasons: {'non finito': 8, 'non termitano': 1, 'Automatic rule: 64 of 90 answers (71%) excluded as faster than 501 ms, above the 20% limit': 1, 'non ha partecipato': 1, 'non completo': 1, 'q': 1, 'a': 1, 'Automatic rule: 19 of 90 answers (21%) excluded as faster than 501 ms, above the 20% limit': 1, 'Automatic rule: 26 of 90 answers (29%) excluded as faster than 501 ms, above the 20% limit': 1, 'Non completato': 1, 'non completato': 1}; with phase-2 answers: 11",,,,
+phase 2 included participants with both sessions Completed,158.0,,,,158,
+A−C ratings: linear mixed model with crossed random intercepts participant + prompt×seed cell + image (REML),0.1011,"converged=True; variance components {""cell"": 0.4355, ""image"": 0.0704, ""participant"": 1.05} (labels from the model, corrected 2026-10-03 second pass); residual 1.5431; fit 35s",0.016,0.1862,9413,0.0199
+BASE−C ratings: same crossed model,0.1344,,0.0493,0.2194,,0.002
+A−BASE ratings: same crossed model,-0.0333,difference of the two fixed effects; SE not reported here,,,,
+Davidson OR A vs C: participant bootstrap (2000 resamples),1.0894,"cluster bootstrap over participants, percentile interval",0.9821,1.2049,158 participants × 48 prompts,
+Davidson OR BASE vs C: participant bootstrap (2000 resamples),1.1331,"cluster bootstrap over participants, percentile interval",1.0404,1.2398,158 participants × 48 prompts,
+Davidson OR A vs BASE: participant bootstrap (2000 resamples),0.9614,"cluster bootstrap over participants, percentile interval",0.8745,1.0561,158 participants × 48 prompts,
+Davidson OR A vs C: prompt bootstrap (2000 resamples),1.0894,"cluster bootstrap over prompts, percentile interval",0.9464,1.2394,158 participants × 48 prompts,
+Davidson OR BASE vs C: prompt bootstrap (2000 resamples),1.1331,"cluster bootstrap over prompts, percentile interval",0.9852,1.2928,158 participants × 48 prompts,
+Davidson OR A vs BASE: prompt bootstrap (2000 resamples),0.9614,"cluster bootstrap over prompts, percentile interval",0.8394,1.1012,158 participants × 48 prompts,
+Davidson OR A vs C: two-way bootstrap (2000 resamples),1.0894,"pigeonhole (two-way cluster) bootstrap: participants and prompts resampled independently, observation weight = product of multiplicities (Owen 2007; Owen & Eckles 2012)",0.8991,1.3128,158 participants × 48 prompts,
+Davidson OR BASE vs C: two-way bootstrap (2000 resamples),1.1331,"pigeonhole (two-way cluster) bootstrap: participants and prompts resampled independently, observation weight = product of multiplicities (Owen 2007; Owen & Eckles 2012)",0.949,1.351,158 participants × 48 prompts,
+Davidson OR A vs BASE: two-way bootstrap (2000 resamples),0.9614,"pigeonhole (two-way cluster) bootstrap: participants and prompts resampled independently, observation weight = product of multiplicities (Owen 2007; Owen & Eckles 2012)",0.8023,1.1635,158 participants × 48 prompts,
+A−C ratings per participant: two-way (participant × prompt) pigeonhole bootstrap (corrected: outer mean weighted by participant multiplicity),0.1037,"participants and prompts resampled independently; within-participant means weighted by prompt multiplicity; outer mean weighted by participant multiplicity; drawn participants lacking A or C after resampling are dropped (mean 0.00 per resample). First-pass estimator (ids counted once, superseded): -0.0096 / +0.2145. Compare with the t interval +0.029/+0.178",-0.024,0.2347,2000,

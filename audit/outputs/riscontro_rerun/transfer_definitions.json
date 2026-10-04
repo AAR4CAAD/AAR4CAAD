@@ -1,0 +1,8 @@
+{
+  "source_distance_D": 0.2352287934639978,
+  "max_absolute_error_S_equals_D_P": 0.0,
+  "max_absolute_error_ratio_equals_P_over_D": 0.0,
+  "source_pooled_multivariate_dispersion": 0.9131288332377052,
+  "projection_over_source_dispersion": 0.04697410260942737,
+  "projection_over_source_dispersion_note": "NOT output SD, NOT Cohen d; pooled dispersion is the scalar denominator of the reported source centroid distance."
+}

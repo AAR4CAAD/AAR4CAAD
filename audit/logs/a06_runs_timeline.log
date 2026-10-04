@@ -1,0 +1,94 @@
+=== a06_runs_timeline started 2026-10-03T20:52:58+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+                code       dataset  seed                      noise_offset  timestep_min                   started     status  n_generated_images_in_export                                                                                                                                                                               notes
+0      RUN-AESTHETIC  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-27T22:19:41.814Z  Completed                             0                                                                                                                                                                                 NaN
+1        RUN-CONTROL    CONTROL-v1  9865  default(worker: 0.0357 for SDXL)             0  2026-09-27T22:19:54.103Z  Completed                             0                                                                                                                                                                                 NaN
+2      TEST-AES-S500  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T00:18:07.866Z  Completed                             0                                                                                                                                 green-cast investigation: 500 steps instead of 1500
+3     TEST-AES-LR3E5  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T00:30:22.592Z  Completed                             0                                                                                                                                green-cast investigation: lr 3e-5 cosine, warmup 100
+4    RUN-AESTHETIC-2  AESTHETIC-v2  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T01:29:48.053Z  Completed                             0                                                                            Same settings as RUN-AESTHETIC; dataset AESTHETIC-v2 with captions describing vegetation, sky and light.
+5      RUN-CONTROL-2    CONTROL-v2  9865  default(worker: 0.0357 for SDXL)             0  2026-09-28T01:30:00.495Z  Completed                             0                                                                                                          Same settings as RUN-CONTROL; dataset CONTROL-v2 with harmonised captions.
+6    RUN-AESTHETIC-3  AESTHETIC-v2  1254                            0.0357             0  2026-09-28T04:46:40.598Z  Completed                             0                                                                                      As RUN-AESTHETIC-2 plus SDXL noise offset 0.0357 (fixes washed-out, low-contrast LoRA output).
+7      RUN-CONTROL-3    CONTROL-v2  9865                            0.0357             0  2026-09-28T04:46:52.436Z  Completed                             0                                                                                                                                     As RUN-CONTROL-2 plus SDXL noise offset 0.0357.
+8    RUN-AESTHETIC-4  AESTHETIC-v2  1254                            0.0357           250  2026-09-28T05:55:49.175Z  Completed                           192  As RUN-AESTHETIC-3 but without the 250 least noisy timesteps: the LoRA no longer learns fine photographic texture (JPEG noise, lettering) and SDXL keeps its own detail rendering.
+9      RUN-CONTROL-4    CONTROL-v2  9865                            0.0357           250  2026-09-28T05:56:01.349Z  Completed                           192                                                                                                                                           As RUN-CONTROL-3 with timesteps 250-1000.
+10  RUN-AESTHETIC-RV  AESTHETIC-v2  1254                            0.0357           250  2026-09-28T06:45:32.724Z  Completed                             0                                                                                 Photorealism test: same settings as RUN-AESTHETIC-4 on a photorealistic SDXL base (RealVisXL V5.0).
+11    RUN-CONTROL-RV    CONTROL-v2  9865                            0.0357           250  2026-09-28T06:45:45.110Z  Completed                             0                                                                                                                Photorealism test: same settings as RUN-CONTROL-4 on RealVisXL V5.0.
+RUN-AESTHETIC-4: lora_sha256 in the 192 generation records: {'082928a6933ee8856a6aee7624a141b5d4dafa04b2c0b6bf9964dd9ac765059e'}
+RUN-CONTROL-4: lora_sha256 in the 192 generation records: {'da3ae5c4973e31137c0bac449955619b7a6c5935f17d4007c9b1afc3b5800fef'}
+training_run.updated events per run id: {'10': 2, '11': 2, '12': 2, '13': 2, '14': 2, '15': 2, '16': 2, '5': 10, '6': 7, '7': 2, '8': 2, '9': 2}
+prompt.changed events: 323 2026-09-27T22:49:45.908Z → 2026-09-28T11:39:51.874Z
+generation plans in export: [{'generation_plan_id': 22, 'name': 'Main plan v6 - seeds A', 'prompt_set_id': 15, 'frozen_at': '2026-09-28T13:09:13.584Z'}, {'generation_plan_id': 23, 'name': 'Main plan v6 - seeds B', 'prompt_set_id': 15, 'frozen_at': '2026-09-28T13:09:16.072Z'}]
+generation.imported events: 364 first 2026-09-27T23:27:09.296Z last 2026-09-28T14:28:28.115Z | before the final prompt freeze: 292
+generation cloud jobs: 21                         time job_id  plan_id
+10  2026-09-27T23:22:59.103Z      7      3.0
+17  2026-09-28T01:03:38.539Z     11      4.0
+18  2026-09-28T01:03:40.416Z     12      5.0
+25  2026-09-28T01:56:12.485Z     15      6.0
+27  2026-09-28T02:10:12.801Z     16      7.0
+29  2026-09-28T04:22:58.477Z     17      8.0
+35  2026-09-28T05:17:11.111Z     20      9.0
+37  2026-09-28T05:37:30.024Z     21     10.0
+43  2026-09-28T06:23:03.060Z     24     11.0
+49  2026-09-28T07:11:57.857Z     27     12.0
+51  2026-09-28T07:32:10.318Z     28     13.0
+52  2026-09-28T07:32:12.207Z     29     14.0
+55  2026-09-28T08:36:50.032Z     30     15.0
+57  2026-09-28T08:59:07.606Z     31     16.0
+58  2026-09-28T08:59:09.692Z     32     17.0
+61  2026-09-28T10:43:46.144Z     33     18.0
+62  2026-09-28T10:43:48.121Z     34     19.0
+65  2026-09-28T11:09:42.167Z     35     20.0
+66  2026-09-28T11:09:44.283Z     36     21.0
+69  2026-09-28T13:09:15.717Z     37     22.0
+70  2026-09-28T13:09:17.723Z     38     23.0
+screening: images with defects 48 {'AESTHETIC': 14, 'BASE': 21, 'CONTROL': 13} | defect types: {'Perspective': 22, 'Deformation': 21, 'WrongSubject': 2, 'Artefacts': 2, 'Perspective, Artefacts': 1}
+reviewed_at span: 2026-09-28T15:29:45.525Z → 2026-09-28T15:31:44.220Z | distinct reviewed_at values: 192 | manual_correction events: 149 2026-09-28T13:25:37.292Z → 2026-09-28T15:14:36.964Z | users: {'admin@research.local': 149}
+phase-1 ratings after the first phase-2 rating: 0
+=== a06_runs_timeline started 2026-10-03T20:53:18+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+                code       dataset  seed                      noise_offset  timestep_min                   started     status  n_generated_images_in_export                                                                                                                                                                               notes
+0      RUN-AESTHETIC  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-27T22:19:41.814Z  Completed                             0                                                                                                                                                                                 NaN
+1        RUN-CONTROL    CONTROL-v1  9865  default(worker: 0.0357 for SDXL)             0  2026-09-27T22:19:54.103Z  Completed                             0                                                                                                                                                                                 NaN
+2      TEST-AES-S500  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T00:18:07.866Z  Completed                             0                                                                                                                                 green-cast investigation: 500 steps instead of 1500
+3     TEST-AES-LR3E5  AESTHETIC-v1  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T00:30:22.592Z  Completed                             0                                                                                                                                green-cast investigation: lr 3e-5 cosine, warmup 100
+4    RUN-AESTHETIC-2  AESTHETIC-v2  1254  default(worker: 0.0357 for SDXL)             0  2026-09-28T01:29:48.053Z  Completed                             0                                                                            Same settings as RUN-AESTHETIC; dataset AESTHETIC-v2 with captions describing vegetation, sky and light.
+5      RUN-CONTROL-2    CONTROL-v2  9865  default(worker: 0.0357 for SDXL)             0  2026-09-28T01:30:00.495Z  Completed                             0                                                                                                          Same settings as RUN-CONTROL; dataset CONTROL-v2 with harmonised captions.
+6    RUN-AESTHETIC-3  AESTHETIC-v2  1254                            0.0357             0  2026-09-28T04:46:40.598Z  Completed                             0                                                                                      As RUN-AESTHETIC-2 plus SDXL noise offset 0.0357 (fixes washed-out, low-contrast LoRA output).
+7      RUN-CONTROL-3    CONTROL-v2  9865                            0.0357             0  2026-09-28T04:46:52.436Z  Completed                             0                                                                                                                                     As RUN-CONTROL-2 plus SDXL noise offset 0.0357.
+8    RUN-AESTHETIC-4  AESTHETIC-v2  1254                            0.0357           250  2026-09-28T05:55:49.175Z  Completed                           192  As RUN-AESTHETIC-3 but without the 250 least noisy timesteps: the LoRA no longer learns fine photographic texture (JPEG noise, lettering) and SDXL keeps its own detail rendering.
+9      RUN-CONTROL-4    CONTROL-v2  9865                            0.0357           250  2026-09-28T05:56:01.349Z  Completed                           192                                                                                                                                           As RUN-CONTROL-3 with timesteps 250-1000.
+10  RUN-AESTHETIC-RV  AESTHETIC-v2  1254                            0.0357           250  2026-09-28T06:45:32.724Z  Completed                             0                                                                                 Photorealism test: same settings as RUN-AESTHETIC-4 on a photorealistic SDXL base (RealVisXL V5.0).
+11    RUN-CONTROL-RV    CONTROL-v2  9865                            0.0357           250  2026-09-28T06:45:45.110Z  Completed                             0                                                                                                                Photorealism test: same settings as RUN-CONTROL-4 on RealVisXL V5.0.
+RUN-AESTHETIC-4: lora_sha256 in the 192 generation records: {'082928a6933ee8856a6aee7624a141b5d4dafa04b2c0b6bf9964dd9ac765059e'}
+RUN-CONTROL-4: lora_sha256 in the 192 generation records: {'da3ae5c4973e31137c0bac449955619b7a6c5935f17d4007c9b1afc3b5800fef'}
+training_run.updated events per run id: {'10': 2, '11': 2, '12': 2, '13': 2, '14': 2, '15': 2, '16': 2, '5': 10, '6': 7, '7': 2, '8': 2, '9': 2}
+prompt.changed events: 323 2026-09-27T22:49:45.908Z → 2026-09-28T11:39:51.874Z
+generation plans in export: [{'generation_plan_id': 22, 'name': 'Main plan v6 - seeds A', 'prompt_set_id': 15, 'frozen_at': '2026-09-28T13:09:13.584Z'}, {'generation_plan_id': 23, 'name': 'Main plan v6 - seeds B', 'prompt_set_id': 15, 'frozen_at': '2026-09-28T13:09:16.072Z'}]
+generation.imported events: 364 first 2026-09-27T23:27:09.296Z last 2026-09-28T14:28:28.115Z | before the final prompt freeze: 292
+generation cloud jobs: 21                         time job_id  plan_id
+10  2026-09-27T23:22:59.103Z      7      3.0
+17  2026-09-28T01:03:38.539Z     11      4.0
+18  2026-09-28T01:03:40.416Z     12      5.0
+25  2026-09-28T01:56:12.485Z     15      6.0
+27  2026-09-28T02:10:12.801Z     16      7.0
+29  2026-09-28T04:22:58.477Z     17      8.0
+35  2026-09-28T05:17:11.111Z     20      9.0
+37  2026-09-28T05:37:30.024Z     21     10.0
+43  2026-09-28T06:23:03.060Z     24     11.0
+49  2026-09-28T07:11:57.857Z     27     12.0
+51  2026-09-28T07:32:10.318Z     28     13.0
+52  2026-09-28T07:32:12.207Z     29     14.0
+55  2026-09-28T08:36:50.032Z     30     15.0
+57  2026-09-28T08:59:07.606Z     31     16.0
+58  2026-09-28T08:59:09.692Z     32     17.0
+61  2026-09-28T10:43:46.144Z     33     18.0
+62  2026-09-28T10:43:48.121Z     34     19.0
+65  2026-09-28T11:09:42.167Z     35     20.0
+66  2026-09-28T11:09:44.283Z     36     21.0
+69  2026-09-28T13:09:15.717Z     37     22.0
+70  2026-09-28T13:09:17.723Z     38     23.0
+screening: images with defects 48 {'AESTHETIC': 14, 'BASE': 21, 'CONTROL': 13} | defect types: {'Perspective': 22, 'Deformation': 21, 'WrongSubject': 2, 'Artefacts': 2, 'Perspective, Artefacts': 1}
+reviewed_at span: 2026-09-28T15:29:45.525Z → 2026-09-28T15:31:44.220Z | distinct reviewed_at values: 192 | manual_correction events: 149 2026-09-28T13:25:37.292Z → 2026-09-28T15:14:36.964Z | users: {'admin@research.local': 149}
+phase-1 ratings after the first phase-2 rating: 0
+caption.changed by corpus: {'AESTHETIC': 384, 'CONTROL': 170, 'other': 0}
+done
+=== a06_runs_timeline started 2026-10-04T01:41:42+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
+=== a06_runs_timeline started 2026-10-04T01:44:10+0200 python 3.14.3 numpy 2.5.3 pandas 3.0.6
