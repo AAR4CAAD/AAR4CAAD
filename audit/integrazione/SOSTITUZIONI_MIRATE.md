@@ -1,5 +1,8 @@
 # Sostituzioni mirate (abstract, risultati, conclusioni) basate sugli esiti dell'integrazione — da NON applicare ancora al Word
 
+> Superseded: integrated into manuscript revision 16 (4 October 2026). Kept as history.
+
+
 Integra `PATCH_MANOSCRITTO.md` (audit v2); dove le due liste divergono vale questa. Riferimento: revisione 13.
 
 | posizione | sostituire | con | fonte |

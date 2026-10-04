@@ -49,27 +49,22 @@ The folder [`audit/`](audit/README.md) contains the independent re-analysis carr
 
 Every report has a companion CSV with all its numbers. Result files are named after their analysis.
 
-## Results reported in the manuscript
+## Results reported in the manuscript (revision 16)
 
 | Result | Value | Source in this repository |
 |---|---|---|
-| Phase 1: individual judgements are heterogeneous, the aggregate is stable | ICC single rater 0.138; ICC(k) 0.858; correlation of each participant with the others .351 (n = 161) | `human_report/report_paper_participant_level.md` |
-| Leave-one-out preference signal between the two sets | +0.915 points | `human_report/report_paper_participant_level.md` |
-| **Primary contrast, ratings: AESTHETIC − CONTROL** | +0.104 points (95% CI +0.029 / +0.178; p = .0067), mean of the within-participant differences, n = 158; d_z = +0.22; +0.105 at triplet level | `human_report/report_paper_participant_level.md` |
-| Pairwise choices AESTHETIC vs CONTROL | OR 1.090 (0.985–1.206); AESTHETIC chosen in 51.1% of the decisive comparisons (mean over the triplets) | `human_report/report_paper_participant_level.md` |
-| BASE − CONTROL and AESTHETIC − BASE | +0.140 and −0.036 points | `human_report/report_paper_participant_level.md` |
-| The two training sets differ in embedding space, with large overlap | centroid distance 0.235, standardised 0.26; AUC 0.78 | `embedding_report/report_dino.md`, A |
-| The direction CONTROL → AESTHETIC follows the ratings of the 422 photographs in neither set | Spearman ρ +0.39 | `report_dino.md`, A3 |
-| BASE → AESTHETIC moves along the source direction, BASE → CONTROL does not | +0.0443 and +0.0014; contrast +0.0429, transfer ratio 18% | `report_dino.md`, B1 |
-| The difference is one of direction, not of amount of shift | 96% due to direction | `report_dino.md`, B5 |
-| Post-hoc sensitivity: three training seeds, each applied to both corpora | +0.0435, +0.0412, +0.0504 on 192 cells | `replication_report/report_replication_dino.md`, 1 |
-| What the source direction contains | photography R² 0.10, framing and scene 0.21, architectural content 0.50, metadata 0.25; share of the gap: 8%, 33%, 57%, all blocks 65% | `decomposition_report/report_direction_decomposition.md`, 1–2 |
-| Profile of the 31 covariates, photographs vs generated images | r = 0.71; same sign for 27 of 31 | `report_direction_decomposition.md`, 4 |
-| Residual direction | 71% of the length, cosine 0.85, ρ 0.39 → 0.24; +0.0186, +0.0080, +0.0269 by training seed | `report_direction_decomposition.md`, 3 |
-| VLM triangulation on the 159 triplets | +0.149 SD (architectural appearance), +0.245 SD (representation quality); near-zero correlation with human ratings | `vlm_report/report_vlm.md`, 1 and 3 |
-| The VLM contrasts do not keep a coherent direction with the paired training seeds; the original CONTROL adapter scores lower than other CONTROL adapters on representation quality | none of the five measures named in advance is positive for the three seeds | `vlm_report/report_replication_vlm.md`, 1 and 5 |
-| The captions may be a second channel of transfer | the two sets can be told apart from the captions alone (AUC 0.85) | `decomposition_report/report_captions.md` |
-| Curator composition (architects vs non-experts; high vs low expertise) | ρ 0.423 and 0.500; gaps +0.893 / +1.130 and +0.978 / +1.133 | computed from `data/export/pretraining_ratings.csv` and `participants.csv` (see `PAPER_MAP.md`) |
+| Phase 1: low individual agreement, precise aggregate | ICC(1) 0.138; ICC(k₀) 0.860 (one-way ANOVA on rater-centred scores, k₀ = 38.3); SE per AESTHETIC photograph 0.153–0.487 | `audit/integrazione/verifica_tabelle_locali.csv` |
+| Stability of the selection under resampling of the 166 raters | 101.4 photographs selected on average (72–135); 79.4% of the 89 recovered; Jaccard 0.592; inclusion probability of the 89: 0.506–1.000 | `audit/integrazione/stabilita_bootstrap_riprodotta.csv` |
+| CONTROL construction | stratum counts: 20 type+style, 41 type only, 28 random (seed 345145722); exact re-execution | `audit/outputs/report_control.md` |
+| Source direction outside the LoRA sets | Spearman ρ 0.397 with the mean rating of the 422 external photographs | `audit/integrazione/verifica_tabelle_locali.csv` |
+| **Transfer along the source direction** | P A−C +0.0429 [+0.0275; +0.0599] = 18.2% of d on 159 triplets; +0.0435 / +0.0412 / +0.0504 on 192 cells for the three paired seeds (R 19.2% on average) | `audit/outputs/dino_reproduction.csv`; `audit/integrazione/dino_aggiustamento_completo.csv` |
+| After removing the period/area/type/style directions from photographs and outputs (G2) | P +0.0148 / +0.0089 / +0.0106 (CI > 0); R 11.4% of the residual separation (d_T 0.1005; 87 directions, 57.4% of photograph variance) | `audit/integrazione/dino_aggiustamento_completo.csv` |
+| Approach to the own repertoire (DINOv2, original geometry) | ΔD −0.0148 / −0.0081 / −0.0095; own − other −0.0111 / −0.0112 / −0.0085 (CI < 0); after G2 the own − other contrast is no longer consistent across seeds | `audit/outputs/dino_distance_changes.csv`; `analysis/figures/fig_dino_distance_changes.png` |
+| 31 descriptors | r(x, a−c) 0.707; 27/31 same sign; r(x,a) −0.006; r(x,c) −0.427; within type+style strata r 0.026 | `audit/outputs/descriptors_profile.csv`, `descriptors_by_stratum.csv` |
+| Captions | 37/27 curves (20/14 strict), 17/27 concrete, 28/10 water; v1→v2 additions concentrated in AESTHETIC | `audit/outputs/report_captions.md`; `audit/integrazione/caption_v1_v2_transizioni.csv` |
+| **Human contrast, ratings: AESTHETIC − CONTROL** | +0.104 [+0.029; +0.178] (t, n = 158); +0.101 [+0.016; +0.186] (crossed mixed model); +0.104 [−0.019; +0.237] (two-way bootstrap) | `audit/integrazione/tabella3_completa.csv` |
+| BASE − CONTROL; AESTHETIC − BASE | +0.140 [+0.068; +0.212]; −0.036 [−0.108; +0.035] | idem |
+| Pairwise choices | OR A:C 1.090 [0.985; 1.206] (BT), 1.089 (Davidson; two-way 0.909–1.306); B:C 1.133; A:B 0.962; binomial 677/1,320 = 51.3% (marginal) | idem |
 
 **Note on the human estimates.** The manuscript reports participant-level estimates: for each participant the mean
 difference AESTHETIC − CONTROL over the images rated, then a one-sample t test on the 158 differences; Bradley–Terry odds

@@ -1,5 +1,8 @@
 # ARCH300 — Analysis plan of the pilot study
 
+> **Note added 2026-10-04.** Where this plan says that CONTROL is "matched on building type and style", the recorded procedure is a stratum-count matching with progressive relaxation (20 photographs by type+style, 41 by type only, 28 at random; seed 345145722), not a photograph-to-photograph pairing: see `audit/outputs/report_control.md`. The plan is kept as written at the time.
+
+
 **Investigating Aesthetic Transfer in Generative Models for Architectural Design:
 A Pilot Study on Consensus-Based Fine-Tuning and Human Evaluation**
 

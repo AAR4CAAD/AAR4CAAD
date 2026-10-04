@@ -1,5 +1,8 @@
 # Patch proposte al manoscritto (revisione 12) — da NON applicare ancora al Word
 
+> Superseded: these proposals preceded manuscript revision 16, which integrates the audit and the targeted integration. Kept as history.
+
+
 Stato delle prove: **[V]** verificato dall'audit con numeri in `outputs/`; **[D]** dichiarazione che spetta agli autori; **[A]** aperto in attesa di nuova raccolta/training. Il limite di 15 pagine riguarda l'integrazione successiva.
 
 ## Titolo, abstract
